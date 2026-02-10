@@ -16,6 +16,7 @@ SAVE_DIR = 'static/images'
 DB_FILE = 'analysis_db.json'
 AI_MODEL_ID = "openai/clip-vit-base-patch32"
 
+# フォルダ作成
 os.makedirs(SAVE_DIR, exist_ok=True)
 
 # --- 1. 構図 (Composition) ---
@@ -33,25 +34,21 @@ model = CLIPModel.from_pretrained(AI_MODEL_ID).to(device)
 processor = CLIPProcessor.from_pretrained(AI_MODEL_ID)
 
 def extract_number(text):
-    """ 数値抽出ロジック（修正版：BOOKMARK内のMによる100万倍誤爆を防止） """
+    """ 数値抽出ロジック（M/K誤爆防止版） """
     if not text: return 0
     clean = text.replace(',', '').strip()
     upper = clean.upper()
-    
-    # そもそもBOOKMARKやLIKESといった単語が入っている場合は、
-    # その単語の一部であるKやMに反応させないためのガードを入れる
     
     mul = 1
     
     # K (千) の判定
     if 'K' in upper:
-        # BOOKMARK, LIKES, WORK などの単語内のKは無視
         if 'BOOKMARK' not in upper and 'LIKES' not in upper:
             mul = 1000
             
     # M (百万) の判定
     elif 'M' in upper:
-        # BOOKMARK, IMAGE, COMMENT などの単語内のMは無視 ★ここを修正！
+        # BOOKMARK, IMAGE, COMMENT などの単語内のMは無視
         if 'BOOKMARK' not in upper and 'IMAGE' not in upper and 'COMMENT' not in upper:
             mul = 1000000
 
@@ -109,7 +106,22 @@ def predict_composition(pil_img):
     return best, round(avg_scores[best] * 100, 1)
 
 async def run_analysis(tweet_url):
+    """ 分析メイン処理 """
+    # URLからIDを抽出
     tweet_id = tweet_url.split('/')[-1].split('?')[0]
+    
+    # --- ⏩ ここがスキップ機能！ ---
+    if os.path.exists(DB_FILE):
+        try:
+            with open(DB_FILE, 'r', encoding='utf-8') as f:
+                db = json.load(f)
+                # 既にIDが存在するかチェック
+                if any(entry.get('tweet_id') == tweet_id for entry in db):
+                    print(f"⏩ Skip: {tweet_id} (Already analyzed)")
+                    return # 処理を終了して帰る
+        except Exception as e:
+            print(f"⚠️ DB Check Error: {e}")
+    # ----------------------------
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -123,7 +135,8 @@ async def run_analysis(tweet_url):
         try:
             print(f"📡 Fetching data from X: {tweet_url}")
             await page.goto(tweet_url, wait_until="domcontentloaded")
-            await asyncio.sleep(4)
+            # 読み込み待ち時間を少し短縮 (4秒 -> 3秒)
+            await asyncio.sleep(3)
 
             # --- メトリクス取得 ---
             data = {'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0}
@@ -195,6 +208,7 @@ async def run_analysis(tweet_url):
                 "save_rate": round((data['bookmarks']/data['likes']*100), 2) if data['likes'] > 0 else 0
             }
 
+            # DBを再読み込みして追記
             db = []
             if os.path.exists(DB_FILE):
                 try:
@@ -203,18 +217,19 @@ async def run_analysis(tweet_url):
                 except:
                     db = []
             
+            # 念のため重複排除（IDが同じなら古い方を消して新しい方を入れる）
             db = [entry for entry in db if entry['tweet_id'] != tweet_id]
             db.append(final_result)
             
             with open(DB_FILE, 'w', encoding='utf-8') as f:
                 json.dump(db, f, ensure_ascii=False, indent=2)
 
-            print(f"\n✅ Analysis Complete!")
+            print(f"\n✅ Analysis Complete! (ID: {tweet_id})")
             if image_results:
                 print(f"🎨 Color: {image_results[0]['color']} | 💡 Brightness: {image_results[0]['brightness']}")
 
         except Exception as e:
-            print(f"❌ Critical Error: {e}")
+            print(f"❌ Error analyzing {tweet_url}: {e}")
         finally:
             await browser.close()
 
@@ -222,4 +237,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         asyncio.run(run_analysis(sys.argv[1]))
     else:
+        # テスト用
         asyncio.run(run_analysis("https://x.com/snow_sayu_/status/1867910835085148236"))

@@ -6,12 +6,17 @@
     <title>Analytics Report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    
     <style>
         body { background-color: #f8f9fa; font-family: 'Helvetica Neue', Arial, sans-serif; }
         .stat-card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: 100%; }
         .big-number { font-size: 2.5rem; font-weight: bold; color: #2c3e50; }
         .label-text { color: #7f8c8d; font-size: 0.9rem; text-transform: uppercase; }
         .top-rank-img { width: 50px; height: 50px; object-fit: cover; border-radius: 8px; margin-right: 10px; }
+        /* ツールチップ内の画像スタイル */
+        #chartjs-tooltip { opacity: 1; position: absolute; background: rgba(0, 0, 0, 0.8); color: white; border-radius: 8px; pointer-events: none; transform: translate(-50%, 0); transition: all .1s ease; padding: 10px; z-index: 100; max-width: 150px; text-align: center; }
+        .tooltip-img { width: 100%; border-radius: 5px; margin-bottom: 5px; }
     </style>
 </head>
 <body>
@@ -43,6 +48,21 @@
             </div>
         </div>
 
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="stat-card">
+                    <h4 class="mb-3">🎯 戦略マトリクス (4-Quadrant Matrix)</h4>
+                    <p class="small text-muted mb-4">
+                        縦軸：保存率 (Save) / 横軸：エンゲージメント (Eng)<br>
+                        <strong>右上: 神投稿 (God Tier)</strong> | <strong>右下: バズ (Viral)</strong> | <strong>左上: お宝 (Hidden Gem)</strong>
+                    </p>
+                    <div style="height: 500px; width: 100%;">
+                        <canvas id="scatterChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row g-4 mb-4">
             <div class="col-md-6">
                 <div class="stat-card">
@@ -61,14 +81,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="stat-card">
-                    <h5 class="mb-3">🏆 保存率ランキング TOP3</h5>
+                    <h5 class="mb-3">🏆 保存率ランキング TOP5</h5>
                     <table class="table align-middle">
                         <tbody>
                             {% for tweet in stats.top_tweets %}
                             <tr>
-                                <td width="50">
-                                    <h4 class="text-muted m-0">#{{ loop.index }}</h4>
-                                </td>
+                                <td width="50"><h4 class="text-muted m-0">#{{ loop.index }}</h4></td>
                                 <td width="70">
                                     {% if tweet.images %}
                                     <img src="{{ tweet.images[0].path }}" class="top-rank-img">
@@ -76,16 +94,12 @@
                                 </td>
                                 <td>
                                     <div><strong>ID: {{ tweet.tweet_id }}</strong></div>
-                                    <small class="text-muted">{{ tweet.images[0].composition if tweet.images else '' }}</small>
+                                    <span class="badge bg-light text-dark">{{ tweet.images[0].composition if tweet.images else '' }}</span>
                                 </td>
                                 <td class="text-end">
-                                    <span class="badge bg-primary rounded-pill p-2" style="font-size:1rem;">
-                                        Save Rate: {{ tweet.save_rate }}%
-                                    </span>
+                                    <span class="badge bg-primary rounded-pill p-2" style="font-size:1rem;">Save: {{ tweet.save_rate }}%</span>
                                 </td>
-                                <td class="text-end">
-                                    <a href="{{ tweet.url }}" target="_blank" class="btn btn-sm btn-light">見る</a>
-                                </td>
+                                <td class="text-end"><a href="{{ tweet.url }}" target="_blank" class="btn btn-sm btn-light">見る</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -96,10 +110,80 @@
 
         <script>
             // データ受け取り
+            const scatterData = {{ stats.scatter_data | tojson }};
+            const avgSave = {{ stats.avg_save_rate }};
+            const avgEng = {{ stats.avg_eng_rate }};
             const compData = {{ stats.composition_stats | tojson }};
             const brightData = {{ stats.brightness_stats | tojson }};
 
-            // 構図チャート
+            // --- 1. 散布図 (Scatter Chart) ---
+            const ctxScatter = document.getElementById('scatterChart').getContext('2d');
+            new Chart(ctxScatter, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Post',
+                        data: scatterData,
+                        backgroundColor: (ctx) => {
+                            // 象限によって色を変える
+                            const v = ctx.raw;
+                            if (!v) return 'rgba(100, 100, 100, 0.5)';
+                            if (v.y >= avgSave && v.x >= avgEng) return 'rgba(255, 99, 132, 1)'; // 右上: 神 (赤)
+                            if (v.y >= avgSave && v.x < avgEng) return 'rgba(54, 162, 235, 1)';  // 左上: お宝 (青)
+                            if (v.y < avgSave && v.x >= avgEng) return 'rgba(255, 206, 86, 1)';  // 右下: バズ (黄)
+                            return 'rgba(201, 203, 207, 1)'; // 左下: 普通 (グレー)
+                        },
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { 
+                            title: { display: true, text: 'Engagement Rate (%)' },
+                            grid: { color: (ctx) => ctx.tick.value === 0 ? 'black' : '#e5e5e5' }
+                        },
+                        y: { 
+                            title: { display: true, text: 'Save Rate (%)' },
+                            grid: { color: (ctx) => ctx.tick.value === 0 ? 'black' : '#e5e5e5' }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => `ID: ${ctx.raw.id} (Save: ${ctx.raw.y}%, Eng: ${ctx.raw.x}%)`
+                            }
+                        },
+                        annotation: {
+                            annotations: {
+                                line1: {
+                                    type: 'line',
+                                    yMin: avgSave, yMax: avgSave,
+                                    borderColor: 'rgba(0,0,0,0.3)', borderWidth: 2, borderDash: [6, 6],
+                                    label: { display: true, content: `Avg Save: ${avgSave}%`, position: 'end' }
+                                },
+                                line2: {
+                                    type: 'line',
+                                    xMin: avgEng, xMax: avgEng,
+                                    borderColor: 'rgba(0,0,0,0.3)', borderWidth: 2, borderDash: [6, 6],
+                                    label: { display: true, content: `Avg Eng: ${avgEng}%`, position: 'end', rotation: 90 }
+                                }
+                            }
+                        }
+                    },
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const url = scatterData[index].url;
+                            window.open(url, '_blank');
+                        }
+                    }
+                }
+            });
+
+            // --- 2. 構図チャート ---
             new Chart(document.getElementById('compChart'), {
                 type: 'bar',
                 data: {
@@ -113,7 +197,7 @@
                 options: { scales: { y: { beginAtZero: true } } }
             });
 
-            // 明るさチャート
+            // --- 3. 明るさチャート ---
             new Chart(document.getElementById('brightChart'), {
                 type: 'doughnut',
                 data: {
