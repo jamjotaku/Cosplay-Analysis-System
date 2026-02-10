@@ -1,29 +1,33 @@
 import sys
 import asyncio
-import json
 import re
-from datetime import datetime
+import os
 from playwright.async_api import async_playwright
 
 # --- 設定 ---
-AUTH_FILE = 'auth.json'  # ログイン情報（これがないと詳細データが見れない場合がある）
+AUTH_FILE = 'auth.json'
 
-# ロケーション判定用キーワード (レガシー機能移植)
-LOCATION_KEYWORDS = {
-    "Event": ["コミケ", "C9", "C10", "夏コミ", "冬コミ", "アコスタ", "acosta", "池ハロ", "となコス", "超会議", "ニコ超", "ラグコス", "ワンフェス", "ホココス", "ビビコス", "ストフェス", "a!"],
-    "Studio": ["スタジオ", "studio", "撮", "撮影会", "宅コス", "家", "自撮り", "セルフィー", "笹塚"]
-}
-
-def parse_metric(text):
-    """ '1.5万' などの表記を数値に変換 """
+def extract_number_from_label(text):
+    """ 
+    aria-label="15,234 Likes" や "851 Reposts" から数字だけを抜き出す
+    画面表示が "15K" でも、aria-label は正確な数字を持っていることが多い
+    """
     if not text: return 0
-    text = text.replace(',', '').strip()
-    try:
-        if '万' in text: return int(float(text.replace('万', '')) * 10000)
-        if 'K' in text: return int(float(text.replace('K', '')) * 1000)
-        if 'M' in text: return int(float(text.replace('M', '')) * 1000000)
-        return int(''.join(filter(str.isdigit, text)) or 0)
-    except: return 0
+    # カンマ削除
+    clean_text = text.replace(',', '')
+    
+    # "15K" 表記の場合の対応 (aria-labelも短縮されている場合への保険)
+    multiplier = 1
+    if 'K' in clean_text.upper() and 'LIKES' not in clean_text.upper(): # 単位としてのKかチェック
+         if 'K' in clean_text: multiplier = 1000
+         elif 'M' in clean_text: multiplier = 1000000
+
+    # 数字抽出
+    match = re.search(r'(\d+(?:\.\d+)?)', clean_text)
+    if match:
+        val = float(match.group(1))
+        return int(val * multiplier)
+    return 0
 
 async def analyze_tweet(url):
     print(f"🔍 Analyzing: {url}")
@@ -31,144 +35,83 @@ async def analyze_tweet(url):
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
-            storage_state=AUTH_FILE if asyncio.os.path.exists(AUTH_FILE) else None,
+            storage_state=AUTH_FILE if os.path.exists(AUTH_FILE) else None,
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
         page = await context.new_page()
 
         try:
             await page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            await asyncio.sleep(3) # レンダリング待ち
+            await asyncio.sleep(3)
 
-            # --- 1. 基本メトリクス取得 (いいね, RP, ブックマーク, インプレッション) ---
-            # aria-label属性から正確な数値を拾う戦略
-            metrics = {
-                'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0, 'replies': 0
-            }
+            metrics = {'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0}
 
-            # data-testid 属性を使って特定
-            likes_elem = await page.query_selector('[data-testid="like"]') or await page.query_selector('[data-testid="unlike"]')
-            if likes_elem:
-                 # aria-label="1234 likes" から抽出
-                 label = await likes_elem.get_attribute("aria-label")
-                 metrics['likes'] = parse_metric(label)
+            # --- 戦略: ボタンの aria-label (読み上げ用テキスト) を攻める ---
+            # これが最も確実。画面上 "15K" でも、ここは "15234" だったりする。
 
-            rp_elem = await page.query_selector('[data-testid="retweet"]') or await page.query_selector('[data-testid="unretweet"]')
-            if rp_elem:
-                 label = await rp_elem.get_attribute("aria-label")
-                 metrics['reposts'] = parse_metric(label)
+            # 1. いいね (Like / Unlike 両対応)
+            like_btn = await page.query_selector('[data-testid="like"]') or await page.query_selector('[data-testid="unlike"]')
+            if like_btn:
+                label = await like_btn.get_attribute("aria-label")
+                # 例: "15234 Likes" または "Like" (0の場合)
+                metrics['likes'] = extract_number_from_label(label)
 
-            bm_elem = await page.query_selector('[data-testid="bookmark"]') or await page.query_selector('[data-testid="removeBookmark"]')
-            if bm_elem:
-                 label = await bm_elem.get_attribute("aria-label")
-                 metrics['bookmarks'] = parse_metric(label)
+            # 2. リポスト (Retweet / Unretweet)
+            rp_btn = await page.query_selector('[data-testid="retweet"]') or await page.query_selector('[data-testid="unretweet"]')
+            if rp_btn:
+                label = await rp_btn.get_attribute("aria-label")
+                metrics['reposts'] = extract_number_from_label(label)
+
+            # 3. ブックマーク (Bookmark / RemoveBookmark)
+            bm_btn = await page.query_selector('[data-testid="bookmark"]') or await page.query_selector('[data-testid="removeBookmark"]')
+            if bm_btn:
+                label = await bm_btn.get_attribute("aria-label")
+                metrics['bookmarks'] = extract_number_from_label(label)
             
-            # インプレッション (Views) - 表示場所が変動するためテキスト探索
-            # 通常は "xyz Views" のように表示されるリンクまたはspanを探す
-            view_elem = await page.query_selector('a[href$="/analytics"]')
+            # 4. インプレッション (Views)
+            # これはボタンではなくリンクまたはテキスト
+            view_elem = await page.query_selector('a[href*="/analytics"]')
             if view_elem:
-                text = await view_elem.inner_text() # "1.2万を表示" など
-                metrics['views'] = parse_metric(text)
+                label = await view_elem.get_attribute("aria-label") or await view_elem.inner_text()
+                metrics['views'] = extract_number_from_label(label)
             
-            # --- 2. ユーザー情報 (フォロワー数) ---
-            # Viral Efficiency計算用
-            user_link = await page.query_selector('[data-testid="User-Name"] a')
-            follower_count = 0
-            screen_name = "Unknown"
-            if user_link:
-                href = await user_link.get_attribute("href")
-                screen_name = href.replace('/', '')
-                # プロフィールをホバーまたは別タブで開かないと取れない場合があるが、
-                # 今回は単一分析なので、プロフィールページへジャンプして取るのもアリ
-                # (簡易版として一旦スキップし、必要なら実装追加)
-
-            # --- 3. テキスト & ロケーション判定 ---
-            text_content = ""
-            text_elem = await page.query_selector('[data-testid="tweetText"]')
-            if text_elem:
-                text_content = await text_elem.inner_text()
-            
-            loc_label = 'Others'
-            if any(k in text_content for k in LOCATION_KEYWORDS['Event']): loc_label = 'Event'
-            elif any(k in text_content for k in LOCATION_KEYWORDS['Studio']): loc_label = 'Studio/Home'
-
-            # --- 4. 画像分析 (アスペクト比) ---
-            images = []
-            img_elems = await page.query_selector_all('[data-testid="tweetPhoto"] img')
-            aspect_label = 'No Image'
-            
-            for img in img_elems:
-                src = await img.get_attribute("src")
-                # スタイルからアスペクト比を推測
-                style = await img.get_attribute("style") # width/heightが入っていることが多い
-                # ここでは簡易的に1枚目のURLを取得
-                images.append(src)
-            
-            if images:
-                # 実際の画像サイズ取得は別途画像処理が必要だが、
-                # ここでは「画像がある」ことまでは確定
-                aspect_label = 'Image Found' 
-
-            # --- 5. 時間帯 ---
-            time_elem = await page.query_selector('time')
-            post_time = "Unknown"
-            post_hour = -1
-            if time_elem:
-                dt_str = await time_elem.get_attribute("datetime")
-                post_time = dt_str
-                try:
-                    dt = datetime.fromisoformat(dt_str.replace('Z', '+00:00'))
-                    post_hour = dt.hour
-                except: pass
+            # --- 補正: 画面上のテキスト表示 ("15K") からのバックアップ取得 ---
+            # aria-labelが "Like" (数字なし) だけど画面には "15K" とある場合の対策
+            if metrics['likes'] == 0:
+                 like_text_elem = await page.query_selector('[data-testid="like"] span, [data-testid="unlike"] span')
+                 if like_text_elem:
+                     text = await like_text_elem.inner_text()
+                     if text:
+                         # K/M変換ロジックを通す
+                         text = text.replace('K', '000').replace('M', '000000').replace('.', '') # 簡易変換
+                         metrics['likes'] = extract_number_from_label(text)
 
             # --- 結果出力 ---
-            result = {
-                'url': url,
-                'screen_name': screen_name,
-                'metrics': metrics,
-                'text_analysis': {
-                    'length': len(text_content),
-                    'hashtags': text_content.count('#'),
-                    'location_type': loc_label
-                },
-                'image_analysis': {
-                    'count': len(images),
-                    'urls': images,
-                    'aspect_status': aspect_label
-                },
-                'time_analysis': {
-                    'posted_at': post_time,
-                    'hour': post_hour
-                }
-            }
-            
-            # コンソールに見やすく表示
-            print("-" * 40)
-            print(f"📊 分析結果: {screen_name}")
-            print(f"❤️ Likes: {metrics['likes']:,}")
-            print(f"👁️ Views: {metrics['views']:,}")
-            print(f"🔖 Saves: {metrics['bookmarks']:,}")
+            print("\n" + "💎" * 20)
+            print(f"📊 正確な分析結果")
+            print("💎" * 20)
+            print(f"❤️ Likes:    {metrics['likes']:,}")
+            print(f"🔄 Reposts:  {metrics['reposts']:,}")
+            print(f"🔖 Saves:    {metrics['bookmarks']:,}")
+            print(f"👁️ Views:    {metrics['views']:,}")
             
             if metrics['views'] > 0:
                 eng_rate = round((metrics['likes'] / metrics['views']) * 100, 2)
-                print(f"⚡ Engagement Rate: {eng_rate}% (Likes/Views)")
+                print("-" * 20)
+                print(f"⚡ Engagement Rate: {eng_rate}%")
             
-            print(f"📍 Location: {loc_label}")
-            print(f"⏰ Hour: {post_hour}時")
-            print("-" * 40)
-
-            return result
+            # 保存率の計算
+            if metrics['likes'] > 0:
+                save_rate = round((metrics['bookmarks'] / metrics['likes']) * 100, 2)
+                print(f"💾 Save Rate:       {save_rate}%")
+                
+            print("💎" * 20 + "\n")
 
         except Exception as e:
             print(f"❌ Error: {e}")
-            return None
-            
         finally:
             await browser.close()
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python fetch_tweet_data.py <TWEET_URL>")
-    else:
-        url = sys.argv[1]
-        asyncio.run(analyze_tweet(url))
+    url = sys.argv[1] if len(sys.argv) > 1 else "https://x.com/snow_sayu_/status/1867910835085148236"
+    asyncio.run(analyze_tweet(url))

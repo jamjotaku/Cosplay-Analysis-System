@@ -1,0 +1,13 @@
+# スクレイピング・ブラウザ自動操作
+playwright
+playwright-stealth
+
+# 画像解析・数値計算
+opencv-python-headless
+numpy
+Pillow
+
+# 通信・ユーティリティ
+requests
+python-dateutil
+python-dotenv
