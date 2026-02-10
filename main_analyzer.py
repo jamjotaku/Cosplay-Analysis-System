@@ -4,7 +4,9 @@ import json
 import re
 import os
 import torch
-import colorsys
+import random
+import cv2
+import numpy as np
 from datetime import datetime
 from PIL import Image
 from playwright.async_api import async_playwright
@@ -38,49 +40,54 @@ def extract_number(text):
     if not text: return 0
     clean = text.replace(',', '').strip()
     upper = clean.upper()
-    
     mul = 1
-    
-    # K (千) の判定
     if 'K' in upper:
-        if 'BOOKMARK' not in upper and 'LIKES' not in upper:
-            mul = 1000
-            
-    # M (百万) の判定
+        if 'BOOKMARK' not in upper and 'LIKES' not in upper: mul = 1000
     elif 'M' in upper:
-        # BOOKMARK, IMAGE, COMMENT などの単語内のMは無視
-        if 'BOOKMARK' not in upper and 'IMAGE' not in upper and 'COMMENT' not in upper:
-            mul = 1000000
-
+        if 'BOOKMARK' not in upper and 'IMAGE' not in upper and 'COMMENT' not in upper: mul = 1000000
     match = re.search(r'(\d+(?:\.\d+)?)', clean)
     return int(float(match.group(1)) * mul) if match else 0
+
+def analyze_skin_ratio(img_path):
+    """ ★肌色ピクセル率を計算する (0.0 - 100.0) """
+    try:
+        img = cv2.imread(img_path)
+        if img is None: return 0.0
+        
+        # HSV色空間に変換
+        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+        
+        # 肌色の範囲定義 (一般的な肌色)
+        lower_skin = np.array([0, 20, 70], dtype=np.uint8)
+        upper_skin = np.array([20, 255, 255], dtype=np.uint8)
+        
+        # 肌色マスクを作成
+        mask = cv2.inRange(hsv, lower_skin, upper_skin)
+        
+        # 肌色ピクセル数をカウント
+        skin_pixels = cv2.countNonZero(mask)
+        total_pixels = img.shape[0] * img.shape[1]
+        
+        return round((skin_pixels / total_pixels) * 100, 2)
+    except Exception as e:
+        print(f"⚠️ Skin analysis failed: {e}")
+        return 0.0
 
 def analyze_color_and_brightness(img_path):
     """ 画像の主要色と明るさを解析する """
     try:
         img = Image.open(img_path).convert("RGB")
-        
-        # 1. 輝度 (Brightness) の判定
         gray_img = img.convert("L")
-        stat = gray_img.resize((1, 1)).getpixel((0, 0))
-        brightness_val = stat
-        
+        brightness_val = gray_img.resize((1, 1)).getpixel((0, 0))
         brightness_tag = "Normal"
         if brightness_val > 170: brightness_tag = "Bright"
         elif brightness_val < 85: brightness_tag = "Dark"
-
-        # 2. ドミナントカラー (Dominant Color) の抽出
         img_small = img.resize((150, 150))
         result = img_small.quantize(colors=5, method=2)
-        dominant_color = result.getpalette()[:3] # RGB
-        
-        # HEX変換
+        dominant_color = result.getpalette()[:3]
         hex_color = '#{:02x}{:02x}{:02x}'.format(*dominant_color)
-        
         return hex_color, brightness_tag
-        
-    except Exception as e:
-        print(f"⚠️ Color Analysis Failed: {e}")
+    except:
         return "#000000", "Unknown"
 
 def predict_composition(pil_img):
@@ -105,24 +112,47 @@ def predict_composition(pil_img):
     best = max(avg_scores, key=avg_scores.get)
     return best, round(avg_scores[best] * 100, 1)
 
-async def run_analysis(tweet_url):
-    """ 分析メイン処理 """
-    # URLからIDを抽出
-    tweet_id = tweet_url.split('/')[-1].split('?')[0]
+def get_tweet_time(tweet_id):
+    """ ★Tweet IDから投稿日時を逆算 (Snowflake) """
+    try:
+        # Twitter Epoch (1288834974657) を加算
+        t_ms = (int(tweet_id) >> 22) + 1288834974657
+        return datetime.fromtimestamp(t_ms / 1000.0).isoformat()
+    except:
+        return None
+
+def normalize_url(url):
+    """ URL正規化 """
+    match = re.search(r'(https?://(?:x|twitter)\.com/[a-zA-Z0-9_]+/status/\d+)', url)
+    if match:
+        return match.group(1)
+    return url.split('?')[0]
+
+async def run_analysis(raw_url):
+    tweet_url = normalize_url(raw_url)
+    tweet_id = tweet_url.split('/')[-1]
     
-    # --- ⏩ ここがスキップ機能！ ---
+    # --- スキップ機能 (肌色データがない場合も再処理) ---
     if os.path.exists(DB_FILE):
         try:
             with open(DB_FILE, 'r', encoding='utf-8') as f:
                 db = json.load(f)
-                # 既にIDが存在するかチェック
-                if any(entry.get('tweet_id') == tweet_id for entry in db):
-                    print(f"⏩ Skip: {tweet_id} (Already analyzed)")
-                    return # 処理を終了して帰る
-        except Exception as e:
-            print(f"⚠️ DB Check Error: {e}")
-    # ----------------------------
+                entry = next((e for e in db if e.get('tweet_id') == tweet_id), None)
+                
+                # エントリが存在し、かつ画像があり、かつ肌色データ(skin_ratio)も持っている場合のみスキップ
+                if entry:
+                    # 画像がないデータ(失敗データ)は再取得させるためスキップしない
+                    if not entry.get('images'): 
+                        pass 
+                    # 肌色データ取得済みの場合はスキップ
+                    elif 'images' in entry and len(entry['images']) > 0 and 'skin_ratio' in entry['images'][0]:
+                        print(f"⏩ Skip: {tweet_id} (Fully analyzed)")
+                        return
+        except: pass
     
+    # BAN対策の待ち時間
+    await asyncio.sleep(random.uniform(1, 3))
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
@@ -133,23 +163,39 @@ async def run_analysis(tweet_url):
         page = await context.new_page()
 
         try:
-            print(f"📡 Fetching data from X: {tweet_url}")
-            await page.goto(tweet_url, wait_until="domcontentloaded")
-            # 読み込み待ち時間を少し短縮 (4秒 -> 3秒)
-            await asyncio.sleep(3)
+            print(f"📡 Analyzing: {tweet_url}")
+            try:
+                await page.goto(tweet_url, wait_until="networkidle", timeout=60000)
+                await asyncio.sleep(5)
+            except Exception as e:
+                print(f"⚠️ Load Warning: {e}")
 
-            # --- メトリクス取得 ---
+            # --- メトリクス取得 (完全版) ---
             data = {'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0}
-            targets = [('likes', ['like', 'unlike']), ('reposts', ['retweet', 'unretweet']), ('bookmarks', ['bookmark', 'removeBookmark'])]
+            
+            # 各ボタンのaria-labelから数値を取得
+            targets = [
+                ('likes', ['like', 'unlike']), 
+                ('reposts', ['retweet', 'unretweet']), 
+                ('bookmarks', ['bookmark', 'removeBookmark'])
+            ]
+            
             for key, ids in targets:
                 for tid in ids:
                     btn = await page.query_selector(f'[data-testid="{tid}"]')
                     if btn:
-                        val = extract_number(await btn.get_attribute("aria-label"))
-                        if val > 0: data[key] = val; break
+                        aria_label = await btn.get_attribute("aria-label")
+                        val = extract_number(aria_label)
+                        if val > 0: 
+                            data[key] = val
+                            break
             
+            # インプレッション数
             view_link = await page.query_selector('a[href*="/analytics"]')
-            if view_link: data['views'] = extract_number(await view_link.get_attribute("aria-label") or await view_link.inner_text())
+            if view_link: 
+                aria_label = await view_link.get_attribute("aria-label")
+                inner_text = await view_link.inner_text()
+                data['views'] = extract_number(aria_label or inner_text)
 
             # --- 画像処理 & 解析 ---
             image_results = []
@@ -177,14 +223,15 @@ async def run_analysis(tweet_url):
                             if resp:
                                 with open(img_path, "wb") as f: f.write(await resp.body())
                                 
-                                # === 解析パート ===
+                                # === AI解析 ===
                                 pil_img = Image.open(img_path)
                                 
-                                # 1. 構図判定 (AI)
+                                # 1. 構図
                                 comp_cat, comp_conf = predict_composition(pil_img)
-                                
-                                # 2. 色彩・輝度解析 (計算)
+                                # 2. 色・明るさ
                                 hex_color, brightness = analyze_color_and_brightness(img_path)
+                                # 3. ★肌色率
+                                skin_ratio = analyze_skin_ratio(img_path)
 
                                 image_results.append({
                                     "path": img_path,
@@ -192,44 +239,48 @@ async def run_analysis(tweet_url):
                                     "composition": comp_cat,
                                     "confidence": comp_conf,
                                     "color": hex_color,
-                                    "brightness": brightness
+                                    "brightness": brightness,
+                                    "skin_ratio": skin_ratio # ★追加
                                 })
                         finally:
                             await img_page.close()
 
-            # --- 保存 ---
+            # 失敗判定: 画像なし & いいね0 は保存しない
+            if not image_results and data['likes'] == 0:
+                print(f"⚠️ Analysis Failed (No Data) for {tweet_id}. Skipping Save.")
+                return 
+
+            # 保存データ構築
             final_result = {
                 "tweet_id": tweet_id,
                 "url": tweet_url,
                 "timestamp": datetime.now().isoformat(),
+                "created_at": get_tweet_time(tweet_id), # ★追加: 投稿日時
                 "metrics": data,
                 "images": image_results,
                 "engagement_rate": round((data['likes']/data['views']*100), 2) if data['views'] > 0 else 0,
                 "save_rate": round((data['bookmarks']/data['likes']*100), 2) if data['likes'] > 0 else 0
             }
 
-            # DBを再読み込みして追記
+            # DB保存
             db = []
             if os.path.exists(DB_FILE):
-                try:
-                    with open(DB_FILE, 'r', encoding='utf-8') as f:
+                try: 
+                    with open(DB_FILE, 'r', encoding='utf-8') as f: 
                         db = json.load(f)
-                except:
-                    db = []
+                except: db = []
             
-            # 念のため重複排除（IDが同じなら古い方を消して新しい方を入れる）
+            # 重複排除して追記
             db = [entry for entry in db if entry['tweet_id'] != tweet_id]
             db.append(final_result)
             
             with open(DB_FILE, 'w', encoding='utf-8') as f:
                 json.dump(db, f, ensure_ascii=False, indent=2)
 
-            print(f"\n✅ Analysis Complete! (ID: {tweet_id})")
-            if image_results:
-                print(f"🎨 Color: {image_results[0]['color']} | 💡 Brightness: {image_results[0]['brightness']}")
+            print(f"\n✅ Complete: {tweet_id} | Skin: {image_results[0]['skin_ratio'] if image_results else 0}%")
 
         except Exception as e:
-            print(f"❌ Error analyzing {tweet_url}: {e}")
+            print(f"❌ Error: {e}")
         finally:
             await browser.close()
 
@@ -237,5 +288,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         asyncio.run(run_analysis(sys.argv[1]))
     else:
-        # テスト用
+        # テスト用URL
         asyncio.run(run_analysis("https://x.com/snow_sayu_/status/1867910835085148236"))
