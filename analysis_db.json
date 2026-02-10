@@ -12753,5 +12753,2654 @@
     ],
     "engagement_rate": 2.73,
     "save_rate": 6.98
+  },
+  {
+    "tweet_id": "1771488874818150751",
+    "url": "https://x.com/samesandayo/status/1771488874818150751?s=20",
+    "timestamp": "2026-02-10T08:10:23.091252",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1771865109448610228",
+    "url": "https://x.com/samesandayo/status/1771865109448610228?s=20",
+    "timestamp": "2026-02-10T08:10:33.947343",
+    "metrics": {
+      "likes": 125,
+      "reposts": 20,
+      "bookmarks": 6,
+      "views": 8575
+    },
+    "images": [
+      {
+        "path": "static/images/1771865109448610228_1.jpg",
+        "url": "https://pbs.twimg.com/media/GJbt6_pbIAA5cK3?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.6,
+        "color": "#1f6a94",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.46,
+    "save_rate": 4.8
+  },
+  {
+    "tweet_id": "1773644012244631908",
+    "url": "https://x.com/samesandayo/status/1773644012244631908?s=20",
+    "timestamp": "2026-02-10T08:10:42.818218",
+    "metrics": {
+      "likes": 72,
+      "reposts": 14,
+      "bookmarks": 1,
+      "views": 3910
+    },
+    "images": [
+      {
+        "path": "static/images/1773644012244631908_1.jpg",
+        "url": "https://pbs.twimg.com/media/GJ0_02wbEAAgYEp?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 24.0,
+        "color": "#1c212f",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.84,
+    "save_rate": 1.39
+  },
+  {
+    "tweet_id": "1786652199055155528",
+    "url": "https://x.com/samesandayo/status/1786652199055155528?s=20",
+    "timestamp": "2026-02-10T08:10:51.981285",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 4463
+    },
+    "images": [
+      {
+        "path": "static/images/1786652199055155528_1.jpg",
+        "url": "https://pbs.twimg.com/media/GMt2sR8acAAj-_N?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 16.9,
+        "color": "#1d1b25",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1787327242558964141",
+    "url": "https://x.com/samesandayo/status/1787327242558964141?s=20",
+    "timestamp": "2026-02-10T08:11:00.490425",
+    "metrics": {
+      "likes": 105,
+      "reposts": 26,
+      "bookmarks": 7,
+      "views": 5693
+    },
+    "images": [
+      {
+        "path": "static/images/1787327242558964141_1.jpg",
+        "url": "https://pbs.twimg.com/media/GM3cpocbAAACIiP?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.2,
+        "color": "#dbdcec",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.84,
+    "save_rate": 6.67
+  },
+  {
+    "tweet_id": "1787418537507893335",
+    "url": "https://x.com/samesandayo/status/1787418537507893335?s=20",
+    "timestamp": "2026-02-10T08:11:09.907598",
+    "metrics": {
+      "likes": 65,
+      "reposts": 10,
+      "bookmarks": 2,
+      "views": 3539
+    },
+    "images": [
+      {
+        "path": "static/images/1787418537507893335_1.jpg",
+        "url": "https://pbs.twimg.com/media/GM4vrx-a0AA0NW4?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.4,
+        "color": "#0e1f20",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.84,
+    "save_rate": 3.08
+  },
+  {
+    "tweet_id": "1789586472229847073",
+    "url": "https://x.com/samesandayo/status/1789586472229847073?s=20",
+    "timestamp": "2026-02-10T08:11:18.716975",
+    "metrics": {
+      "likes": 0,
+      "reposts": 37,
+      "bookmarks": 35,
+      "views": 16400
+    },
+    "images": [
+      {
+        "path": "static/images/1789586472229847073_1.jpg",
+        "url": "https://pbs.twimg.com/media/GNXjaMLakAAuN9O?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.6,
+        "color": "#dcdff4",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1800880020724084765",
+    "url": "https://x.com/samesandayo/status/1800880020724084765?s=20",
+    "timestamp": "2026-02-10T08:11:27.216527",
+    "metrics": {
+      "likes": 101,
+      "reposts": 19,
+      "bookmarks": 8,
+      "views": 5402
+    },
+    "images": [
+      {
+        "path": "static/images/1800880020724084765_1.jpg",
+        "url": "https://pbs.twimg.com/media/GP4C1MwbAAAZMvb?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 18.1,
+        "color": "#cfddea",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.87,
+    "save_rate": 7.92
+  },
+  {
+    "tweet_id": "1875115013662531819",
+    "url": "https://x.com/samesandayo/status/1875115013662531819?s=20",
+    "timestamp": "2026-02-10T08:11:36.679561",
+    "metrics": {
+      "likes": 1129,
+      "reposts": 88,
+      "bookmarks": 79,
+      "views": 33000
+    },
+    "images": [
+      {
+        "path": "static/images/1875115013662531819_1.jpg",
+        "url": "https://pbs.twimg.com/media/GgW_KUgakAA8C7X?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.8,
+        "color": "#289ad9",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.42,
+    "save_rate": 7.0
+  },
+  {
+    "tweet_id": "1889974346506252332",
+    "url": "https://x.com/samesandayo/status/1889974346506252332?s=20",
+    "timestamp": "2026-02-10T08:11:45.765768",
+    "metrics": {
+      "likes": 628,
+      "reposts": 60,
+      "bookmarks": 33,
+      "views": 21400
+    },
+    "images": [
+      {
+        "path": "static/images/1889974346506252332_1.jpg",
+        "url": "https://pbs.twimg.com/media/GjqJpjVaYAAYZKl?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 9.9,
+        "color": "#e4e6e8",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.93,
+    "save_rate": 5.25
+  },
+  {
+    "tweet_id": "1885321131336622533",
+    "url": "https://x.com/sirane2525/status/1885321131336622533?s=20",
+    "timestamp": "2026-02-10T08:11:51.748902",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1895108079123079381",
+    "url": "https://x.com/sirane2525/status/1895108079123079381?s=20",
+    "timestamp": "2026-02-10T08:12:00.720451",
+    "metrics": {
+      "likes": 0,
+      "reposts": 98,
+      "bookmarks": 323,
+      "views": 75200
+    },
+    "images": [
+      {
+        "path": "static/images/1895108079123079381_1.jpg",
+        "url": "https://pbs.twimg.com/media/GkzGv_9WoAA4-Vl?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 23.3,
+        "color": "#f5f1ee",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1913578412930978126",
+    "url": "https://x.com/sirane2525/status/1913578412930978126?s=20",
+    "timestamp": "2026-02-10T08:12:09.758757",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 18700
+    },
+    "images": [
+      {
+        "path": "static/images/1913578412930978126_1.jpg",
+        "url": "https://pbs.twimg.com/media/Go5la9tbEAIJg_o?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 15.5,
+        "color": "#1b1e2d",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1917565085159153919",
+    "url": "https://x.com/sirane2525/status/1917565085159153919?s=20",
+    "timestamp": "2026-02-10T08:12:19.259462",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 13800
+    },
+    "images": [
+      {
+        "path": "static/images/1917565085159153919_1.jpg",
+        "url": "https://pbs.twimg.com/media/GpyPRn0bQAA-dLB?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 13.2,
+        "color": "#21235e",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1918289957732667894",
+    "url": "https://x.com/sirane2525/status/1918289957732667894?s=20",
+    "timestamp": "2026-02-10T08:12:28.099970",
+    "metrics": {
+      "likes": 599,
+      "reposts": 82,
+      "bookmarks": 41,
+      "views": 14600
+    },
+    "images": [
+      {
+        "path": "static/images/1918289957732667894_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gp8ie2ZbsAACAv1?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 17.9,
+        "color": "#edecea",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 4.1,
+    "save_rate": 6.84
+  },
+  {
+    "tweet_id": "1926973228901155231",
+    "url": "https://x.com/sirane2525/status/1926973228901155231?s=20",
+    "timestamp": "2026-02-10T08:12:36.535243",
+    "metrics": {
+      "likes": 0,
+      "reposts": 71,
+      "bookmarks": 62,
+      "views": 19400
+    },
+    "images": [
+      {
+        "path": "static/images/1926973228901155231_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gr377gnWEAA4he_?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.6,
+        "color": "#0c1160",
+        "brightness": "Dark"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1948948883683565760",
+    "url": "https://x.com/sirane2525/status/1948948883683565760?s=20",
+    "timestamp": "2026-02-10T08:12:46.212775",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 690,
+      "views": 187300
+    },
+    "images": [
+      {
+        "path": "static/images/1948948883683565760_1.jpg",
+        "url": "https://pbs.twimg.com/media/GwwOrOGbgAMoPRc?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 26.2,
+        "color": "#14131b",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1956223092143087893",
+    "url": "https://x.com/sirane2525/status/1956223092143087893?s=20",
+    "timestamp": "2026-02-10T08:12:56.146589",
+    "metrics": {
+      "likes": 0,
+      "reposts": 95,
+      "bookmarks": 305,
+      "views": 47800
+    },
+    "images": [
+      {
+        "path": "static/images/1956223092143087893_1.jpg",
+        "url": "https://pbs.twimg.com/media/GyXmh3Sa4Ac3K4X?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 24.3,
+        "color": "#e9dfd4",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1956523491798499612",
+    "url": "https://x.com/sirane2525/status/1956523491798499612?s=20",
+    "timestamp": "2026-02-10T08:13:04.751436",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 33800
+    },
+    "images": [
+      {
+        "path": "static/images/1956523491798499612_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gyb3vRCagAAAXeT?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.8,
+        "color": "#28292e",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1959239803490476538",
+    "url": "https://x.com/sirane2525/status/1959239803490476538?s=20",
+    "timestamp": "2026-02-10T08:13:14.642452",
+    "metrics": {
+      "likes": 1130,
+      "reposts": 87,
+      "bookmarks": 177,
+      "views": 21900
+    },
+    "images": [
+      {
+        "path": "static/images/1959239803490476538_1.jpg",
+        "url": "https://pbs.twimg.com/media/GzCeNi1boAALK0c?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 14.6,
+        "color": "#25282c",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 5.16,
+    "save_rate": 15.66
+  },
+  {
+    "tweet_id": "1963208969893359906",
+    "url": "https://x.com/sirane2525/status/1963208969893359906?s=20",
+    "timestamp": "2026-02-10T08:13:23.806342",
+    "metrics": {
+      "likes": 756,
+      "reposts": 76,
+      "bookmarks": 105,
+      "views": 18000
+    },
+    "images": [
+      {
+        "path": "static/images/1963208969893359906_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gz64JiFacAA4EWq?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 16.3,
+        "color": "#242831",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 4.2,
+    "save_rate": 13.89
+  },
+  {
+    "tweet_id": "1966812821968351258",
+    "url": "https://x.com/sirane2525/status/1966812821968351258?s=20",
+    "timestamp": "2026-02-10T08:13:32.487633",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 17900
+    },
+    "images": [
+      {
+        "path": "static/images/1966812821968351258_1.jpg",
+        "url": "https://pbs.twimg.com/media/G0uF1MrboAAN5be?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.6,
+        "color": "#060a5f",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1967421571309682692",
+    "url": "https://x.com/sirane2525/status/1967421571309682692?s=20",
+    "timestamp": "2026-02-10T08:13:40.148425",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1967488890509697373",
+    "url": "https://x.com/sirane2525/status/1967488890509697373?s=20",
+    "timestamp": "2026-02-10T08:13:49.273367",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1968276794706174058",
+    "url": "https://x.com/sirane2525/status/1968276794706174058?s=20",
+    "timestamp": "2026-02-10T08:13:58.390009",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1975154847671538048",
+    "url": "https://x.com/sirane2525/status/1975154847671538048?s=20",
+    "timestamp": "2026-02-10T08:14:08.340395",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1983851068221223085",
+    "url": "https://x.com/sirane2525/status/1983851068221223085?s=20",
+    "timestamp": "2026-02-10T08:14:16.065423",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "2003452715339579874",
+    "url": "https://x.com/sirane2525/status/2003452715339579874?s=20",
+    "timestamp": "2026-02-10T08:14:23.255899",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1816695329615458619",
+    "url": "https://x.com/RaM_606rn/status/1816695329615458619?s=20",
+    "timestamp": "2026-02-10T08:14:30.749901",
+    "metrics": {
+      "likes": 0,
+      "reposts": 2,
+      "bookmarks": 0,
+      "views": 530
+    },
+    "images": [
+      {
+        "path": "static/images/1816695329615458619_1.jpg",
+        "url": "https://pbs.twimg.com/media/GTYyxY-agAEDJ4J?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 18.6,
+        "color": "#191b1c",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1817212857672745393",
+    "url": "https://x.com/RaM_606rn/status/1817212857672745393?s=20",
+    "timestamp": "2026-02-10T08:14:38.333496",
+    "metrics": {
+      "likes": 8,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 476
+    },
+    "images": [
+      {
+        "path": "static/images/1817212857672745393_1.jpg",
+        "url": "https://pbs.twimg.com/media/GTgJdhWaQAAHbjf?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.5,
+        "color": "#9d9b9d",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.68,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1826199284905316533",
+    "url": "https://x.com/RaM_606rn/status/1826199284905316533?s=20",
+    "timestamp": "2026-02-10T08:14:46.002007",
+    "metrics": {
+      "likes": 10,
+      "reposts": 3,
+      "bookmarks": 0,
+      "views": 971
+    },
+    "images": [
+      {
+        "path": "static/images/1826199284905316533_1.jpg",
+        "url": "https://pbs.twimg.com/media/GVf2kPkbcAApK27?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.9,
+        "color": "#eff0ef",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.03,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1847956545142984991",
+    "url": "https://x.com/RaM_606rn/status/1847956545142984991?s=20",
+    "timestamp": "2026-02-10T08:14:51.728077",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1928777010140131837",
+    "url": "https://x.com/VERYVERY_HOT/status/1928777010140131837",
+    "timestamp": "2026-02-10T08:15:01.385741",
+    "metrics": {
+      "likes": 1927,
+      "reposts": 144,
+      "bookmarks": 172,
+      "views": 64900
+    },
+    "images": [
+      {
+        "path": "static/images/1928777010140131837_1.jpg",
+        "url": "https://pbs.twimg.com/media/GsRkcf7aMAELMUY?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.9,
+        "color": "#191b1f",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.97,
+    "save_rate": 8.93
+  },
+  {
+    "tweet_id": "1930208305269616846",
+    "url": "https://x.com/VERYVERY_HOT/status/1930208305269616846",
+    "timestamp": "2026-02-10T08:15:07.568242",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1963190533066789119",
+    "url": "https://x.com/VERYVERY_HOT/status/1963190533066789119",
+    "timestamp": "2026-02-10T08:15:13.906825",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1963923571903996036",
+    "url": "https://x.com/VERYVERY_HOT/status/1963923571903996036",
+    "timestamp": "2026-02-10T08:15:23.795778",
+    "metrics": {
+      "likes": 0,
+      "reposts": 124,
+      "bookmarks": 176,
+      "views": 44700
+    },
+    "images": [
+      {
+        "path": "static/images/1963923571903996036_1.jpg",
+        "url": "https://pbs.twimg.com/media/G0FCEHkbEAA15_e?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.0,
+        "color": "#5b6063",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "2002382762485912044",
+    "url": "https://x.com/___napo_leon___/status/2002382762485912044",
+    "timestamp": "2026-02-10T08:15:30.306556",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1786711631160053855",
+    "url": "https://x.com/FuriFuriFFF/status/1786711631160053855",
+    "timestamp": "2026-02-10T08:15:40.428770",
+    "metrics": {
+      "likes": 0,
+      "reposts": 304,
+      "bookmarks": 604,
+      "views": 186500
+    },
+    "images": [
+      {
+        "path": "static/images/1786711631160053855_1.jpg",
+        "url": "https://pbs.twimg.com/media/GMusvlhbYAA_qSv?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.3,
+        "color": "#54606b",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1786910452230021474",
+    "url": "https://x.com/FuriFuriFFF/status/1786910452230021474",
+    "timestamp": "2026-02-10T08:15:46.632279",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1787403115152715918",
+    "url": "https://x.com/FuriFuriFFF/status/1787403115152715918",
+    "timestamp": "2026-02-10T08:15:54.785837",
+    "metrics": {
+      "likes": 0,
+      "reposts": 413,
+      "bookmarks": 2072,
+      "views": 494000
+    },
+    "images": [
+      {
+        "path": "static/images/1787403115152715918_1.jpg",
+        "url": "https://pbs.twimg.com/media/GM4hp_MbgAAM3ej?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.6,
+        "color": "#545c6d",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1789240533422149769",
+    "url": "https://x.com/FuriFuriFFF/status/1789240533422149769",
+    "timestamp": "2026-02-10T08:16:03.505572",
+    "metrics": {
+      "likes": 2308,
+      "reposts": 251,
+      "bookmarks": 329,
+      "views": 108500
+    },
+    "images": [
+      {
+        "path": "static/images/1789240533422149769_1.jpg",
+        "url": "https://pbs.twimg.com/media/GNSox82bUAA1KjV?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 14.2,
+        "color": "#9f9ca5",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.13,
+    "save_rate": 14.25
+  },
+  {
+    "tweet_id": "1791400870023921927",
+    "url": "https://x.com/FuriFuriFFF/status/1791400870023921927",
+    "timestamp": "2026-02-10T08:16:11.841817",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 245,
+      "views": 89400
+    },
+    "images": [
+      {
+        "path": "static/images/1791400870023921927_1.jpg",
+        "url": "https://pbs.twimg.com/media/GNxVmErbAAAQQWR?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.4,
+        "color": "#e7e3ef",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1794655959660519538",
+    "url": "https://x.com/FuriFuriFFF/status/1794655959660519538",
+    "timestamp": "2026-02-10T08:16:17.582388",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1794685098765565989",
+    "url": "https://x.com/FuriFuriFFF/status/1794685098765565989",
+    "timestamp": "2026-02-10T08:16:26.881584",
+    "metrics": {
+      "likes": 695,
+      "reposts": 81,
+      "bookmarks": 46,
+      "views": 42400
+    },
+    "images": [
+      {
+        "path": "static/images/1794685098765565989_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOgAkxHbUAEbgwT?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.6,
+        "color": "#97a09e",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.64,
+    "save_rate": 6.62
+  },
+  {
+    "tweet_id": "1795014364354740490",
+    "url": "https://x.com/FuriFuriFFF/status/1795014364354740490",
+    "timestamp": "2026-02-10T08:16:36.414390",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 18500
+    },
+    "images": [
+      {
+        "path": "static/images/1795014364354740490_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOksCcnbwAA0eJH?format=jpg&name=orig",
+        "composition": "Object/Scenery",
+        "confidence": 26.3,
+        "color": "#131a18",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1795403206102814800",
+    "url": "https://x.com/FuriFuriFFF/status/1795403206102814800",
+    "timestamp": "2026-02-10T08:16:45.075748",
+    "metrics": {
+      "likes": 405,
+      "reposts": 48,
+      "bookmarks": 27,
+      "views": 26900
+    },
+    "images": [
+      {
+        "path": "static/images/1795403206102814800_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOqNr2DbUAAjcJG?format=jpg&name=orig",
+        "composition": "Object/Scenery",
+        "confidence": 19.0,
+        "color": "#1a1f1d",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.51,
+    "save_rate": 6.67
+  },
+  {
+    "tweet_id": "1795767792509280696",
+    "url": "https://x.com/FuriFuriFFF/status/1795767792509280696",
+    "timestamp": "2026-02-10T08:16:50.879964",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1796128546131177857",
+    "url": "https://x.com/FuriFuriFFF/status/1796128546131177857",
+    "timestamp": "2026-02-10T08:16:58.866261",
+    "metrics": {
+      "likes": 292,
+      "reposts": 33,
+      "bookmarks": 18,
+      "views": 20900
+    },
+    "images": [
+      {
+        "path": "static/images/1796128546131177857_1.jpg",
+        "url": "https://pbs.twimg.com/media/GO0hY6ya4AAO-u-?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.7,
+        "color": "#171b1b",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.4,
+    "save_rate": 6.16
+  },
+  {
+    "tweet_id": "1797662368237023733",
+    "url": "https://x.com/FuriFuriFFF/status/1797662368237023733",
+    "timestamp": "2026-02-10T08:17:07.293587",
+    "metrics": {
+      "likes": 312,
+      "reposts": 25,
+      "bookmarks": 26,
+      "views": 12400
+    },
+    "images": [
+      {
+        "path": "static/images/1797662368237023733_1.jpg",
+        "url": "https://pbs.twimg.com/media/GPKUZEtbAAAiW5w?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.4,
+        "color": "#cbd3d9",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.52,
+    "save_rate": 8.33
+  },
+  {
+    "tweet_id": "1798711256909824250",
+    "url": "https://x.com/FuriFuriFFF/status/1798711256909824250",
+    "timestamp": "2026-02-10T08:17:16.303947",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 224700
+    },
+    "images": [
+      {
+        "path": "static/images/1798711256909824250_1.jpg",
+        "url": "https://pbs.twimg.com/media/GPZOVejagAE7a8D?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 14.5,
+        "color": "#5d5f5c",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1799033699658531166",
+    "url": "https://x.com/FuriFuriFFF/status/1799033699658531166",
+    "timestamp": "2026-02-10T08:17:24.262559",
+    "metrics": {
+      "likes": 0,
+      "reposts": 41,
+      "bookmarks": 34,
+      "views": 19600
+    },
+    "images": [
+      {
+        "path": "static/images/1799033699658531166_1.jpg",
+        "url": "https://pbs.twimg.com/media/GPdznG9a0AAWYgv?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.3,
+        "color": "#191d1c",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1801219761235493332",
+    "url": "https://x.com/FuriFuriFFF/status/1801219761235493332",
+    "timestamp": "2026-02-10T08:17:33.007754",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 27,
+      "views": 34800
+    },
+    "images": [
+      {
+        "path": "static/images/1801219761235493332_1.jpg",
+        "url": "https://pbs.twimg.com/media/GP83zxQbsAAE5U1?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.3,
+        "color": "#1b251f",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1804852817875828880",
+    "url": "https://x.com/FuriFuriFFF/status/1804852817875828880",
+    "timestamp": "2026-02-10T08:17:42.500835",
+    "metrics": {
+      "likes": 1191,
+      "reposts": 92,
+      "bookmarks": 199,
+      "views": 49500
+    },
+    "images": [
+      {
+        "path": "static/images/1804852817875828880_1.jpg",
+        "url": "https://pbs.twimg.com/media/GQwgDg_awAE-qvP?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 16.1,
+        "color": "#f6f8f8",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.41,
+    "save_rate": 16.71
+  },
+  {
+    "tweet_id": "1808864157489639899",
+    "url": "https://x.com/FuriFuriFFF/status/1808864157489639899",
+    "timestamp": "2026-02-10T08:17:51.129370",
+    "metrics": {
+      "likes": 73,
+      "reposts": 13,
+      "bookmarks": 2,
+      "views": 5644
+    },
+    "images": [
+      {
+        "path": "static/images/1808864157489639899_1.jpg",
+        "url": "https://pbs.twimg.com/media/GRpgV6jbMAAg-8h?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.1,
+        "color": "#9aa9a5",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.29,
+    "save_rate": 2.74
+  },
+  {
+    "tweet_id": "1828052338994745697",
+    "url": "https://x.com/FuriFuriFFF/status/1828052338994745697",
+    "timestamp": "2026-02-10T08:17:59.067915",
+    "metrics": {
+      "likes": 213,
+      "reposts": 26,
+      "bookmarks": 15,
+      "views": 8655
+    },
+    "images": [
+      {
+        "path": "static/images/1828052338994745697_1.jpg",
+        "url": "https://pbs.twimg.com/media/GV6L6Q6aIAAXUP1?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 16.7,
+        "color": "#161c1b",
+        "brightness": "Dark"
+      }
+    ],
+    "engagement_rate": 2.46,
+    "save_rate": 7.04
+  },
+  {
+    "tweet_id": "1837119734967587293",
+    "url": "https://x.com/FuriFuriFFF/status/1837119734967587293",
+    "timestamp": "2026-02-10T08:18:08.003242",
+    "metrics": {
+      "likes": 0,
+      "reposts": 24,
+      "bookmarks": 21,
+      "views": 11500
+    },
+    "images": [
+      {
+        "path": "static/images/1837119734967587293_1.jpg",
+        "url": "https://pbs.twimg.com/media/GX7CqCDbgAAEjH_?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 23.7,
+        "color": "#111320",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1840923722871619877",
+    "url": "https://x.com/FuriFuriFFF/status/1840923722871619877",
+    "timestamp": "2026-02-10T08:18:14.273482",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1851235468454887517",
+    "url": "https://x.com/FuriFuriFFF/status/1851235468454887517",
+    "timestamp": "2026-02-10T08:18:22.980249",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 13400
+    },
+    "images": [
+      {
+        "path": "static/images/1851235468454887517_1.jpg",
+        "url": "https://pbs.twimg.com/media/GbDo1m3bQAEvHf3?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 18.7,
+        "color": "#919394",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1895694810264322385",
+    "url": "https://x.com/FuriFuriFFF/status/1895694810264322385",
+    "timestamp": "2026-02-10T08:18:32.887416",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 7330
+    },
+    "images": [
+      {
+        "path": "static/images/1895694810264322385_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gk7cTeTbQAQw_cY?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.2,
+        "color": "#dbdbe7",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1896178165296566384",
+    "url": "https://x.com/FuriFuriFFF/status/1896178165296566384",
+    "timestamp": "2026-02-10T08:18:41.126379",
+    "metrics": {
+      "likes": 0,
+      "reposts": 27,
+      "bookmarks": 21,
+      "views": 12200
+    },
+    "images": [
+      {
+        "path": "static/images/1896178165296566384_1.jpg",
+        "url": "https://pbs.twimg.com/media/GlCT_FQbUAAjhgc?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.9,
+        "color": "#5b5d6a",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1904828705522036823",
+    "url": "https://x.com/FuriFuriFFF/status/1904828705522036823",
+    "timestamp": "2026-02-10T08:18:49.980097",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 3,
+      "views": 3977
+    },
+    "images": [
+      {
+        "path": "static/images/1904828705522036823_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gm9PmybbAAANnvt?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 16.0,
+        "color": "#040b57",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1914836037094006896",
+    "url": "https://x.com/FuriFuriFFF/status/1914836037094006896",
+    "timestamp": "2026-02-10T08:18:59.274632",
+    "metrics": {
+      "likes": 98,
+      "reposts": 13,
+      "bookmarks": 3,
+      "views": 3373
+    },
+    "images": [
+      {
+        "path": "static/images/1914836037094006896_1.jpg",
+        "url": "https://pbs.twimg.com/media/GpLdODba4AIdB_x?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 19.1,
+        "color": "#5c5c5f",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.91,
+    "save_rate": 3.06
+  },
+  {
+    "tweet_id": "1941450450269868214",
+    "url": "https://x.com/FuriFuriFFF/status/1941450450269868214",
+    "timestamp": "2026-02-10T08:19:09.618122",
+    "metrics": {
+      "likes": 485,
+      "reposts": 48,
+      "bookmarks": 63,
+      "views": 15400
+    },
+    "images": [
+      {
+        "path": "static/images/1941450450269868214_1.jpg",
+        "url": "https://pbs.twimg.com/media/GvFq4kUaAAIiM4W?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.4,
+        "color": "#24242b",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.15,
+    "save_rate": 12.99
+  },
+  {
+    "tweet_id": "1941455450672886058",
+    "url": "https://x.com/FuriFuriFFF/status/1941455450672886058",
+    "timestamp": "2026-02-10T08:19:18.704917",
+    "metrics": {
+      "likes": 406,
+      "reposts": 42,
+      "bookmarks": 62,
+      "views": 14000
+    },
+    "images": [
+      {
+        "path": "static/images/1941455450672886058_1.jpg",
+        "url": "https://pbs.twimg.com/media/GvFvbW2XsAA4JP7?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 14.7,
+        "color": "#d8dae8",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.9,
+    "save_rate": 15.27
+  },
+  {
+    "tweet_id": "1942144834846019818",
+    "url": "https://x.com/FuriFuriFFF/status/1942144834846019818",
+    "timestamp": "2026-02-10T08:19:27.746279",
+    "metrics": {
+      "likes": 420,
+      "reposts": 42,
+      "bookmarks": 66,
+      "views": 10600
+    },
+    "images": [
+      {
+        "path": "static/images/1942144834846019818_1.jpg",
+        "url": "https://pbs.twimg.com/media/GvPibTdXwAEREgZ?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.2,
+        "color": "#a8a09e",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.96,
+    "save_rate": 15.71
+  },
+  {
+    "tweet_id": "1945284187621126332",
+    "url": "https://x.com/FuriFuriFFF/status/1945284187621126332",
+    "timestamp": "2026-02-10T08:19:37.707053",
+    "metrics": {
+      "likes": 540,
+      "reposts": 46,
+      "bookmarks": 87,
+      "views": 12200
+    },
+    "images": [
+      {
+        "path": "static/images/1945284187621126332_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gv8JpfgXIAA7nTj?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.9,
+        "color": "#5e6359",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 4.43,
+    "save_rate": 16.11
+  },
+  {
+    "tweet_id": "1494237674160357378",
+    "url": "https://x.com/mm_23_22/status/1494237674160357378",
+    "timestamp": "2026-02-10T08:19:43.214302",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1498255561892429828",
+    "url": "https://x.com/mm_23_22/status/1498255561892429828",
+    "timestamp": "2026-02-10T08:19:52.828564",
+    "metrics": {
+      "likes": 640,
+      "reposts": 92,
+      "bookmarks": 25,
+      "views": 0
+    },
+    "images": [
+      {
+        "path": "static/images/1498255561892429828_1.jpg",
+        "url": "https://pbs.twimg.com/media/FMrffDxaMAEnCjW?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.7,
+        "color": "#050b19",
+        "brightness": "Dark"
+      }
+    ],
+    "engagement_rate": 0,
+    "save_rate": 3.91
+  },
+  {
+    "tweet_id": "1499698807449481219",
+    "url": "https://x.com/mm_23_22/status/1499698807449481219",
+    "timestamp": "2026-02-10T08:19:58.268583",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1741025503413489897",
+    "url": "https://x.com/mm_23_22/status/1741025503413489897",
+    "timestamp": "2026-02-10T08:20:03.607938",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1867160393598312568",
+    "url": "https://x.com/mm_23_22/status/1867160393598312568",
+    "timestamp": "2026-02-10T08:20:09.176619",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1867177778904539587",
+    "url": "https://x.com/mm_23_22/status/1867177778904539587",
+    "timestamp": "2026-02-10T08:20:14.828168",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1869343340036329645",
+    "url": "https://x.com/mm_23_22/status/1869343340036329645",
+    "timestamp": "2026-02-10T08:20:20.466117",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1873323965990797611",
+    "url": "https://x.com/mm_23_22/status/1873323965990797611",
+    "timestamp": "2026-02-10T08:20:25.916698",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1873648812314820951",
+    "url": "https://x.com/mm_23_22/status/1873648812314820951",
+    "timestamp": "2026-02-10T08:20:33.835979",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1893953472279756829",
+    "url": "https://x.com/mm_23_22/status/1893953472279756829",
+    "timestamp": "2026-02-10T08:20:41.225598",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1977338423720780174",
+    "url": "https://x.com/up_up_apu/status/1977338423720780174",
+    "timestamp": "2026-02-10T08:20:46.796379",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1704447257804992571",
+    "url": "https://x.com/chacha_0320/status/1704447257804992571",
+    "timestamp": "2026-02-10T08:20:52.339606",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1708064920833843384",
+    "url": "https://x.com/chacha_0320/status/1708064920833843384",
+    "timestamp": "2026-02-10T08:20:57.948008",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1710968796016779643",
+    "url": "https://x.com/chacha_0320/status/1710968796016779643",
+    "timestamp": "2026-02-10T08:21:06.814015",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 26800
+    },
+    "images": [
+      {
+        "path": "static/images/1710968796016779643_1.jpg",
+        "url": "https://pbs.twimg.com/media/F76VDMkaEAAM2iN?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.5,
+        "color": "#10141f",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1715322849219731737",
+    "url": "https://x.com/chacha_0320/status/1715322849219731737",
+    "timestamp": "2026-02-10T08:21:15.232434",
+    "metrics": {
+      "likes": 649,
+      "reposts": 127,
+      "bookmarks": 38,
+      "views": 26900
+    },
+    "images": [
+      {
+        "path": "static/images/1715322849219731737_1.jpg",
+        "url": "https://pbs.twimg.com/media/F84NCdSaUAA_QUU?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.6,
+        "color": "#101722",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.41,
+    "save_rate": 5.86
+  },
+  {
+    "tweet_id": "1717505642813104572",
+    "url": "https://x.com/chacha_0320/status/1717505642813104572",
+    "timestamp": "2026-02-10T08:21:20.776666",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1724381467801985291",
+    "url": "https://x.com/chacha_0320/status/1724381467801985291",
+    "timestamp": "2026-02-10T08:21:26.338049",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1732353156322127928",
+    "url": "https://x.com/chacha_0320/status/1732353156322127928",
+    "timestamp": "2026-02-10T08:21:31.995231",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1738710281558360149",
+    "url": "https://x.com/chacha_0320/status/1738710281558360149",
+    "timestamp": "2026-02-10T08:21:37.605219",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1739590599052087352",
+    "url": "https://x.com/chacha_0320/status/1739590599052087352",
+    "timestamp": "2026-02-10T08:21:45.788262",
+    "metrics": {
+      "likes": 375,
+      "reposts": 62,
+      "bookmarks": 9,
+      "views": 13100
+    },
+    "images": [
+      {
+        "path": "static/images/1739590599052087352_1.jpg",
+        "url": "https://pbs.twimg.com/media/GCREbWraoAAA9ds?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.4,
+        "color": "#e5e3e5",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.86,
+    "save_rate": 2.4
+  },
+  {
+    "tweet_id": "1751451469189190115",
+    "url": "https://x.com/chacha_0320/status/1751451469189190115",
+    "timestamp": "2026-02-10T08:21:51.305411",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1753737395563053326",
+    "url": "https://x.com/chacha_0320/status/1753737395563053326",
+    "timestamp": "2026-02-10T08:21:56.780714",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1757727199174816042",
+    "url": "https://x.com/chacha_0320/status/1757727199174816042",
+    "timestamp": "2026-02-10T08:22:04.920895",
+    "metrics": {
+      "likes": 0,
+      "reposts": 98,
+      "bookmarks": 39,
+      "views": 19300
+    },
+    "images": [
+      {
+        "path": "static/images/1757727199174816042_1.jpg",
+        "url": "https://pbs.twimg.com/media/GGSzkLJaYAE2Gay?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 18.6,
+        "color": "#228bec",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1759175803387162941",
+    "url": "https://x.com/chacha_0320/status/1759175803387162941",
+    "timestamp": "2026-02-10T08:22:10.676510",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1759352860544999888",
+    "url": "https://x.com/chacha_0320/status/1759352860544999888",
+    "timestamp": "2026-02-10T08:22:16.308482",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1760987920331341939",
+    "url": "https://x.com/chacha_0320/status/1760987920331341939",
+    "timestamp": "2026-02-10T08:22:21.852610",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1763157479461150766",
+    "url": "https://x.com/chacha_0320/status/1763157479461150766",
+    "timestamp": "2026-02-10T08:22:27.385083",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1763880300822872439",
+    "url": "https://x.com/chacha_0320/status/1763880300822872439",
+    "timestamp": "2026-02-10T08:22:32.953228",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1764237163078864908",
+    "url": "https://x.com/chacha_0320/status/1764237163078864908",
+    "timestamp": "2026-02-10T08:22:38.645074",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1765331922493075555",
+    "url": "https://x.com/chacha_0320/status/1765331922493075555",
+    "timestamp": "2026-02-10T08:22:48.095815",
+    "metrics": {
+      "likes": 1850,
+      "reposts": 126,
+      "bookmarks": 298,
+      "views": 57800
+    },
+    "images": [
+      {
+        "path": "static/images/1765331922493075555_1.jpg",
+        "url": "https://pbs.twimg.com/media/GH-4Bp4boAASQoi?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.0,
+        "color": "#aca69d",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.2,
+    "save_rate": 16.11
+  },
+  {
+    "tweet_id": "1767510966739358154",
+    "url": "https://x.com/chacha_0320/status/1767510966739358154",
+    "timestamp": "2026-02-10T08:22:53.856321",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1768234937050927171",
+    "url": "https://x.com/chacha_0320/status/1768234937050927171",
+    "timestamp": "2026-02-10T08:22:59.375516",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1769689392933994855",
+    "url": "https://x.com/chacha_0320/status/1769689392933994855",
+    "timestamp": "2026-02-10T08:23:05.028235",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1770767966990139496",
+    "url": "https://x.com/chacha_0320/status/1770767966990139496",
+    "timestamp": "2026-02-10T08:23:10.628855",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1772580705026896217",
+    "url": "https://x.com/chacha_0320/status/1772580705026896217",
+    "timestamp": "2026-02-10T08:23:19.815727",
+    "metrics": {
+      "likes": 1137,
+      "reposts": 139,
+      "bookmarks": 93,
+      "views": 33300
+    },
+    "images": [
+      {
+        "path": "static/images/1772580705026896217_1.jpg",
+        "url": "https://pbs.twimg.com/media/GJl4wT3bMAABtmU?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.3,
+        "color": "#0125a2",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.41,
+    "save_rate": 8.18
+  },
+  {
+    "tweet_id": "1773685247843897745",
+    "url": "https://x.com/chacha_0320/status/1773685247843897745",
+    "timestamp": "2026-02-10T08:23:25.402940",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1775490229304193149",
+    "url": "https://x.com/chacha_0320/status/1775490229304193149",
+    "timestamp": "2026-02-10T08:23:31.082611",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1776804501665788169",
+    "url": "https://x.com/chacha_0320/status/1776804501665788169",
+    "timestamp": "2026-02-10T08:23:36.481251",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1776929579321757722",
+    "url": "https://x.com/chacha_0320/status/1776929579321757722",
+    "timestamp": "2026-02-10T08:23:44.292333",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1778373674623729907",
+    "url": "https://x.com/chacha_0320/status/1778373674623729907",
+    "timestamp": "2026-02-10T08:23:54.710402",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1779105226638909913",
+    "url": "https://x.com/chacha_0320/status/1779105226638909913",
+    "timestamp": "2026-02-10T08:24:02.738050",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1780554781146370488",
+    "url": "https://x.com/chacha_0320/status/1780554781146370488",
+    "timestamp": "2026-02-10T08:24:11.366881",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1780589330714788000",
+    "url": "https://x.com/chacha_0320/status/1780589330714788000",
+    "timestamp": "2026-02-10T08:24:22.008640",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1781278629198184746",
+    "url": "https://x.com/chacha_0320/status/1781278629198184746",
+    "timestamp": "2026-02-10T08:24:29.619730",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1782001963519066354",
+    "url": "https://x.com/chacha_0320/status/1782001963519066354",
+    "timestamp": "2026-02-10T08:24:34.974504",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1783451323020746816",
+    "url": "https://x.com/chacha_0320/status/1783451323020746816",
+    "timestamp": "2026-02-10T08:24:40.487321",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1784537605725635046",
+    "url": "https://x.com/chacha_0320/status/1784537605725635046",
+    "timestamp": "2026-02-10T08:24:46.153102",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1785986378939220286",
+    "url": "https://x.com/chacha_0320/status/1785986378939220286",
+    "timestamp": "2026-02-10T08:24:53.522978",
+    "metrics": {
+      "likes": 507,
+      "reposts": 85,
+      "bookmarks": 23,
+      "views": 19400
+    },
+    "images": [
+      {
+        "path": "static/images/1785986378939220286_1.jpg",
+        "url": "https://pbs.twimg.com/media/GMkZIy0aUAAvwfS?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.3,
+        "color": "#dadbe7",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.61,
+    "save_rate": 4.54
+  },
+  {
+    "tweet_id": "1786703846720610533",
+    "url": "https://x.com/chacha_0320/status/1786703846720610533",
+    "timestamp": "2026-02-10T08:25:01.400708",
+    "metrics": {
+      "likes": 993,
+      "reposts": 118,
+      "bookmarks": 93,
+      "views": 28700
+    },
+    "images": [
+      {
+        "path": "static/images/1786703846720610533_1.jpg",
+        "url": "https://pbs.twimg.com/media/GMulrXNaAAEGoib?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.9,
+        "color": "#d0b5a2",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.46,
+    "save_rate": 9.37
+  },
+  {
+    "tweet_id": "1787079435478585852",
+    "url": "https://x.com/chacha_0320/status/1787079435478585852",
+    "timestamp": "2026-02-10T08:25:07.256156",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1788167506311696867",
+    "url": "https://x.com/chacha_0320/status/1788167506311696867",
+    "timestamp": "2026-02-10T08:25:12.791529",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1791061273255502055",
+    "url": "https://x.com/chacha_0320/status/1791061273255502055",
+    "timestamp": "2026-02-10T08:25:20.739736",
+    "metrics": {
+      "likes": 802,
+      "reposts": 108,
+      "bookmarks": 55,
+      "views": 30500
+    },
+    "images": [
+      {
+        "path": "static/images/1791061273255502055_1.jpg",
+        "url": "https://pbs.twimg.com/media/GNsgu5Ob0AA9r60?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.7,
+        "color": "#055be7",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.63,
+    "save_rate": 6.86
+  },
+  {
+    "tweet_id": "1792513820168241184",
+    "url": "https://x.com/chacha_0320/status/1792513820168241184",
+    "timestamp": "2026-02-10T08:25:28.853203",
+    "metrics": {
+      "likes": 720,
+      "reposts": 108,
+      "bookmarks": 53,
+      "views": 24700
+    },
+    "images": [
+      {
+        "path": "static/images/1792513820168241184_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOBJ0R8bsAAWerW?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.7,
+        "color": "#d1d7e2",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.91,
+    "save_rate": 7.36
+  },
+  {
+    "tweet_id": "1793241072849858900",
+    "url": "https://x.com/chacha_0320/status/1793241072849858900",
+    "timestamp": "2026-02-10T08:25:37.316418",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 24,
+      "views": 22700
+    },
+    "images": [
+      {
+        "path": "static/images/1793241072849858900_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOLfPu1boAEhBMb?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.9,
+        "color": "#cdd5ec",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1794332634186998210",
+    "url": "https://x.com/chacha_0320/status/1794332634186998210",
+    "timestamp": "2026-02-10T08:25:46.050495",
+    "metrics": {
+      "likes": 815,
+      "reposts": 145,
+      "bookmarks": 102,
+      "views": 32000
+    },
+    "images": [
+      {
+        "path": "static/images/1794332634186998210_1.jpg",
+        "url": "https://pbs.twimg.com/media/GObABMaawAAXg35?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.3,
+        "color": "#a6b0d0",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.55,
+    "save_rate": 12.52
+  },
+  {
+    "tweet_id": "1794637984488464526",
+    "url": "https://x.com/chacha_0320/status/1794637984488464526",
+    "timestamp": "2026-02-10T08:25:54.116189",
+    "metrics": {
+      "likes": 1754,
+      "reposts": 126,
+      "bookmarks": 219,
+      "views": 51600
+    },
+    "images": [
+      {
+        "path": "static/images/1794637984488464526_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOfVuYba8AAhaCH?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 29.0,
+        "color": "#d5b1a0",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.4,
+    "save_rate": 12.49
+  },
+  {
+    "tweet_id": "1795410820354158794",
+    "url": "https://x.com/chacha_0320/status/1795410820354158794",
+    "timestamp": "2026-02-10T08:26:02.466416",
+    "metrics": {
+      "likes": 2080,
+      "reposts": 214,
+      "bookmarks": 236,
+      "views": 70900
+    },
+    "images": [
+      {
+        "path": "static/images/1795410820354158794_1.jpg",
+        "url": "https://pbs.twimg.com/media/GOqUnvtaMAA_fcO?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 20.2,
+        "color": "#ac9b97",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.93,
+    "save_rate": 11.35
+  },
+  {
+    "tweet_id": "1799725231864782946",
+    "url": "https://x.com/chacha_0320/status/1799725231864782946",
+    "timestamp": "2026-02-10T08:26:10.459946",
+    "metrics": {
+      "likes": 870,
+      "reposts": 92,
+      "bookmarks": 56,
+      "views": 34200
+    },
+    "images": [
+      {
+        "path": "static/images/1799725231864782946_1.jpg",
+        "url": "https://pbs.twimg.com/media/GPnojrna4AAckPG?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 23.4,
+        "color": "#262b30",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.54,
+    "save_rate": 6.44
+  },
+  {
+    "tweet_id": "1800494572457624000",
+    "url": "https://x.com/chacha_0320/status/1800494572457624000",
+    "timestamp": "2026-02-10T08:26:16.014881",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1801948823197212852",
+    "url": "https://x.com/chacha_0320/status/1801948823197212852",
+    "timestamp": "2026-02-10T08:26:23.797653",
+    "metrics": {
+      "likes": 597,
+      "reposts": 93,
+      "bookmarks": 35,
+      "views": 28400
+    },
+    "images": [
+      {
+        "path": "static/images/1801948823197212852_1.jpg",
+        "url": "https://pbs.twimg.com/media/GQHO5jAaMAAhWh4?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 13.6,
+        "color": "#dbd8d6",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.1,
+    "save_rate": 5.86
+  },
+  {
+    "tweet_id": "1802294268070932849",
+    "url": "https://x.com/chacha_0320/status/1802294268070932849",
+    "timestamp": "2026-02-10T08:26:29.924523",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1803750440452108766",
+    "url": "https://x.com/chacha_0320/status/1803750440452108766",
+    "timestamp": "2026-02-10T08:26:39.633125",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1804722819076592044",
+    "url": "https://x.com/chacha_0320/status/1804722819076592044",
+    "timestamp": "2026-02-10T08:26:50.127470",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1804833270653411586",
+    "url": "https://x.com/chacha_0320/status/1804833270653411586",
+    "timestamp": "2026-02-10T08:26:58.887454",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1805931970855100434",
+    "url": "https://x.com/chacha_0320/status/1805931970855100434",
+    "timestamp": "2026-02-10T08:27:08.375077",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1806648444607741966",
+    "url": "https://x.com/chacha_0320/status/1806648444607741966",
+    "timestamp": "2026-02-10T08:27:16.323389",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1806981158066090008",
+    "url": "https://x.com/chacha_0320/status/1806981158066090008",
+    "timestamp": "2026-02-10T08:27:25.168420",
+    "metrics": {
+      "likes": 3017,
+      "reposts": 188,
+      "bookmarks": 382,
+      "views": 120200
+    },
+    "images": [
+      {
+        "path": "static/images/1806981158066090008_1.jpg",
+        "url": "https://pbs.twimg.com/media/GROvyMCbAAAHCs3?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 12.9,
+        "color": "#5a5e62",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.51,
+    "save_rate": 12.66
+  },
+  {
+    "tweet_id": "1808091693402710092",
+    "url": "https://x.com/chacha_0320/status/1808091693402710092",
+    "timestamp": "2026-02-10T08:27:33.830092",
+    "metrics": {
+      "likes": 0,
+      "reposts": 162,
+      "bookmarks": 189,
+      "views": 43900
+    },
+    "images": [
+      {
+        "path": "static/images/1808091693402710092_1.jpg",
+        "url": "https://pbs.twimg.com/media/GRehzukb0AIyGdx?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.4,
+        "color": "#6898e2",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1809187653885263916",
+    "url": "https://x.com/chacha_0320/status/1809187653885263916",
+    "timestamp": "2026-02-10T08:27:42.758287",
+    "metrics": {
+      "likes": 2192,
+      "reposts": 212,
+      "bookmarks": 260,
+      "views": 83600
+    },
+    "images": [
+      {
+        "path": "static/images/1809187653885263916_1.jpg",
+        "url": "https://pbs.twimg.com/media/GRuGlBzawAAKQY8?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.1,
+        "color": "#a69ba3",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.62,
+    "save_rate": 11.86
+  },
+  {
+    "tweet_id": "1809458074744418323",
+    "url": "https://x.com/chacha_0320/status/1809458074744418323",
+    "timestamp": "2026-02-10T08:27:50.879685",
+    "metrics": {
+      "likes": 0,
+      "reposts": 47,
+      "bookmarks": 33,
+      "views": 31100
+    },
+    "images": [
+      {
+        "path": "static/images/1809458074744418323_1.jpg",
+        "url": "https://pbs.twimg.com/media/GRx8hroaQAA5qzi?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.0,
+        "color": "#aba9aa",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1809550589409505419",
+    "url": "https://x.com/chacha_0320/status/1809550589409505419",
+    "timestamp": "2026-02-10T08:27:59.550303",
+    "metrics": {
+      "likes": 783,
+      "reposts": 103,
+      "bookmarks": 34,
+      "views": 47300
+    },
+    "images": [
+      {
+        "path": "static/images/1809550589409505419_1.jpg",
+        "url": "https://pbs.twimg.com/media/GRzQqqracAApACX?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 14.1,
+        "color": "#1f252b",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 1.66,
+    "save_rate": 4.34
+  },
+  {
+    "tweet_id": "1810275468085702956",
+    "url": "https://x.com/chacha_0320/status/1810275468085702956",
+    "timestamp": "2026-02-10T08:28:05.501840",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 0
+    },
+    "images": [],
+    "engagement_rate": 0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1811365148457832475",
+    "url": "https://x.com/chacha_0320/status/1811365148457832475",
+    "timestamp": "2026-02-10T08:28:14.142480",
+    "metrics": {
+      "likes": 1537,
+      "reposts": 174,
+      "bookmarks": 198,
+      "views": 43500
+    },
+    "images": [
+      {
+        "path": "static/images/1811365148457832475_1.jpg",
+        "url": "https://pbs.twimg.com/media/GSNC_x-awAAAADH?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 18.4,
+        "color": "#0771cb",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.53,
+    "save_rate": 12.88
+  },
+  {
+    "tweet_id": "1812447652862374353",
+    "url": "https://x.com/chacha_0320/status/1812447652862374353",
+    "timestamp": "2026-02-10T08:28:22.948340",
+    "metrics": {
+      "likes": 0,
+      "reposts": 0,
+      "bookmarks": 0,
+      "views": 131300
+    },
+    "images": [
+      {
+        "path": "static/images/1812447652862374353_1.jpg",
+        "url": "https://pbs.twimg.com/media/GScbgurWIAA6Nx2?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 13.8,
+        "color": "#202021",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
+  },
+  {
+    "tweet_id": "1813179822375596445",
+    "url": "https://x.com/chacha_0320/status/1813179822375596445",
+    "timestamp": "2026-02-10T08:28:31.793720",
+    "metrics": {
+      "likes": 0,
+      "reposts": 108,
+      "bookmarks": 32,
+      "views": 26500
+    },
+    "images": [
+      {
+        "path": "static/images/1813179822375596445_1.jpg",
+        "url": "https://pbs.twimg.com/media/GSm1bgUbIAEh5it?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 15.6,
+        "color": "#20232b",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 0.0,
+    "save_rate": 0
   }
 ]
