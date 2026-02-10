@@ -1,0 +1,22 @@
+[
+  {
+    "tweet_id": "1867910835085148236",
+    "url": "https://x.com/snow_sayu_/status/1867910835085148236?s=20",
+    "timestamp": "2026-02-10T05:04:57.237157",
+    "metrics": {
+      "likes": 15500,
+      "reposts": 851,
+      "bookmarks": 1465000,
+      "views": 821500
+    },
+    "images": [
+      {
+        "path": "downloaded_images/1867910835085148236_1.jpg",
+        "url": "https://pbs.twimg.com/media/GewnALebkAA32Dc?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 99.9
+      }
+    ],
+    "engagement_rate": 1.89
+  }
+]

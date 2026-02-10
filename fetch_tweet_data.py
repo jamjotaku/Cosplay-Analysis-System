@@ -6,31 +6,38 @@ from playwright.async_api import async_playwright
 
 # --- 設定 ---
 AUTH_FILE = 'auth.json'
+SAVE_DIR = 'downloaded_images'
+
+# フォルダがない場合は作成
+if not os.path.exists(SAVE_DIR):
+    os.makedirs(SAVE_DIR)
 
 def extract_number_from_label(text):
-    """ 
-    aria-label="15,234 Likes" や "851 Reposts" から数字だけを抜き出す
-    画面表示が "15K" でも、aria-label は正確な数字を持っていることが多い
-    """
     if not text: return 0
-    # カンマ削除
     clean_text = text.replace(',', '')
-    
-    # "15K" 表記の場合の対応 (aria-labelも短縮されている場合への保険)
     multiplier = 1
-    if 'K' in clean_text.upper() and 'LIKES' not in clean_text.upper(): # 単位としてのKかチェック
+    if 'K' in clean_text.upper() and 'LIKES' not in clean_text.upper():
          if 'K' in clean_text: multiplier = 1000
          elif 'M' in clean_text: multiplier = 1000000
-
-    # 数字抽出
     match = re.search(r'(\d+(?:\.\d+)?)', clean_text)
     if match:
         val = float(match.group(1))
         return int(val * multiplier)
     return 0
 
+def get_high_res_url(url):
+    if not url: return None
+    base_match = re.match(r'(https://pbs\.twimg\.com/media/[\w-]+)', url)
+    if base_match:
+        base_url = base_match.group(1)
+        fmt = 'png' if '.png' in url else 'jpg'
+        return f"{base_url}?format={fmt}&name=orig"
+    return url
+
 async def analyze_tweet(url):
     print(f"🔍 Analyzing: {url}")
+    # URLからツイートIDを抽出
+    tweet_id = url.split('/')[-1].split('?')[0]
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -44,68 +51,50 @@ async def analyze_tweet(url):
             await page.goto(url, wait_until="domcontentloaded", timeout=60000)
             await asyncio.sleep(3)
 
+            # --- メトリクス取得 ---
             metrics = {'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0}
-
-            # --- 戦略: ボタンの aria-label (読み上げ用テキスト) を攻める ---
-            # これが最も確実。画面上 "15K" でも、ここは "15234" だったりする。
-
-            # 1. いいね (Like / Unlike 両対応)
             like_btn = await page.query_selector('[data-testid="like"]') or await page.query_selector('[data-testid="unlike"]')
-            if like_btn:
-                label = await like_btn.get_attribute("aria-label")
-                # 例: "15234 Likes" または "Like" (0の場合)
-                metrics['likes'] = extract_number_from_label(label)
-
-            # 2. リポスト (Retweet / Unretweet)
-            rp_btn = await page.query_selector('[data-testid="retweet"]') or await page.query_selector('[data-testid="unretweet"]')
-            if rp_btn:
-                label = await rp_btn.get_attribute("aria-label")
-                metrics['reposts'] = extract_number_from_label(label)
-
-            # 3. ブックマーク (Bookmark / RemoveBookmark)
+            if like_btn: metrics['likes'] = extract_number_from_label(await like_btn.get_attribute("aria-label"))
             bm_btn = await page.query_selector('[data-testid="bookmark"]') or await page.query_selector('[data-testid="removeBookmark"]')
-            if bm_btn:
-                label = await bm_btn.get_attribute("aria-label")
-                metrics['bookmarks'] = extract_number_from_label(label)
-            
-            # 4. インプレッション (Views)
-            # これはボタンではなくリンクまたはテキスト
+            if bm_btn: metrics['bookmarks'] = extract_number_from_label(await bm_btn.get_attribute("aria-label"))
             view_elem = await page.query_selector('a[href*="/analytics"]')
-            if view_elem:
-                label = await view_elem.get_attribute("aria-label") or await view_elem.inner_text()
-                metrics['views'] = extract_number_from_label(label)
-            
-            # --- 補正: 画面上のテキスト表示 ("15K") からのバックアップ取得 ---
-            # aria-labelが "Like" (数字なし) だけど画面には "15K" とある場合の対策
-            if metrics['likes'] == 0:
-                 like_text_elem = await page.query_selector('[data-testid="like"] span, [data-testid="unlike"] span')
-                 if like_text_elem:
-                     text = await like_text_elem.inner_text()
-                     if text:
-                         # K/M変換ロジックを通す
-                         text = text.replace('K', '000').replace('M', '000000').replace('.', '') # 簡易変換
-                         metrics['likes'] = extract_number_from_label(text)
+            if view_elem: metrics['views'] = extract_number_from_label(await view_elem.inner_text())
+
+            # --- 画像の抽出とダウンロード ---
+            image_urls = []
+            tweet_photo_container = await page.query_selector('[data-testid="tweetPhoto"]')
+            if tweet_photo_container:
+                images = await tweet_photo_container.query_selector_all('img')
+                for i, img in enumerate(images):
+                    src = await img.get_attribute('src')
+                    if src and 'pbs.twimg.com/media' in src:
+                        high_res = get_high_res_url(src)
+                        if high_res and high_res not in image_urls:
+                            image_urls.append(high_res)
+                            
+                            # ダウンロード実行
+                            save_path = os.path.join(SAVE_DIR, f"{tweet_id}_{len(image_urls)}.jpg")
+                            try:
+                                img_page = await context.new_page()
+                                response = await img_page.goto(high_res)
+                                if response:
+                                    await response.body()
+                                    with open(save_path, "wb") as f:
+                                        f.write(await response.body())
+                                    print(f"  ✅ Saved: {save_path}")
+                                await img_page.close()
+                            except Exception as e:
+                                print(f"  ❌ Failed to download {high_res}: {e}")
 
             # --- 結果出力 ---
-            print("\n" + "💎" * 20)
-            print(f"📊 正確な分析結果")
-            print("💎" * 20)
+            print("\n" + "📸" * 20)
+            print(f"📊 分析完了: {len(image_urls)}枚の画像を保存しました")
+            print("📸" * 20)
             print(f"❤️ Likes:    {metrics['likes']:,}")
-            print(f"🔄 Reposts:  {metrics['reposts']:,}")
             print(f"🔖 Saves:    {metrics['bookmarks']:,}")
             print(f"👁️ Views:    {metrics['views']:,}")
-            
-            if metrics['views'] > 0:
-                eng_rate = round((metrics['likes'] / metrics['views']) * 100, 2)
-                print("-" * 20)
-                print(f"⚡ Engagement Rate: {eng_rate}%")
-            
-            # 保存率の計算
-            if metrics['likes'] > 0:
-                save_rate = round((metrics['bookmarks'] / metrics['likes']) * 100, 2)
-                print(f"💾 Save Rate:       {save_rate}%")
-                
-            print("💎" * 20 + "\n")
+            print(f"📂 Location: ./{SAVE_DIR}/")
+            print("📸" * 20 + "\n")
 
         except Exception as e:
             print(f"❌ Error: {e}")
@@ -113,5 +102,5 @@ async def analyze_tweet(url):
             await browser.close()
 
 if __name__ == "__main__":
-    url = sys.argv[1] if len(sys.argv) > 1 else "https://x.com/snow_sayu_/status/1867910835085148236"
-    asyncio.run(analyze_tweet(url))
+    target = sys.argv[1] if len(sys.argv) > 1 else "https://x.com/snow_sayu_/status/1867910835085148236"
+    asyncio.run(analyze_tweet(target))
