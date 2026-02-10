@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Dashboard</title>
+    <title>Cosplay Analysis Dashboard v4.2</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body class="bg-slate-100 min-h-screen pb-12">
     
-    <div class="bg-white shadow-sm p-4 mb-6">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.1.0/chartjs-plugin-annotation.min.js"></script>
+</head>
+<body class="bg-slate-100 min-h-screen pb-12 font-sans">
+    
+    <div class="bg-white shadow-sm p-4 mb-6 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <h2 class="text-2xl font-bold text-gray-800">📊 分析インサイト・レポート</h2>
-            <a href="/" class="text-blue-500 hover:text-blue-700 font-bold border border-blue-500 px-4 py-2 rounded-lg transition">
-                ← リストに戻る
+            <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                <i class="fa-solid fa-chart-line text-blue-500 mr-2"></i>分析インサイト
+            </h2>
+            <a href="/" class="text-blue-500 hover:text-blue-700 font-bold border border-blue-500 px-4 py-2 rounded-lg transition hover:bg-blue-50">
+                <i class="fa-solid fa-arrow-left mr-2"></i>リストに戻る
             </a>
         </div>
     </div>
@@ -24,26 +28,30 @@
         {% if stats %}
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
-                <p class="text-gray-500 text-sm font-bold uppercase">分析済みツイート数</p>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Analyzed Tweets</p>
                 <p class="text-4xl font-black text-gray-800 mt-2">{{ stats.total_tweets }}</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500">
-                <p class="text-gray-500 text-sm font-bold uppercase">平均 保存率 (SAVE RATE)</p>
-                <p class="text-4xl font-black text-blue-600 mt-2">{{ stats.avg_save_rate }}%</p>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Avg Save Rate</p>
+                <p class="text-4xl font-black text-blue-600 mt-2">{{ stats.avg_save_rate }}<span class="text-xl">%</span></p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-yellow-400">
-                <p class="text-gray-500 text-sm font-bold uppercase">平均 エンゲージメント</p>
-                <p class="text-4xl font-black text-yellow-500 mt-2">{{ stats.avg_eng_rate }}%</p>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Avg Engagement</p>
+                <p class="text-4xl font-black text-yellow-500 mt-2">{{ stats.avg_eng_rate }}<span class="text-xl">%</span></p>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             <div class="bg-white p-6 rounded-xl shadow-lg col-span-1 lg:col-span-2">
-                <h3 class="text-xl font-bold mb-2 flex items-center">
-                    <i class="fa-solid fa-bullseye text-red-500 mr-2"></i>戦略マトリクス (4-Quadrant Matrix)
-                </h3>
-                <p class="text-sm text-gray-500 mb-4">右上: 神投稿 (God Tier) | 右下: バズ (Viral) | 左上: お宝 (Hidden Gem)</p>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-gray-800">
+                        <i class="fa-solid fa-bullseye text-red-500 mr-2"></i>4-Quadrant Strategy Matrix
+                    </h3>
+                    <div class="text-xs text-gray-400">
+                        縦軸: 保存率 / 横軸: エンゲージメント
+                    </div>
+                </div>
                 <div class="h-96 w-full">
                     <canvas id="mainMatrix"></canvas>
                 </div>
@@ -53,7 +61,10 @@
                 <h3 class="text-xl font-bold mb-2 flex items-center">
                     <i class="fa-solid fa-person-dress text-pink-500 mr-2"></i>肌色露出度 vs 保存率
                 </h3>
-                <p class="text-sm text-gray-500 mb-4">露出が増えると保存率は上がるのか？の検証</p>
+                <p class="text-xs text-gray-500 mb-4">
+                    <span class="inline-block w-3 h-3 bg-pink-500 rounded-full mr-1"></span>全身・バストアップ (有効データ)
+                    <span class="inline-block w-3 h-3 bg-blue-400 ml-3 mr-1"></span>顔アップ (参考値/ノイズ)
+                </p>
                 <div class="h-64 w-full">
                     <canvas id="skinChart"></canvas>
                 </div>
@@ -61,9 +72,9 @@
 
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-bold mb-2 flex items-center">
-                    <i class="fa-regular fa-clock text-blue-500 mr-2"></i>投稿時間帯別 平均保存率
+                    <i class="fa-regular fa-clock text-blue-500 mr-2"></i>投稿時間帯別パフォーマンス
                 </h3>
-                <p class="text-sm text-gray-500 mb-4">何時に投稿するのがベストか？ (0時〜23時)</p>
+                <p class="text-xs text-gray-500 mb-4">何時に投稿された画像が最も保存されているか (JST)</p>
                 <div class="h-64 w-full">
                     <canvas id="timeChart"></canvas>
                 </div>
@@ -71,8 +82,9 @@
 
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-bold mb-2 flex items-center">
-                    <i class="fa-solid fa-crop-simple text-green-500 mr-2"></i>構図別 平均保存率
+                    <i class="fa-solid fa-crop-simple text-green-500 mr-2"></i>構図別 保存率ランキング
                 </h3>
+                <p class="text-xs text-gray-500 mb-4">どの画角が最も効果的か</p>
                 <div class="h-64 w-full">
                     <canvas id="compChart"></canvas>
                 </div>
@@ -81,20 +93,32 @@
         </div>
 
         {% else %}
-        <div class="text-center py-20">
-            <h2 class="text-2xl font-bold text-gray-400">データがありません</h2>
-            <p class="text-gray-500 mt-2">CSVをアップロードして分析を開始してください。</p>
-            <a href="/" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">トップへ戻る</a>
+        <div class="flex flex-col items-center justify-center py-20 text-center">
+            <div class="bg-white p-8 rounded-full shadow-lg mb-6">
+                <i class="fa-solid fa-database text-6xl text-gray-300"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-500">データがまだありません</h2>
+            <p class="text-gray-400 mt-2">トップページからCSVをアップロードして分析を開始してください。</p>
+            <a href="/" class="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-lg transition">
+                分析を開始する
+            </a>
         </div>
         {% endif %}
     </div>
 
     <script>
+        // ★重要: Annotationプラグインを有効化
+        if (window['chartjs-plugin-annotation']) {
+            Chart.register(window['chartjs-plugin-annotation']);
+        }
+
+        // Pythonからデータを受け取る
         const stats = {{ stats|tojson }};
-        
-        if (stats) {
-            // --- 1. マトリクスチャート ---
-            const ctxMatrix = document.getElementById('mainMatrix');
+
+        if (stats && stats.total_tweets > 0) {
+            
+            // --- 1. メインマトリクス (Scatter) ---
+            const ctxMatrix = document.getElementById('mainMatrix').getContext('2d');
             new Chart(ctxMatrix, {
                 type: 'scatter',
                 data: {
@@ -102,66 +126,81 @@
                         label: 'Post',
                         data: stats.scatter_data,
                         backgroundColor: (ctx) => {
-                            const val = ctx.raw;
-                            if (!val) return 'rgba(200, 200, 200, 0.5)';
-                            // 色分け: 保存率が高い=赤, エンゲージが高い=黄, 両方高い=紫, 低い=青
-                            if (val.y > stats.avg_save_rate && val.x > stats.avg_eng_rate) return 'rgba(155, 89, 182, 0.8)'; // God
-                            if (val.y > stats.avg_save_rate) return 'rgba(231, 76, 60, 0.8)'; // Hidden Gem (High Save)
-                            if (val.x > stats.avg_eng_rate) return 'rgba(241, 196, 15, 0.8)'; // Viral
-                            return 'rgba(52, 152, 219, 0.6)'; // Normal
+                            const v = ctx.raw;
+                            if (!v) return '#ccc';
+                            // 象限ごとの色分け
+                            if (v.y > stats.avg_save_rate && v.x > stats.avg_eng_rate) return 'rgba(155, 89, 182, 0.8)'; // God (紫)
+                            if (v.y > stats.avg_save_rate) return 'rgba(231, 76, 60, 0.8)'; // Hidden Gem (赤)
+                            if (v.x > stats.avg_eng_rate) return 'rgba(241, 196, 15, 0.8)'; // Viral (黄)
+                            return 'rgba(52, 152, 219, 0.6)'; // Normal (青)
                         },
-                        pointRadius: 6,
+                        pointRadius: 5,
                         pointHoverRadius: 8
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    scales: {
-                        x: { title: { display: true, text: 'Engagement Rate (%)' } },
-                        y: { title: { display: true, text: 'Save Rate (%)' } }
-                    },
                     plugins: {
                         tooltip: {
                             callbacks: {
-                                label: (ctx) => `ID: ${ctx.raw.id}`
+                                label: (ctx) => `ID: ${ctx.raw.id} (Save: ${ctx.raw.y}%, Eng: ${ctx.raw.x}%)`
                             }
                         },
                         annotation: {
                             annotations: {
-                                line1: {
+                                lineY: {
                                     type: 'line', yMin: stats.avg_save_rate, yMax: stats.avg_save_rate,
                                     borderColor: 'gray', borderWidth: 2, borderDash: [5, 5],
-                                    label: { content: `Avg Save: ${stats.avg_save_rate}%`, enabled: true, position: 'end' }
+                                    label: { content: `Avg Save: ${stats.avg_save_rate}%`, enabled: true, position: 'end', backgroundColor: 'rgba(0,0,0,0.7)' }
                                 },
-                                line2: {
+                                lineX: {
                                     type: 'line', xMin: stats.avg_eng_rate, xMax: stats.avg_eng_rate,
                                     borderColor: 'gray', borderWidth: 2, borderDash: [5, 5],
-                                    label: { content: `Avg Eng: ${stats.avg_eng_rate}%`, enabled: true, position: 'start', rotation: 90 }
+                                    label: { content: `Avg Eng: ${stats.avg_eng_rate}%`, enabled: true, position: 'start', rotation: 90, backgroundColor: 'rgba(0,0,0,0.7)' }
                                 }
                             }
                         }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Engagement Rate (%)' } },
+                        y: { title: { display: true, text: 'Save Rate (%)' } }
                     }
                 }
             });
 
-            // --- 2. 肌色率チャート (Scatter) ---
-            new Chart(document.getElementById('skinChart'), {
+            // --- 2. 肌色率チャート (★顔アップ対策版) ---
+            // データを「顔アップ」と「それ以外」に分離する
+            const faceUpData = stats.skin_scatter.filter(d => d.comp === 'Face Close-up');
+            const bodyData = stats.skin_scatter.filter(d => d.comp !== 'Face Close-up');
+
+            const ctxSkin = document.getElementById('skinChart').getContext('2d');
+            new Chart(ctxSkin, {
                 type: 'scatter',
                 data: {
-                    datasets: [{
-                        label: 'Posts',
-                        data: stats.skin_scatter,
-                        backgroundColor: 'rgba(236, 72, 153, 0.6)', // Pink
-                        pointRadius: 4
-                    }]
+                    datasets: [
+                        {
+                            label: '全身・バストアップ', # 本命データ
+                            data: bodyData,
+                            backgroundColor: 'rgba(236, 72, 153, 0.7)', // ピンク
+                            pointRadius: 4
+                        },
+                        {
+                            label: '顔アップ (参考)', # ノイズ
+                            data: faceUpData,
+                            backgroundColor: 'rgba(96, 165, 250, 0.5)', // 薄い青
+                            pointStyle: 'crossRot', // バツ印にする
+                            pointRadius: 5,
+                            borderWidth: 2
+                        }
+                    ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
                         x: { title: { display: true, text: '肌色率 (%)' }, min: 0, max: 100 },
-                        y: { title: { display: true, text: '保存率 (%)' } }
+                        y: { title: { display: true, text: '保存率 (%)' }, beginAtZero: true }
                     }
                 }
             });
@@ -181,13 +220,11 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    scales: {
-                        y: { beginAtZero: true }
-                    }
+                    scales: { y: { beginAtZero: true } }
                 }
             });
 
-            // --- 4. 構図チャート (Bar) ---
+            // --- 4. 構図チャート (Horizontal Bar) ---
             new Chart(document.getElementById('compChart'), {
                 type: 'bar',
                 data: {
@@ -206,11 +243,11 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    indexAxis: 'y'
+                    indexAxis: 'y', // 横棒グラフにする
+                    scales: { x: { beginAtZero: true } }
                 }
             });
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.1.0/chartjs-plugin-annotation.min.js"></script>
 </body>
 </html>

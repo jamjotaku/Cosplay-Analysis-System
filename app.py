@@ -1,154 +1,175 @@
-from flask import Flask, render_template, request, redirect, url_for
-import json
 import os
+import json
 import asyncio
 import csv
-import io
-import threading
+from flask import Flask, render_template, request, redirect, url_for
+from werkzeug.utils import secure_filename
+from datetime import datetime
+
+# main_analyzer.py から分析ロジックをインポート
+# ※ main_analyzer.py が同じフォルダにある前提です
 from main_analyzer import run_analysis
 
 app = Flask(__name__)
-# セッション通知用にキーを設定（必須ではないですが念のため）
-app.secret_key = 'cosplay_analysis_secret'
-DB_FILE = 'analysis_db.json'
+app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['DB_FILE'] = 'analysis_db.json'
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+# ---------------------------------------------------------
+# データ読み込み & ユーティリティ
+# ---------------------------------------------------------
 def load_data():
-    """ JSONデータベースを読み込むヘルパー関数 """
-    if os.path.exists(DB_FILE):
-        with open(DB_FILE, 'r', encoding='utf-8') as f:
-            try: return json.load(f)
-            except: return []
+    if os.path.exists(app.config['DB_FILE']):
+        with open(app.config['DB_FILE'], 'r', encoding='utf-8') as f:
+            try:
+                return json.load(f)
+            except:
+                return []
     return []
 
-# --- 🧵 バックグラウンド処理用の関数 ---
-def background_batch_analysis(urls):
-    """ 裏側（別スレッド）で実行される分析ループ """
-    print(f"🧵 バックグラウンド処理を開始: 全 {len(urls)} 件")
-    
-    # スレッドごとに新しいイベントループを作成
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    
+def background_batch_analysis(csv_path):
+    """ バックグラウンドでCSVのURLを順次処理する """
+    urls = []
+    try:
+        with open(csv_path, 'r', encoding='utf-8-sig') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                # 'Expanded URL' または 'URL' カラムを探す
+                url = row.get('Expanded URL') or row.get('URL')
+                if url:
+                    urls.append(url)
+    except Exception as e:
+        print(f"❌ CSV Read Error: {e}")
+        return
+
+    print(f"🚀 Batch Analysis Started: {len(urls)} tweets")
     for i, url in enumerate(urls):
-        # 進捗をログに出す（これがターミナルで見える）
-        print(f"📦 Batch Progress: {i+1}/{len(urls)} -> {url}")
-        try:
-            # main_analyzer.py の処理を呼び出す
-            # (main_analyzer側にスキップ機能があるので、既に終わっていれば一瞬で次へ進みます)
-            loop.run_until_complete(run_analysis(url))
-        except Exception as e:
-            print(f"❌ Error in batch: {url} -> {e}")
-    
-    print("🏁 すべてのバックグラウンド分析が完了しました！")
-    loop.close()
-
-@app.route('/', methods=['GET'])
-def index():
-    """ トップページ: 最新の分析結果リストを表示 """
-    data = load_data()
-    data.reverse() # 新しい順
-    return render_template('index.html', tweets=data)
-
-@app.route('/analyze', methods=['POST'])
-def analyze():
-    """ 単発分析用 """
-    url = request.form.get('url')
-    if url:
-        print(f"🚀 単発リクエスト: {url}")
+        print(f"Processing {i+1}/{len(urls)}: {url}")
         asyncio.run(run_analysis(url))
-    return redirect(url_for('index'))
+    print("🎉 All Batch Analysis Completed!")
+
+# ---------------------------------------------------------
+# ルーティング
+# ---------------------------------------------------------
+@app.route('/')
+def index():
+    """ ダッシュボード (一覧画面) """
+    data = load_data()
+    # 新しい順に並び替え
+    data.sort(key=lambda x: x.get('timestamp', ''), reverse=True)
+    return render_template('index.html', tweets=data)
 
 @app.route('/upload_csv', methods=['POST'])
 def upload_csv():
-    """ CSV一括分析用（スレッド対応版） """
+    """ CSVアップロード & 解析開始 """
     if 'file' not in request.files:
         return redirect(url_for('index'))
-    
     file = request.files['file']
-    if file.filename == '' or not file:
+    if file.filename == '':
         return redirect(url_for('index'))
 
-    # CSVからURLリストを作成
-    stream = io.StringIO(file.stream.read().decode("UTF8"), newline=None)
-    csv_input = csv.reader(stream)
-    
-    # x.com または twitter.com を含むURLだけ抽出
-    urls = [row[0].strip() for row in csv_input if row and ("x.com" in row[0] or "twitter.com" in row[0])]
+    if file:
+        filename = secure_filename(file.filename)
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(filepath)
 
-    if urls:
-        # ★ここが重要！
-        # メイン処理を止めないように、別のスレッド（分身）を作って仕事を丸投げする
-        thread = threading.Thread(target=background_batch_analysis, args=(urls,))
+        # 非同期で解析を実行 (簡易的な実装)
+        import threading
+        thread = threading.Thread(target=background_batch_analysis, args=(filepath,))
         thread.start()
-        
-        print(f"✅ {len(urls)} 件の分析をバックグラウンドで予約しました。")
 
-    # ユーザーを待たせずに即座にトップページへ戻す
-    return redirect(url_for('index'))
+        return redirect(url_for('index'))
 
-@app.route('/stats', methods=['GET'])
+@app.route('/stats')
 def stats():
-    """ 分析レポート用（4象限マトリクス対応） """
+    """ ★分析レポート画面 (完全版) """
     data = load_data()
-    
     if not data:
         return render_template('stats.html', stats=None)
 
-    # --- 統計データの計算 ---
+    # --- 集計用データの初期化 ---
     stats_data = {
         "total_tweets": len(data),
         "avg_save_rate": 0,
         "avg_eng_rate": 0,
-        "composition_stats": {},
-        "brightness_stats": {},
-        "top_tweets": [],
-        "scatter_data": [] # 散布図用のデータ
+        "composition_stats": {}, # 構図別平均
+        "hourly_stats": [0] * 24, # 0時~23時の平均保存率
+        "scatter_data": [],       # メインマトリクス用
+        "skin_scatter": []        # 肌色率 vs 保存率用
     }
 
-    # 1. 全体平均の計算
-    if len(data) > 0:
-        total_save = sum(d.get('save_rate', 0) for d in data)
-        total_eng = sum(d.get('engagement_rate', 0) for d in data)
-        stats_data['avg_save_rate'] = round(total_save / len(data), 2)
-        stats_data['avg_eng_rate'] = round(total_eng / len(data), 2)
-
-    # 2. カテゴリ別集計（構図・明るさ）
-    # ループを1回にまとめて高速化
+    hourly_sums = [0] * 24
+    hourly_counts = [0] * 24
     comp_groups = {}
-    bright_groups = {}
-    
-    for d in data:
-        # 画像がないデータはスキップ
-        if not d.get('images'): continue
-        
-        # 構図集計
-        comp = d['images'][0].get('composition', 'Unknown')
-        if comp not in comp_groups: comp_groups[comp] = []
-        comp_groups[comp].append(d.get('save_rate', 0))
-        
-        # 明るさ集計
-        bright = d['images'][0].get('brightness', 'Unknown')
-        if bright not in bright_groups: bright_groups[bright] = []
-        bright_groups[bright].append(d.get('engagement_rate', 0))
-        
-        # ★散布図用のデータ作成 (X:Eng, Y:Save)
-        stats_data['scatter_data'].append({
-            'x': d.get('engagement_rate', 0),
-            'y': d.get('save_rate', 0),
-            'id': d.get('tweet_id'),
-            'url': d.get('url'),
-            'img': d['images'][0]['path'] # ツールチップ画像用
-        })
-    
-    # 平均値の算出
-    stats_data['composition_stats'] = {k: round(sum(v)/len(v), 2) for k, v in comp_groups.items()}
-    stats_data['brightness_stats'] = {k: round(sum(v)/len(v), 2) for k, v in bright_groups.items()}
 
-    # 4. ランキング（保存率TOP5）
-    stats_data['top_tweets'] = sorted(data, key=lambda x: x.get('save_rate', 0), reverse=True)[:5]
+    total_save_rate = 0
+    total_eng_rate = 0
+
+    for d in data:
+        save_rate = d.get('save_rate', 0)
+        eng_rate = d.get('engagement_rate', 0)
+        total_save_rate += save_rate
+        total_eng_rate += eng_rate
+        
+        # 1. マトリクス用データ
+        img_path = ""
+        comp_cat = "Unknown"
+        skin_ratio = 0
+        
+        if d.get('images'):
+            img_data = d['images'][0]
+            img_path = img_data.get('path', '')
+            comp_cat = img_data.get('composition', 'Unknown')
+            skin_ratio = img_data.get('skin_ratio', 0)
+
+        stats_data['scatter_data'].append({
+            'x': eng_rate,
+            'y': save_rate,
+            'id': d.get('tweet_id'),
+            'img': img_path
+        })
+
+        # 2. ★肌色率データ (構図情報も含めるのがポイント)
+        # 画像があり、かつ肌色データがある場合のみ
+        if d.get('images'):
+            stats_data['skin_scatter'].append({
+                'x': skin_ratio,
+                'y': save_rate,
+                'comp': comp_cat  # ★フロントエンドで色分けするために必須
+            })
+
+        # 3. 時間帯データ (ISO形式の日時文字列から時間を抽出)
+        created_at = d.get('created_at')
+        if created_at:
+            try:
+                # "2026-02-10T19:30:00" -> 19
+                hour = int(created_at.split('T')[1].split(':')[0])
+                hourly_sums[hour] += save_rate
+                hourly_counts[hour] += 1
+            except:
+                pass
+
+        # 4. 構図別データ集計
+        if comp_cat not in comp_groups:
+            comp_groups[comp_cat] = []
+        comp_groups[comp_cat].append(save_rate)
+
+    # --- 平均値の計算 ---
+    if len(data) > 0:
+        stats_data['avg_save_rate'] = round(total_save_rate / len(data), 2)
+        stats_data['avg_eng_rate'] = round(total_eng_rate / len(data), 2)
+
+    # 時間帯別平均
+    for h in range(24):
+        if hourly_counts[h] > 0:
+            stats_data['hourly_stats'][h] = round(hourly_sums[h] / hourly_counts[h], 2)
+
+    # 構図別平均
+    stats_data['composition_stats'] = {
+        k: round(sum(v)/len(v), 2) for k, v in comp_groups.items()
+    }
 
     return render_template('stats.html', stats=stats_data)
 
 if __name__ == '__main__':
-    # 外部公開設定
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(debug=True, port=5000)
