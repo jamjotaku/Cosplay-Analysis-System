@@ -1,13 +1,14 @@
-# スクレイピング・ブラウザ自動操作
-playwright
-playwright-stealth
+# Web Framework
+flask
 
-# 画像解析・数値計算
-opencv-python-headless
-numpy
+# Web Scraping & Automation
+playwright
+
+# AI / Machine Learning / Image Processing
+torch
+torchvision
+transformers
 Pillow
 
-# 通信・ユーティリティ
+# Data Handling (Optional but recommended)
 requests
-python-dateutil
-python-dotenv

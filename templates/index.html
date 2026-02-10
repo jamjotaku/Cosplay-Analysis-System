@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosplay Analysis System v2.0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root { --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --accent-color: #ff0080; }
+        body { background-color: #f0f2f5; font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; }
+        
+        /* ヘッダーエリア */
+        .hero-section { background: var(--primary-gradient); color: white; padding: 60px 0; margin-bottom: 40px; border-radius: 0 0 30px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .input-group { box-shadow: 0 15px 35px rgba(0,0,0,0.2); border-radius: 50px; overflow: hidden; max-width: 700px; margin: 0 auto; }
+        .form-control { border: none; padding: 18px 25px; font-size: 1.1rem; }
+        .btn-analyze { background-color: var(--accent-color); color: white; font-weight: bold; border: none; padding: 0 35px; transition: 0.3s; }
+        .btn-analyze:hover { background-color: #d6006c; transform: scale(1.02); }
+
+        /* カードデザイン */
+        .card { border: none; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: all 0.3s ease; background: white; height: 100%; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
+        
+        /* 画像コンテナとAIタグ */
+        .img-container { height: 400px; overflow: hidden; position: relative; background: #1a1a1a; display: flex; align-items: center; justify-content: center; border-radius: 20px 20px 0 0; }
+        .img-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .ai-tags { position: absolute; top: 15px; left: 15px; display: flex; flex-direction: column; gap: 8px; }
+        .tag-badge { background: rgba(0,0,0,0.75); color: #fff; padding: 6px 14px; border-radius: 30px; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); }
+        .tag-situation { background: rgba(255, 0, 128, 0.8) !important; color: #fff; }
+
+        /* メトリクス表示 */
+        .rate-container { display: flex; gap: 10px; margin-bottom: 15px; }
+        .rate-badge { flex: 1; padding: 8px; border-radius: 12px; text-align: center; font-weight: 800; font-size: 0.9rem; }
+        .rate-save { background-color: #e3f2fd; color: #0d6efd; border: 1px solid #bbdefb; }
+        .rate-eng { background-color: #fff3e0; color: #ef6c00; border: 1px solid #ffe0b2; }
+        
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; background: #f8f9fa; padding: 15px; border-radius: 15px; }
+        .stat-item { text-align: center; }
+        .stat-label { font-size: 0.7rem; color: #95a5a6; text-transform: uppercase; font-weight: bold; margin-bottom: 2px; }
+        .stat-value { font-size: 1.1rem; font-weight: 900; color: #2c3e50; }
+
+        /* ローディング */
+        .loader { display: none; border: 3px solid #f3f3f3; border-top: 3px solid white; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; margin-left: 10px; vertical-align: middle; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">📸 Cosplay Insights</h1>
+            <p class="lead mb-5 opacity-75">AIが構図とシチュエーションを自動判別し、保存率を可視化します</p>
+            
+            <form action="/analyze" method="POST" onsubmit="showLoading()">
+                <div class="input-group">
+                    <input type="text" name="url" class="form-control" placeholder="ここにXのポストURLを貼り付け..." required>
+                    <button class="btn btn-analyze" type="submit" id="submitBtn">
+                        分析を実行 <span class="loader" id="loader"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <div class="row g-4">
+            {% for tweet in tweets %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="img-container">
+                        {% if tweet.images %}
+                            <div class="ai-tags">
+                                <div class="tag-badge"><i class="bi bi-aspect-ratio"></i> {{ tweet.images[0].composition }}</div>
+                                {% if tweet.images[0].situation %}
+                                <div class="tag-badge tag-situation"><i class="bi bi-geo-alt"></i> {{ tweet.images[0].situation }}</div>
+                                {% endif %}
+                            </div>
+                            <img src="{{ tweet.images[0].path }}" alt="Cosplay Analysis">
+                        {% else %}
+                            <div class="text-white">画像が見つかりませんでした</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="rate-container">
+                            <div class="rate-badge rate-save">
+                                <div class="stat-label" style="color: #0d6efd;">Save Rate</div>
+                                {{ tweet.save_rate }}%
+                            </div>
+                            <div class="rate-badge rate-eng">
+                                <div class="stat-label" style="color: #ef6c00;">Engagement</div>
+                                {{ tweet.engagement_rate }}%
+                            </div>
+                        </div>
+                        
+                        <div class="stat-grid mb-3">
+                            <div class="stat-item">
+                                <div class="stat-label">Likes</div>
+                                <div class="stat-value">{{ "{:,}".format(tweet.metrics.likes) }}</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Saves</div>
+                                <div class="stat-value">{{ "{:,}".format(tweet.metrics.bookmarks) }}</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Views</div>
+                                <div class="stat-value">{{ "{:,}".format(tweet.metrics.views) }}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="{{ tweet.url }}" target="_blank" class="btn btn-link btn-sm p-0 text-decoration-none text-muted">
+                                <i class="bi bi-box-arrow-up-right"></i> Twitterで開く
+                            </a>
+                            <small class="text-muted" style="font-size: 0.7rem;">ID: {{ tweet.tweet_id }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        function showLoading() {
+            const btn = document.getElementById('submitBtn');
+            const loader = document.getElementById('loader');
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            btn.innerHTML = 'AI解析中...';
+            loader.style.display = 'inline-block';
+            btn.appendChild(loader);
+        }
+    </script>
+</body>
+</html>
