@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .stat-card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: 100%; }
+        .big-number { font-size: 2.5rem; font-weight: bold; color: #2c3e50; }
+        .label-text { color: #7f8c8d; font-size: 0.9rem; text-transform: uppercase; }
+        .top-rank-img { width: 50px; height: 50px; object-fit: cover; border-radius: 8px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>📊 分析インサイト・レポート</h2>
+            <a href="/" class="btn btn-outline-primary">← リストに戻る</a>
+        </div>
+
+        {% if stats %}
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="stat-card text-center">
+                    <div class="label-text">分析済みツイート数</div>
+                    <div class="big-number">{{ stats.total_tweets }}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card text-center">
+                    <div class="label-text">平均 保存率 (Save Rate)</div>
+                    <div class="big-number text-primary">{{ stats.avg_save_rate }}%</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card text-center">
+                    <div class="label-text">平均 エンゲージメント</div>
+                    <div class="big-number text-warning">{{ stats.avg_eng_rate }}%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="stat-card">
+                    <h5>📐 構図別の平均保存率</h5>
+                    <canvas id="compChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="stat-card">
+                    <h5>💡 明るさ別の反応率</h5>
+                    <canvas id="brightChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="stat-card">
+                    <h5 class="mb-3">🏆 保存率ランキング TOP3</h5>
+                    <table class="table align-middle">
+                        <tbody>
+                            {% for tweet in stats.top_tweets %}
+                            <tr>
+                                <td width="50">
+                                    <h4 class="text-muted m-0">#{{ loop.index }}</h4>
+                                </td>
+                                <td width="70">
+                                    {% if tweet.images %}
+                                    <img src="{{ tweet.images[0].path }}" class="top-rank-img">
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div><strong>ID: {{ tweet.tweet_id }}</strong></div>
+                                    <small class="text-muted">{{ tweet.images[0].composition if tweet.images else '' }}</small>
+                                </td>
+                                <td class="text-end">
+                                    <span class="badge bg-primary rounded-pill p-2" style="font-size:1rem;">
+                                        Save Rate: {{ tweet.save_rate }}%
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <a href="{{ tweet.url }}" target="_blank" class="btn btn-sm btn-light">見る</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // データ受け取り
+            const compData = {{ stats.composition_stats | tojson }};
+            const brightData = {{ stats.brightness_stats | tojson }};
+
+            // 構図チャート
+            new Chart(document.getElementById('compChart'), {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(compData),
+                    datasets: [{
+                        label: 'Save Rate (%)',
+                        data: Object.values(compData),
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                    }]
+                },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+
+            // 明るさチャート
+            new Chart(document.getElementById('brightChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(brightData),
+                    datasets: [{
+                        data: Object.values(brightData),
+                        backgroundColor: ['#ffcd56', '#343a40', '#c0c0c0']
+                    }]
+                }
+            });
+        </script>
+        {% else %}
+        <div class="alert alert-warning">データがありません。まずは分析を実行してください。</div>
+        {% endif %}
+    </div>
+</body>
+</html>

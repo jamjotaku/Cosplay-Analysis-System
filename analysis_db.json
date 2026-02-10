@@ -1,0 +1,186 @@
+[
+  {
+    "tweet_id": "1954302898856403364",
+    "url": "https://x.com/snow_sayu_/status/1954302898856403364?s=20",
+    "timestamp": "2026-02-10T05:44:33.012490",
+    "metrics": {
+      "likes": 5329,
+      "reposts": 389,
+      "bookmarks": 630,
+      "views": 135800
+    },
+    "images": [
+      {
+        "path": "static/images/1954302898856403364_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gx8UH0nagAAhmWR?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.1,
+        "color": "#ece2de",
+        "brightness": "Bright"
+      }
+    ],
+    "engagement_rate": 3.92,
+    "save_rate": 11.82
+  },
+  {
+    "tweet_id": "1950593092027138088",
+    "url": "https://x.com/snow_sayu_/status/1950593092027138088?s=20",
+    "timestamp": "2026-02-10T05:44:47.691453",
+    "metrics": {
+      "likes": 4923,
+      "reposts": 303,
+      "bookmarks": 414,
+      "views": 96600
+    },
+    "images": [
+      {
+        "path": "static/images/1950593092027138088_1.jpg",
+        "url": "https://pbs.twimg.com/media/GxHmEz4bAAElV5G?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.1,
+        "color": "#151564",
+        "brightness": "Dark"
+      }
+    ],
+    "engagement_rate": 5.1,
+    "save_rate": 8.41
+  },
+  {
+    "tweet_id": "2006244600839913715",
+    "url": "https://x.com/kuroma_cos_/status/2006244600839913715?s=20",
+    "timestamp": "2026-02-10T05:45:22.369611",
+    "metrics": {
+      "likes": 1957,
+      "reposts": 154,
+      "bookmarks": 301,
+      "views": 26500
+    },
+    "images": [
+      {
+        "path": "static/images/2006244600839913715_1.jpg",
+        "url": "https://pbs.twimg.com/media/G9ec07OagAAResu?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.7,
+        "color": "#60535c",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 7.38,
+    "save_rate": 15.38
+  },
+  {
+    "tweet_id": "1963925017378673138",
+    "url": "https://x.com/kuroma_cos_/status/1963925017378673138?s=20",
+    "timestamp": "2026-02-10T05:45:49.216897",
+    "metrics": {
+      "likes": 3426,
+      "reposts": 297,
+      "bookmarks": 572,
+      "views": 82000
+    },
+    "images": [
+      {
+        "path": "static/images/1963925017378673138_1.jpg",
+        "url": "https://pbs.twimg.com/media/G0FDYbmaYAAPrTL?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.4,
+        "color": "#a1b5ca",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 4.18,
+    "save_rate": 16.7
+  },
+  {
+    "tweet_id": "1945398595957743638",
+    "url": "https://x.com/kuroma_cos_/status/1945398595957743638?s=20",
+    "timestamp": "2026-02-10T05:46:02.901515",
+    "metrics": {
+      "likes": 5624,
+      "reposts": 298,
+      "bookmarks": 842,
+      "views": 149600
+    },
+    "images": [
+      {
+        "path": "static/images/1945398595957743638_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gv9xsmKWkAAjGos?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.1,
+        "color": "#dbdade",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.76,
+    "save_rate": 14.97
+  },
+  {
+    "tweet_id": "1930206942737379678",
+    "url": "https://x.com/kuroma_cos_/status/1930206942737379678?s=20",
+    "timestamp": "2026-02-10T05:46:30.906381",
+    "metrics": {
+      "likes": 6953,
+      "reposts": 556,
+      "bookmarks": 1138,
+      "views": 183900
+    },
+    "images": [
+      {
+        "path": "static/images/1930206942737379678_1.jpg",
+        "url": "https://pbs.twimg.com/media/Gsl4-l9asAYGjDM?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.6,
+        "color": "#212a22",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.78,
+    "save_rate": 16.37
+  },
+  {
+    "tweet_id": "1887146487949533529",
+    "url": "https://x.com/kuroma_cos_/status/1887146487949533529?s=20",
+    "timestamp": "2026-02-10T05:46:57.499798",
+    "metrics": {
+      "likes": 4575,
+      "reposts": 347,
+      "bookmarks": 563,
+      "views": 122200
+    },
+    "images": [
+      {
+        "path": "static/images/1887146487949533529_1.jpg",
+        "url": "https://pbs.twimg.com/media/GjB9K1IaUAAV80s?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 16.2,
+        "color": "#e0dae2",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 3.74,
+    "save_rate": 12.31
+  },
+  {
+    "tweet_id": "1857701083298279898",
+    "url": "https://x.com/kuroma_cos_/status/1857701083298279898?s=20",
+    "timestamp": "2026-02-10T05:47:19.266667",
+    "metrics": {
+      "likes": 19388,
+      "reposts": 1071,
+      "bookmarks": 2417,
+      "views": 740300
+    },
+    "images": [
+      {
+        "path": "static/images/1857701083298279898_1.jpg",
+        "url": "https://pbs.twimg.com/media/GcfhSPHaMAAlvN5?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 16.0,
+        "color": "#9ba3a3",
+        "brightness": "Normal"
+      }
+    ],
+    "engagement_rate": 2.62,
+    "save_rate": 12.47
+  }
+]

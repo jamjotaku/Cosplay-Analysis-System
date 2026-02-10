@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosplay Analysis System v2.1</title>
+    <title>Cosplay Analysis System v3.0</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
@@ -16,6 +16,8 @@
         .form-control { border: none; padding: 18px 25px; font-size: 1.1rem; }
         .btn-analyze { background-color: var(--accent-color); color: white; font-weight: bold; border: none; padding: 0 35px; transition: 0.3s; }
         .btn-analyze:hover { background-color: #d6006c; transform: scale(1.02); }
+        .btn-stats { background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(5px); transition: 0.3s; margin-top: 20px; border-radius: 30px; padding: 10px 25px; }
+        .btn-stats:hover { background: rgba(255,255,255,0.3); color: white; transform: translateY(-2px); }
 
         /* カードデザイン */
         .card { border: none; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: all 0.3s ease; background: white; height: 100%; }
@@ -60,17 +62,21 @@
 
     <div class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3">📸 Cosplay Color Analytics</h1>
-            <p class="lead mb-5 opacity-75">AIが構図、色彩、明るさを分析し、バズる要素を可視化します</p>
+            <h1 class="display-4 fw-bold mb-3">📸 Cosplay Analysis System</h1>
+            <p class="lead mb-4 opacity-75">AIによる構図・色彩・輝度判定とインサイト分析</p>
             
             <form action="/analyze" method="POST" onsubmit="showLoading()">
-                <div class="input-group">
+                <div class="input-group mb-3">
                     <input type="text" name="url" class="form-control" placeholder="ここにXのポストURLを貼り付け..." required>
                     <button class="btn btn-analyze" type="submit" id="submitBtn">
                         分析を実行 <span class="loader" id="loader"></span>
                     </button>
                 </div>
             </form>
+
+            <a href="/stats" class="btn btn-stats">
+                <i class="bi bi-bar-chart-line-fill"></i> 分析レポートを見る
+            </a>
         </div>
     </div>
 
@@ -152,7 +158,7 @@
             const loader = document.getElementById('loader');
             btn.disabled = true;
             btn.style.opacity = '0.7';
-            btn.innerHTML = '解析中...';
+            btn.innerHTML = 'AI解析中...';
             loader.style.display = 'inline-block';
             btn.appendChild(loader);
         }

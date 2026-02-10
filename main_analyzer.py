@@ -33,13 +33,28 @@ model = CLIPModel.from_pretrained(AI_MODEL_ID).to(device)
 processor = CLIPProcessor.from_pretrained(AI_MODEL_ID)
 
 def extract_number(text):
-    """ 数値抽出ロジック """
+    """ 数値抽出ロジック（修正版：BOOKMARK内のMによる100万倍誤爆を防止） """
     if not text: return 0
     clean = text.replace(',', '').strip()
-    mul = 1
     upper = clean.upper()
-    if 'K' in upper and 'BOOKMARK' not in upper and 'LIKES' not in upper: mul = 1000
-    elif 'M' in upper and 'IMAGE' not in upper: mul = 1000000
+    
+    # そもそもBOOKMARKやLIKESといった単語が入っている場合は、
+    # その単語の一部であるKやMに反応させないためのガードを入れる
+    
+    mul = 1
+    
+    # K (千) の判定
+    if 'K' in upper:
+        # BOOKMARK, LIKES, WORK などの単語内のKは無視
+        if 'BOOKMARK' not in upper and 'LIKES' not in upper:
+            mul = 1000
+            
+    # M (百万) の判定
+    elif 'M' in upper:
+        # BOOKMARK, IMAGE, COMMENT などの単語内のMは無視 ★ここを修正！
+        if 'BOOKMARK' not in upper and 'IMAGE' not in upper and 'COMMENT' not in upper:
+            mul = 1000000
+
     match = re.search(r'(\d+(?:\.\d+)?)', clean)
     return int(float(match.group(1)) * mul) if match else 0
 
@@ -49,7 +64,6 @@ def analyze_color_and_brightness(img_path):
         img = Image.open(img_path).convert("RGB")
         
         # 1. 輝度 (Brightness) の判定
-        # グレースケールに変換して平均輝度を算出 (0-255)
         gray_img = img.convert("L")
         stat = gray_img.resize((1, 1)).getpixel((0, 0))
         brightness_val = stat
@@ -59,12 +73,11 @@ def analyze_color_and_brightness(img_path):
         elif brightness_val < 85: brightness_tag = "Dark"
 
         # 2. ドミナントカラー (Dominant Color) の抽出
-        # 処理を軽くするためリサイズして減色
         img_small = img.resize((150, 150))
         result = img_small.quantize(colors=5, method=2)
         dominant_color = result.getpalette()[:3] # RGB
         
-        # HEX変換 (#RRGGBB)
+        # HEX変換
         hex_color = '#{:02x}{:02x}{:02x}'.format(*dominant_color)
         
         return hex_color, brightness_tag
@@ -165,8 +178,8 @@ async def run_analysis(tweet_url):
                                     "url": high_res,
                                     "composition": comp_cat,
                                     "confidence": comp_conf,
-                                    "color": hex_color,        # HEXコード (#ff0080など)
-                                    "brightness": brightness   # Bright/Dark/Normal
+                                    "color": hex_color,
+                                    "brightness": brightness
                                 })
                         finally:
                             await img_page.close()
@@ -184,12 +197,17 @@ async def run_analysis(tweet_url):
 
             db = []
             if os.path.exists(DB_FILE):
-                try: with open(DB_FILE, 'r', encoding='utf-8') as f: db = json.load(f)
-                except: db = []
+                try:
+                    with open(DB_FILE, 'r', encoding='utf-8') as f:
+                        db = json.load(f)
+                except:
+                    db = []
             
             db = [entry for entry in db if entry['tweet_id'] != tweet_id]
             db.append(final_result)
-            with open(DB_FILE, 'w', encoding='utf-8') as f: json.dump(db, f, ensure_ascii=False, indent=2)
+            
+            with open(DB_FILE, 'w', encoding='utf-8') as f:
+                json.dump(db, f, ensure_ascii=False, indent=2)
 
             print(f"\n✅ Analysis Complete!")
             if image_results:
@@ -201,5 +219,7 @@ async def run_analysis(tweet_url):
             await browser.close()
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1: asyncio.run(run_analysis(sys.argv[1]))
-    else: asyncio.run(run_analysis("https://x.com/snow_sayu_/status/1867910835085148236"))
+    if len(sys.argv) > 1:
+        asyncio.run(run_analysis(sys.argv[1]))
+    else:
+        asyncio.run(run_analysis("https://x.com/snow_sayu_/status/1867910835085148236"))
