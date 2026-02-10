@@ -1,4 +1,8 @@
-# ログイン・認証情報
+# 認証情報
 auth.json
 cookies.json
 .env
+
+# Pythonキャッシュ
+__pycache__/
+*.pyc
