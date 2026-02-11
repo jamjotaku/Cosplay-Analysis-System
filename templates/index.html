@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosplay Analysis System v4.0</title>
+    <title>Cosplay Analysis System v4.2</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 min-h-screen">
     
     <nav class="bg-white shadow-md p-4 mb-6 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-4">
+            <h1 class="text-2xl font-bold text-gray-800 flex items-center">
                 <i class="fa-solid fa-camera-retro text-blue-500 mr-2"></i>Cosplay Analytics
             </h1>
-            <div class="flex gap-4">
-                <a href="/stats" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold transition">
-                    <i class="fa-solid fa-chart-pie mr-2"></i>分析レポート
-                </a>
-                <form action="/upload_csv" method="POST" enctype="multipart/form-data" class="flex gap-2">
-                    <input type="file" name="file" accept=".csv" class="border p-2 rounded text-sm" required>
-                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-bold">
-                        <i class="fa-solid fa-upload mr-2"></i>CSV解析
+            
+            <div class="flex flex-wrap gap-4 items-center">
+                <form action="/analyze_single" method="POST" class="flex gap-2 bg-blue-50 p-2 rounded-lg border border-blue-200">
+                    <input type="text" name="url" placeholder="Twitter URLを貼り付け" class="border p-2 rounded text-sm w-48 lg:w-64" required>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded font-bold text-sm transition">
+                        <i class="fa-solid fa-magnifying-glass mr-1"></i>単発解析
                     </button>
                 </form>
+
+                <form action="/upload_csv" method="POST" enctype="multipart/form-data" class="flex gap-2">
+                    <input type="file" name="file" accept=".csv" class="border p-2 rounded text-sm w-40" required>
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded font-bold text-sm transition">
+                        <i class="fa-solid fa-upload mr-1"></i>CSV
+                    </button>
+                </form>
+
+                <a href="/stats" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold transition shadow-sm">
+                    <i class="fa-solid fa-chart-pie mr-1"></i>分析レポート
+                </a>
             </div>
         </div>
     </nav>
@@ -32,33 +41,26 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {% for tweet in tweets %}
             <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                
-                <div class="relative group">
+                <div class="relative">
                     {% if tweet.images %}
-                        <img src="{{ tweet.images[0].path }}" alt="Cosplay" class="w-full h-80 object-cover object-top">
-                        
+                        <img src="{{ tweet.images[0].path }}" class="w-full h-80 object-cover object-top">
                         <div class="absolute top-2 left-2 flex flex-col gap-1">
-                            <span class="bg-black/70 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
+                            <span class="bg-black/70 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm">
                                 <i class="fa-solid fa-crop-simple mr-1"></i>{{ tweet.images[0].composition }}
                             </span>
-                            <span class="bg-black/70 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
-                                <i class="fa-solid fa-palette mr-1"></i>{{ tweet.images[0].color }}
-                            </span>
                             {% if tweet.images[0].skin_ratio is defined %}
-                            <span class="bg-pink-500/80 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm font-bold">
+                            <span class="bg-pink-500/80 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm font-bold">
                                 <i class="fa-solid fa-person-dress mr-1"></i>Skin: {{ tweet.images[0].skin_ratio }}%
                             </span>
                             {% endif %}
                         </div>
-
                         {% if tweet.created_at %}
                         <div class="absolute top-2 right-2">
-                            <span class="bg-blue-600/80 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
+                            <span class="bg-blue-600/80 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm">
                                 <i class="fa-regular fa-clock mr-1"></i>{{ tweet.created_at.split('T')[1][:5] }}
                             </span>
                         </div>
                         {% endif %}
-
                     {% else %}
                         <div class="w-full h-80 bg-gray-200 flex items-center justify-center text-gray-400">
                             <i class="fa-solid fa-image-slash text-4xl"></i>
@@ -67,26 +69,23 @@
                 </div>
 
                 <div class="p-4">
-                    <div class="flex justify-between items-center mb-4">
+                    <div class="flex justify-between items-center mb-3">
                         <div class="text-center w-1/2 border-r">
-                            <p class="text-xs text-blue-500 font-bold uppercase">Save Rate</p>
+                            <p class="text-[10px] text-blue-500 font-bold uppercase">Save Rate</p>
                             <p class="text-xl font-black text-gray-800">{{ tweet.save_rate }}%</p>
                         </div>
                         <div class="text-center w-1/2">
-                            <p class="text-xs text-orange-500 font-bold uppercase">Engagement</p>
+                            <p class="text-[10px] text-orange-500 font-bold uppercase">Engagement</p>
                             <p class="text-xl font-black text-gray-800">{{ tweet.engagement_rate }}%</p>
                         </div>
                     </div>
-
-                    <div class="flex justify-between text-xs text-gray-500 bg-gray-50 p-2 rounded-lg">
+                    <div class="flex justify-between text-[10px] text-gray-400 bg-gray-50 p-2 rounded">
                         <span><i class="fa-regular fa-heart mr-1"></i>{{ tweet.metrics.likes }}</span>
                         <span><i class="fa-regular fa-bookmark mr-1"></i>{{ tweet.metrics.bookmarks }}</span>
                         <span><i class="fa-regular fa-eye mr-1"></i>{{ tweet.metrics.views }}</span>
                     </div>
-
-                    <a href="{{ tweet.url }}" target="_blank" class="block mt-3 text-center text-sm text-gray-400 hover:text-blue-500 transition">
-                        <i class="fa-brands fa-twitter mr-1"></i>Twitterで開く
-                        <span class="text-xs ml-1 opacity-50">ID: {{ tweet.tweet_id }}</span>
+                    <a href="{{ tweet.url }}" target="_blank" class="block mt-3 text-center text-xs text-gray-400 hover:text-blue-500">
+                        <i class="fa-brands fa-twitter mr-1"></i>Open Twitter
                     </a>
                 </div>
             </div>
