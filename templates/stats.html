@@ -3,113 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosplay Analysis Dashboard v4.4</title>
+    <title>Advanced Insights | v4.6</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.1.0/chartjs-plugin-annotation.min.js"></script>
 </head>
-<body class="bg-slate-100 min-h-screen pb-20">
+<body class="bg-slate-50 min-h-screen pb-24">
     
-    <div class="bg-white shadow-sm p-4 mb-6 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h2 class="text-2xl font-bold text-gray-800 flex items-center">
-                <i class="fa-solid fa-chart-line text-blue-500 mr-2"></i>分析インサイト
-            </h2>
-            <a href="/" class="text-blue-500 hover:text-blue-700 font-bold border border-blue-500 px-4 py-2 rounded-lg transition hover:bg-blue-50">
-                <i class="fa-solid fa-arrow-left mr-2"></i>リストに戻る
+    <nav class="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h2 class="text-xl font-bold text-slate-800">📊 分析インサイト</h2>
+            <a href="/" class="text-blue-500 hover:text-blue-700 font-bold flex items-center transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i>一覧に戻る
             </a>
         </div>
-    </div>
+    </nav>
 
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-6 mt-8">
         {% if stats %}
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
-                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Analyzed Tweets</p>
-                <p class="text-4xl font-black text-gray-800 mt-2">{{ stats.total_tweets }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-indigo-100 border-l-8 border-l-indigo-500">
+                <p class="text-slate-400 text-xs font-black uppercase tracking-widest">Analyzed Tweets</p>
+                <p class="text-4xl font-black text-slate-800 mt-2">{{ stats.total_tweets }}</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500">
-                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Avg Save Rate</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 border-l-8 border-l-blue-500">
+                <p class="text-slate-400 text-xs font-black uppercase tracking-widest">Avg Save Rate</p>
                 <p class="text-4xl font-black text-blue-600 mt-2">{{ stats.avg_save_rate }}%</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-yellow-400">
-                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Avg Engagement</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-yellow-100 border-l-8 border-l-yellow-400">
+                <p class="text-slate-400 text-xs font-black uppercase tracking-widest">Avg Engagement</p>
                 <p class="text-4xl font-black text-yellow-500 mt-2">{{ stats.avg_eng_rate }}%</p>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-xl shadow-lg col-span-1 lg:col-span-2">
-                <h3 class="text-xl font-bold mb-4 flex items-center justify-between">
-                    <span><i class="fa-solid fa-bullseye text-red-500 mr-2"></i>4-Quadrant Strategy Matrix</span>
-                    <span class="text-xs text-gray-400 font-normal underline">ドットをクリックして詳細表示</span>
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden mb-10 border border-slate-100">
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6">
+                <h3 class="text-white font-bold text-xl flex items-center">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-3"></i>キーワード・インパクト分析
                 </h3>
-                <div class="h-96 w-full"><canvas id="mainMatrix"></canvas></div>
+                <p class="text-purple-100 text-xs mt-1">どの言葉が保存率 $y$ に最も貢献しているかを抽出 [cite: 2026-02-12]</p>
             </div>
+            <div class="p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">High Save-Rate Keywords</h4>
+                        <div id="keywordList" class="grid grid-cols-1 gap-3">
+                            </div>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative">
+                        <i class="fa-solid fa-quote-left absolute top-4 left-4 text-slate-200 text-4xl"></i>
+                        <h4 class="font-bold text-indigo-700 mb-4 flex items-center">
+                            <i class="fa-solid fa-robot mr-2"></i>AI分析官のテキスト戦略
+                        </h4>
+                        <p id="aiInsight" class="text-sm text-slate-600 leading-relaxed z-10 relative">
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-                <h3 class="text-xl font-bold mb-4 flex items-center">
+        <div class="bg-white p-8 rounded-3xl shadow-lg mb-10 border border-slate-100">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold flex items-center text-slate-800">
+                    <i class="fa-solid fa-bullseye text-red-500 mr-2"></i>4-Quadrant Strategy Matrix
+                </h3>
+                <span class="text-[10px] text-slate-400 italic underline">点をクリックして投稿画像を確認</span>
+            </div>
+            <div class="h-96 w-full">
+                <canvas id="mainMatrix"></canvas>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                <h3 class="text-lg font-bold mb-6 flex items-center">
                     <i class="fa-solid fa-person-dress text-pink-500 mr-2"></i>肌色露出度 vs 保存率
                 </h3>
                 <div class="h-64 w-full"><canvas id="skinChart"></canvas></div>
             </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-                <h3 class="text-xl font-bold mb-4 flex items-center">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                <h3 class="text-lg font-bold mb-6 flex items-center">
                     <i class="fa-regular fa-clock text-blue-500 mr-2"></i>投稿時間帯別パフォーマンス
                 </h3>
                 <div class="h-64 w-full"><canvas id="timeChart"></canvas></div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
-                <h3 class="text-lg font-bold mb-4 flex items-center">
-                    <i class="fa-solid fa-chart-simple text-green-500 mr-2"></i>構図別 保存効率
-                </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-green-500">
+                <h3 class="text-lg font-bold mb-6">📸 構図別 保存効率 (Avg)</h3>
                 <div class="h-64 w-full"><canvas id="compEfficiencyChart"></canvas></div>
             </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-orange-500">
-                <h3 class="text-lg font-bold mb-4 flex items-center">
-                    <i class="fa-solid fa-trophy text-orange-500 mr-2"></i>勝者の条件 (Top 10 vs 全体)
-                </h3>
-                <div id="comparisonBox" class="space-y-4">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-orange-500">
+                <h3 class="text-lg font-bold mb-6">🏆 勝者の条件 (Top 10 vs All)</h3>
+                <div id="comparisonBox" class="space-y-6">
                     </div>
             </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
-            <div class="bg-indigo-600 p-4 flex justify-between items-center">
-                <h3 class="text-white font-bold flex items-center text-lg">
-                    <i class="fa-solid fa-crown mr-2 text-yellow-400"></i>保存率トップ10
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+            <div class="bg-slate-900 p-6 flex justify-between items-center">
+                <h3 class="text-white font-bold text-xl flex items-center">
+                    <i class="fa-solid fa-crown text-yellow-400 mr-3"></i>保存率トップ10ランキング
                 </h3>
+                <span class="text-slate-400 text-xs">Updated in real-time</span>
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-left">
-                    <thead class="bg-indigo-50 text-indigo-600 text-xs uppercase font-bold">
+                    <thead class="bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-widest border-b border-slate-100">
                         <tr>
-                            <th class="p-4">Rank</th>
-                            <th class="p-4">Preview</th>
-                            <th class="p-4">Save Rate</th>
-                            <th class="p-4">Skin Ratio</th>
-                            <th class="p-4">Time</th>
-                            <th class="p-4">Status</th>
+                            <th class="p-6">Rank</th>
+                            <th class="p-6">Preview</th>
+                            <th class="p-6">Save Rate</th>
+                            <th class="p-6">Skin %</th>
+                            <th class="p-6">Time</th>
+                            <th class="p-6">Status</th>
                         </tr>
                     </thead>
-                    <tbody id="topTable" class="divide-y divide-gray-100"></tbody>
+                    <tbody id="topTable" class="divide-y divide-slate-50">
+                        </tbody>
                 </table>
             </div>
+        </div>
+        {% else %}
+        <div class="flex flex-col items-center justify-center py-32 opacity-20 text-slate-400 text-center">
+            <i class="fa-solid fa-database text-8xl mb-4"></i>
+            <p class="text-xl font-bold italic uppercase">Awaiting Data Streams...</p>
         </div>
         {% endif %}
     </div>
 
-    <div id="imageModal" class="fixed inset-0 bg-black/90 hidden z-[100] flex items-center justify-center p-4 cursor-pointer" onclick="this.classList.add('hidden')">
-        <div class="bg-white p-2 rounded-lg max-w-lg w-full relative">
-            <img id="modalImg" src="" class="w-full h-auto rounded">
-            <div id="modalText" class="p-4 text-center font-bold text-gray-800"></div>
+    <div id="imageModal" class="fixed inset-0 bg-slate-900/95 hidden z-[100] flex items-center justify-center p-6 cursor-pointer transition-opacity duration-300" onclick="this.classList.add('hidden')">
+        <div class="bg-white p-2 rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+            <img id="modalImg" src="" class="w-full h-auto rounded-xl">
+            <div id="modalText" class="p-6 text-center font-black text-slate-800 text-lg"></div>
         </div>
     </div>
 
@@ -119,95 +147,134 @@
 
         if (stats && stats.total_tweets > 0) {
             
-            // --- A. 比較分析の計算 ---
+            // --- A. Keyword & Insight Logic ---
+            const kwList = document.getElementById('keywordList');
+            if(stats.keyword_ranking && stats.keyword_ranking.length > 0) {
+                stats.keyword_ranking.slice(0, 8).forEach(kw => {
+                    const div = document.createElement('div');
+                    div.className = "flex justify-between items-center p-4 bg-white border border-slate-100 rounded-xl shadow-sm hover:border-purple-300 transition group cursor-default";
+                    div.innerHTML = `
+                        <span class="font-bold text-slate-700 group-hover:text-purple-600 transition">#${kw.word}</span>
+                        <div class="text-right">
+                            <span class="text-purple-600 font-black block text-lg">${kw.avg_save}%</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">${kw.count} Posts</span>
+                        </div>
+                    `;
+                    kwList.appendChild(div);
+                });
+                const topKw = stats.keyword_ranking[0];
+                document.getElementById('aiInsight').innerHTML = `
+                    データ解析の結果、<b>「#${topKw.word}」</b>という単語を含む投稿は、平均保存率が <b>${topKw.avg_save}%</b> と極めて高いパフォーマンスを発揮しています。<br><br>
+                    これは全体の平均（${stats.avg_save_rate}%）を大きく上回っており、ファンがこの単語に付随する「シチュエーション」や「キャラクター」を強く求めている証拠です。次回の投稿テキストに必ず含めるべき「パワーワード」と言えるでしょう。
+                `;
+            } else {
+                document.getElementById('aiInsight').innerText = "キーワード解析に十分なデータがまだ蓄積されていません。500件を目指して解析を継続してください。";
+            }
+
+            // --- B. Top 10 Comparison ---
             const top10 = [...stats.raw_tweets].sort((a,b) => b.save_rate - a.save_rate).slice(0, 10);
             const topAvgSkin = (top10.reduce((acc, t) => acc + (t.images[0].skin_ratio || 0), 0) / 10).toFixed(1);
             const allAvgSkin = (stats.skin_scatter.reduce((acc, s) => acc + s.x, 0) / stats.skin_scatter.length).toFixed(1);
 
             document.getElementById('comparisonBox').innerHTML = `
-                <div class="flex justify-between p-4 bg-orange-50 rounded-lg border border-orange-100">
-                    <span class="font-bold text-gray-700">🏆 上位10件の平均肌色率</span>
-                    <span class="text-orange-600 font-black text-xl">${topAvgSkin}%</span>
+                <div class="p-6 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center group">
+                    <span class="font-bold text-slate-700">🏆 上位10件の平均肌色率</span>
+                    <span class="text-orange-600 font-black text-2xl group-hover:scale-110 transition">${topAvgSkin}%</span>
                 </div>
-                <div class="flex justify-between p-4 bg-gray-50 rounded-lg">
-                    <span class="font-bold text-gray-700">📊 全体の平均肌色率</span>
-                    <span class="text-gray-600 font-black text-xl">${allAvgSkin}%</span>
+                <div class="p-6 bg-slate-100 rounded-2xl flex justify-between items-center">
+                    <span class="font-bold text-slate-700">📊 全体の平均肌色率</span>
+                    <span class="text-slate-500 font-black text-2xl">${allAvgSkin}%</span>
                 </div>
-                <p class="text-sm text-gray-500 italic p-2">
-                    結論: 上位投稿は全体より <b>${Math.abs(topAvgSkin - allAvgSkin).toFixed(1)}%</b> ${topAvgSkin > allAvgSkin ? '露出が高い' : '露出が低い'}傾向にあります。
+                <p class="text-xs text-slate-400 italic px-2">
+                    結論: 現在、上位投稿は全体より <b>${Math.abs(topAvgSkin - allAvgSkin).toFixed(1)}%</b> 
+                    ${topAvgSkin > allAvgSkin ? '露出が高い' : '露出が低い'}傾向にあります。
                 </p>
             `;
 
-            // --- B. ランキングテーブルの生成 ---
+            // --- C. Ranking Table ---
             const tableBody = document.getElementById('topTable');
             top10.forEach((t, i) => {
                 const isGod = t.save_rate > stats.avg_save_rate && t.engagement_rate > stats.avg_eng_rate;
                 const row = document.createElement('tr');
-                row.className = "hover:bg-gray-50 transition cursor-pointer";
+                row.className = "hover:bg-slate-50 transition-colors group cursor-pointer";
                 row.innerHTML = `
-                    <td class="p-4 font-black text-gray-400 text-xl">#${i+1}</td>
-                    <td class="p-2"><img src="${t.images[0].path}" class="h-20 w-16 object-cover rounded shadow" onclick="showModal('${t.images[0].path}', 'Save: ${t.save_rate}%')"></td>
-                    <td class="p-4 font-black text-blue-600 text-lg">${t.save_rate}%</td>
-                    <td class="p-4 text-gray-600 font-bold">${t.images[0].skin_ratio}%</td>
-                    <td class="p-4 text-gray-400 text-sm font-mono">${t.created_at ? t.created_at.split('T')[1].substring(0,5) : '-'}</td>
-                    <td class="p-4">${isGod ? '<span class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-[10px] font-black">神投稿</span>' : '<span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-[10px] font-black">隠れた名作</span>'}</td>
+                    <td class="p-6 font-black text-slate-200 group-hover:text-slate-400 transition text-2xl italic">#${i+1}</td>
+                    <td class="p-4"><img src="${t.images[0].path}" class="h-20 w-16 object-cover rounded-lg shadow-md group-hover:scale-110 transition cursor-zoom-in" onclick="showModal('${t.images[0].path}', 'Save Rate: ${t.save_rate}%')"></td>
+                    <td class="p-6 font-black text-blue-600 text-xl">${t.save_rate}%</td>
+                    <td class="p-6 text-slate-600 font-bold">${t.images[0].skin_ratio}%</td>
+                    <td class="p-6 text-slate-400 text-sm font-mono">${t.created_at ? t.created_at.split('T')[1].substring(0,5) : '-'}</td>
+                    <td class="p-6">${isGod ? '<span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-purple-200 shadow-sm shadow-purple-100">God Tier</span>' : '<span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-200 shadow-sm shadow-blue-100">Hidden Gem</span>'}</td>
                 `;
                 tableBody.appendChild(row);
             });
 
-            // --- C. 各種チャート描画 ---
-            // 1. マトリクス
+            // --- D. Chart Visualizations ---
+            // Matrix Chart
             new Chart(document.getElementById('mainMatrix'), {
                 type: 'scatter',
-                data: { datasets: [{ label: 'Posts', data: stats.scatter_data, backgroundColor: 'rgba(52, 152, 219, 0.7)', pointRadius: 7 }] },
-                options: {
+                data: { datasets: [{ label: 'Posts', data: stats.scatter_data, backgroundColor: 'rgba(52, 152, 219, 0.6)', pointRadius: 8, pointHoverRadius: 12 }] },
+                options: { 
                     responsive: true, maintainAspectRatio: false,
-                    onClick: (e, elements) => {
-                        if (elements.length > 0) {
-                            const idx = elements[0].index;
-                            const t = stats.raw_tweets.find(x => x.tweet_id === stats.scatter_data[idx].id);
-                            if (t) showModal(t.images[0].path, `Save: ${t.save_rate}% / ID: ${t.tweet_id}`);
-                        }
+                    onClick: (e, elements) => { 
+                        if (elements.length > 0) { 
+                            const idx = elements[0].index; 
+                            const t = stats.raw_tweets.find(x => x.tweet_id === stats.scatter_data[idx].id); 
+                            if (t) showModal(t.images[0].path, `Save: ${t.save_rate}% / ID: ${t.tweet_id}`); 
+                        } 
                     },
-                    plugins: {
+                    plugins: { 
                         annotation: { annotations: {
-                            lineY: { type: 'line', yMin: stats.avg_save_rate, yMax: stats.avg_save_rate, borderColor: 'rgba(0,0,0,0.2)', borderDash: [5,5] },
-                            lineX: { type: 'line', xMin: stats.avg_eng_rate, xMax: stats.avg_eng_rate, borderColor: 'rgba(0,0,0,0.2)', borderDash: [5,5] }
-                        }}
+                            lineY: { type: 'line', yMin: stats.avg_save_rate, yMax: stats.avg_save_rate, borderColor: 'rgba(0,0,0,0.1)', borderDash: [6,6], borderWidth: 2 },
+                            lineX: { type: 'line', xMin: stats.avg_eng_rate, xMax: stats.avg_eng_rate, borderColor: 'rgba(0,0,0,0.1)', borderDash: [6,6], borderWidth: 2 }
+                        }},
+                        legend: { display: false }
                     },
-                    scales: { x: { title: { display: true, text: 'Engagement (%)' } }, y: { title: { display: true, text: 'Save Rate (%)' } } }
+                    scales: { 
+                        x: { title: { display: true, text: 'Engagement (%)', font: { weight: 'bold' } }, grid: { display: false } }, 
+                        y: { title: { display: true, text: 'Save Rate (%)', font: { weight: 'bold' } }, grid: { color: 'rgba(0,0,0,0.03)' } } 
+                    }
                 }
             });
 
-            // 2. 肌色チャート
+            // Skin Chart
             new Chart(document.getElementById('skinChart'), {
                 type: 'scatter',
                 data: { datasets: [
-                    { label: '全身・バストアップ', data: stats.skin_scatter.filter(d => d.comp !== 'Face Close-up'), backgroundColor: 'rgba(236, 72, 153, 0.7)', pointRadius: 5 },
-                    { label: '顔アップ', data: stats.skin_scatter.filter(d => d.comp === 'Face Close-up'), backgroundColor: 'rgba(59, 130, 246, 0.4)', pointStyle: 'crossRot', pointRadius: 6 }
+                    { label: '全身・バストアップ', data: stats.skin_scatter.filter(d => d.comp !== 'Face Close-up'), backgroundColor: 'rgba(236, 72, 153, 0.6)', pointRadius: 6 },
+                    { label: '顔アップ', data: stats.skin_scatter.filter(d => d.comp === 'Face Close-up'), backgroundColor: 'rgba(59, 130, 246, 0.3)', pointStyle: 'crossRot', pointRadius: 8 }
                 ]},
-                options: { responsive: true, maintainAspectRatio: false, scales: { x: { min: 0, max: 100, title: { display: true, text: '肌色率 (%)' } } } }
+                options: { 
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { x: { min: 0, max: 100, title: { display: true, text: '肌色率 (%)' } } }
+                }
             });
 
-            // 3. 時間帯チャート
+            // Time Chart
             new Chart(document.getElementById('timeChart'), {
                 type: 'bar',
-                data: { labels: Array.from({length: 24}, (_, i) => `${i}時`), datasets: [{ label: '平均保存率', data: stats.hourly_stats, backgroundColor: 'rgba(59, 130, 246, 0.7)', borderRadius: 4 }] },
-                options: { responsive: true, maintainAspectRatio: false }
+                data: { 
+                    labels: Array.from({length: 24}, (_, i) => `${i}h`), 
+                    datasets: [{ label: 'Avg Save Rate', data: stats.hourly_stats, backgroundColor: 'rgba(59, 130, 246, 0.6)', borderRadius: 8 }] 
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { x: { grid: { display: false } } } }
             });
 
-            // 4. 構図効率チャート (新設)
+            // Composition Chart
             new Chart(document.getElementById('compEfficiencyChart'), {
                 type: 'bar',
-                data: { labels: Object.keys(stats.comp_efficiency), datasets: [{ label: '平均保存率 (%)', data: Object.values(stats.comp_efficiency), backgroundColor: 'rgba(34, 197, 94, 0.7)', borderRadius: 5 }] },
-                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false }
+                data: { 
+                    labels: Object.keys(stats.comp_efficiency), 
+                    datasets: [{ label: 'Efficiency (%)', data: Object.values(stats.comp_efficiency), backgroundColor: 'rgba(34, 197, 94, 0.6)', borderRadius: 8 }] 
+                },
+                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true } } }
             });
         }
 
         function showModal(src, text) {
             document.getElementById('modalImg').src = src;
             document.getElementById('modalText').innerText = text;
-            document.getElementById('imageModal').classList.remove('hidden');
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
         }
     </script>
 </body>

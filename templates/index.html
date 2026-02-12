@@ -3,90 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosplay Analysis System v4.2</title>
+    <title>Cosplay Analyzer v4.6</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-slate-50 min-h-screen">
     
-    <nav class="bg-white shadow-md p-4 mb-6 sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-4">
-            <h1 class="text-2xl font-bold text-gray-800 flex items-center">
-                <i class="fa-solid fa-camera-retro text-blue-500 mr-2"></i>Cosplay Analytics
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-black text-slate-800 tracking-tighter italic uppercase">
+                Cosplay <span class="text-blue-600">Analyzer</span>
             </h1>
-            
-            <div class="flex flex-wrap gap-4 items-center">
-                <form action="/analyze_single" method="POST" class="flex gap-2 bg-blue-50 p-2 rounded-lg border border-blue-200">
-                    <input type="text" name="url" placeholder="Twitter URLを貼り付け" class="border p-2 rounded text-sm w-48 lg:w-64" required>
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded font-bold text-sm transition">
-                        <i class="fa-solid fa-magnifying-glass mr-1"></i>単発解析
-                    </button>
-                </form>
-
-                <form action="/upload_csv" method="POST" enctype="multipart/form-data" class="flex gap-2">
-                    <input type="file" name="file" accept=".csv" class="border p-2 rounded text-sm w-40" required>
-                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded font-bold text-sm transition">
-                        <i class="fa-solid fa-upload mr-1"></i>CSV
-                    </button>
-                </form>
-
-                <a href="/stats" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold transition shadow-sm">
-                    <i class="fa-solid fa-chart-pie mr-1"></i>分析レポート
+            <div class="flex gap-4">
+                <a href="/stats" class="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200 flex items-center">
+                    <i class="fa-solid fa-chart-pie mr-2"></i>分析ダッシュボード
                 </a>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto px-4 pb-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {% for tweet in tweets %}
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                <div class="relative">
-                    {% if tweet.images %}
-                        <img src="{{ tweet.images[0].path }}" class="w-full h-80 object-cover object-top">
-                        <div class="absolute top-2 left-2 flex flex-col gap-1">
-                            <span class="bg-black/70 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm">
-                                <i class="fa-solid fa-crop-simple mr-1"></i>{{ tweet.images[0].composition }}
-                            </span>
-                            {% if tweet.images[0].skin_ratio is defined %}
-                            <span class="bg-pink-500/80 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm font-bold">
-                                <i class="fa-solid fa-person-dress mr-1"></i>Skin: {{ tweet.images[0].skin_ratio }}%
-                            </span>
-                            {% endif %}
-                        </div>
-                        {% if tweet.created_at %}
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-blue-600/80 text-white text-[10px] px-2 py-1 rounded-full backdrop-blur-sm">
-                                <i class="fa-regular fa-clock mr-1"></i>{{ tweet.created_at.split('T')[1][:5] }}
-                            </span>
-                        </div>
-                        {% endif %}
-                    {% else %}
-                        <div class="w-full h-80 bg-gray-200 flex items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-image-slash text-4xl"></i>
-                        </div>
-                    {% endif %}
-                </div>
+    <div class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-700 mb-4 flex items-center">
+                    <i class="fa-solid fa-file-csv text-green-500 mr-2"></i>CSV一括解析 (350件の続きから)
+                </h3>
+                <form action="/upload_csv" method="post" enctype="multipart/form-data" class="flex gap-2">
+                    <input type="file" name="file" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200">
+                    <button type="submit" class="bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-bold">Start</button>
+                </form>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-700 mb-4 flex items-center">
+                    <i class="fa-solid fa-magnifying-glass text-blue-500 mr-2"></i>特定のURLをデバッグ解析
+                </h3>
+                <form action="/analyze_single" method="post" class="flex gap-2">
+                    <input type="text" name="url" placeholder="https://x.com/..." class="flex-1 bg-slate-50 border-0 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold">Check</button>
+                </form>
+            </div>
+        </div>
 
-                <div class="p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {% for t in tweets %}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div class="relative">
+                    <img src="{{ t.images[0].path }}" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm">
+                        <span class="text-xs font-black text-blue-600">Save: {{ t.save_rate }}%</span>
+                    </div>
+                </div>
+                <div class="p-5">
                     <div class="flex justify-between items-center mb-3">
-                        <div class="text-center w-1/2 border-r">
-                            <p class="text-[10px] text-blue-500 font-bold uppercase">Save Rate</p>
-                            <p class="text-xl font-black text-gray-800">{{ tweet.save_rate }}%</p>
-                        </div>
-                        <div class="text-center w-1/2">
-                            <p class="text-[10px] text-orange-500 font-bold uppercase">Engagement</p>
-                            <p class="text-xl font-black text-gray-800">{{ tweet.engagement_rate }}%</p>
-                        </div>
+                        <span class="text-[10px] font-mono text-slate-400">ID: {{ t.tweet_id }}</span>
+                        <span class="text-[10px] text-slate-400">{{ t.created_at[:10] }}</span>
                     </div>
-                    <div class="flex justify-between text-[10px] text-gray-400 bg-gray-50 p-2 rounded">
-                        <span><i class="fa-regular fa-heart mr-1"></i>{{ tweet.metrics.likes }}</span>
-                        <span><i class="fa-regular fa-bookmark mr-1"></i>{{ tweet.metrics.bookmarks }}</span>
-                        <span><i class="fa-regular fa-eye mr-1"></i>{{ tweet.metrics.views }}</span>
+                    <p class="text-xs text-slate-600 italic line-clamp-2 mb-4 leading-relaxed">
+                        "{{ t.tweet_text or '(No Text Data)' }}"
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[9px] bg-slate-100 text-slate-600 px-2 py-1 rounded font-bold uppercase">{{ t.images[0].composition }}</span>
+                        <span class="text-[9px] bg-pink-50 text-pink-500 px-2 py-1 rounded font-bold">Skin: {{ t.images[0].skin_ratio }}%</span>
+                        <span class="text-[9px] bg-blue-50 text-blue-500 px-2 py-1 rounded font-bold">Eng: {{ t.engagement_rate }}%</span>
                     </div>
-                    <a href="{{ tweet.url }}" target="_blank" class="block mt-3 text-center text-xs text-gray-400 hover:text-blue-500">
-                        <i class="fa-brands fa-twitter mr-1"></i>Open Twitter
-                    </a>
                 </div>
             </div>
             {% endfor %}

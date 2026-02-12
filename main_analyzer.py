@@ -29,14 +29,13 @@ COMPOSITION_DEFINITIONS = {
 }
 
 # --- 🤖 AIモデル初期化 ---
-print("🤖 Loading AI Model...")
+print("🤖 Loading AI Model for Composition Analysis...")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = CLIPModel.from_pretrained(AI_MODEL_ID).to(device)
 processor = CLIPProcessor.from_pretrained(AI_MODEL_ID)
 
 def extract_tweet_id(url):
-    """ ★最重要修正: URLからID(数字)を確実に抜き出す [cite: 2026-02-12] """
-    # status/ の直後にある10桁以上の数字を抽出。末尾に /photo/1 等があっても無視
+    """ URLからID(数字)を確実に抜き出す [cite: 2026-02-12] """
     match = re.search(r'status/(\d+)', url)
     return match.group(1) if match else None
 
@@ -45,14 +44,9 @@ def extract_number(text):
     if not text: return 0
     clean = text.replace(',', '').strip()
     upper = clean.upper()
-    
     mul = 1
-    # 数字の直後にKがある場合のみ1000倍
-    if re.search(r'\dK', upper):
-        mul = 1000
-    elif re.search(r'\dM', upper):
-        mul = 1000000
-        
+    if re.search(r'\dK', upper): mul = 1000
+    elif re.search(r'\dM', upper): mul = 1000000
     match = re.search(r'(\d+(?:\.\d+)?)', clean)
     return int(float(match.group(1)) * mul) if match else 0
 
@@ -65,9 +59,7 @@ def analyze_skin_ratio(img_path):
         lower_skin = np.array([0, 20, 70], dtype=np.uint8)
         upper_skin = np.array([20, 255, 255], dtype=np.uint8)
         mask = cv2.inRange(hsv, lower_skin, upper_skin)
-        skin_pixels = cv2.countNonZero(mask)
-        total_pixels = img.shape[0] * img.shape[1]
-        return round((skin_pixels / total_pixels) * 100, 2)
+        return round((cv2.countNonZero(mask) / (img.shape[0] * img.shape[1])) * 100, 2)
     except: return 0.0
 
 def get_tweet_time(tweet_id):
@@ -82,8 +74,7 @@ def predict_composition(pil_img):
     labels, prompts_list = [], []
     for label, prompts in COMPOSITION_DEFINITIONS.items():
         for p in prompts:
-            labels.append(label)
-            prompts_list.append(f"a photo of {p}")
+            labels.append(label); prompts_list.append(f"a photo of {p}")
     inputs = processor(text=prompts_list, images=pil_img, return_tensors="pt", padding=True).to(device)
     with torch.no_grad():
         outputs = model(**inputs)
@@ -96,22 +87,18 @@ def predict_composition(pil_img):
     return best, round(avg_scores[best] * 100, 1)
 
 async def run_analysis(raw_url):
-    # ★修正：正規表現によるID抽出
     tweet_id = extract_tweet_id(raw_url)
-    if not tweet_id:
-        print(f"❌ Tweet ID NotFound: {raw_url}")
-        return
+    if not tweet_id: return
 
     tweet_url = f"https://x.com/i/status/{tweet_id}"
     
-    # 既存データのチェック (肌色解析済みならスキップ)
+    # 既存チェック (テキスト未取得なら再解析)
     if os.path.exists(DB_FILE):
         try:
             with open(DB_FILE, 'r', encoding='utf-8') as f:
                 db = json.load(f)
                 entry = next((e for e in db if e.get('tweet_id') == tweet_id), None)
-                if entry and entry.get('images') and 'skin_ratio' in entry['images'][0]:
-                    print(f"⏩ Skip (Already Done): {tweet_id}")
+                if entry and 'tweet_text' in entry and 'skin_ratio' in entry['images'][0]:
                     return
         except: pass
 
@@ -125,11 +112,14 @@ async def run_analysis(raw_url):
 
         try:
             print(f"📡 Analyzing: {tweet_url}")
-            # ★タイムアウト回避：domcontentloadedで読み込み、数秒待機
             await page.goto(tweet_url, wait_until="domcontentloaded", timeout=60000)
             await asyncio.sleep(7)
 
-            # メトリクス取得ロジック (aria-labelから数値を抽出)
+            # ツイート本文取得 [cite: 2026-02-12]
+            tweet_text_el = await page.query_selector('[data-testid="tweetText"]')
+            tweet_text = await tweet_text_el.inner_text() if tweet_text_el else ""
+
+            # メトリクス取得
             metrics = {'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0}
             targets = [('likes', ['like', 'unlike']), ('reposts', ['retweet', 'unretweet']), ('bookmarks', ['bookmark', 'removeBookmark'])]
             for key, ids in targets:
@@ -143,7 +133,7 @@ async def run_analysis(raw_url):
             v_link = await page.query_selector('a[href*="/analytics"]')
             if v_link: metrics['views'] = extract_number(await v_link.get_attribute("aria-label") or await v_link.inner_text())
 
-            # 画像 & 肌色分析 (1枚目のみ)
+            # 画像 & 肌色分析
             image_results = []
             img_el = await page.query_selector('[data-testid="tweetPhoto"] img')
             if img_el:
@@ -156,41 +146,38 @@ async def run_analysis(raw_url):
                         resp = await img_page.goto(high_res)
                         if resp:
                             with open(img_path, "wb") as f: f.write(await resp.body())
-                            pil_img = Image.open(img_path)
-                            comp, conf = predict_composition(pil_img)
+                            comp, conf = predict_composition(Image.open(img_path))
                             s_ratio = analyze_skin_ratio(img_path)
                             image_results.append({
-                                "path": img_path, "url": high_res,
-                                "composition": comp, "confidence": conf,
-                                "skin_ratio": s_ratio
+                                "path": img_path, "composition": comp, "skin_ratio": s_ratio
                             })
                     finally: await img_page.close()
 
-            if not image_results:
-                print(f"⚠️ No Image Found: {tweet_id}")
-                return
+            if not image_results: return
 
             final_result = {
-                "tweet_id": tweet_id, "url": tweet_url,
-                "created_at": get_tweet_time(tweet_id),
-                "timestamp": datetime.now().isoformat(),
+                "tweet_id": tweet_id, "url": tweet_url, "tweet_text": tweet_text,
+                "created_at": get_tweet_time(tweet_id), "timestamp": datetime.now().isoformat(),
                 "metrics": metrics, "images": image_results,
                 "engagement_rate": round((metrics['likes']/metrics['views']*100), 2) if metrics['views'] > 0 else 0,
                 "save_rate": round((metrics['bookmarks']/metrics['likes']*100), 2) if metrics['likes'] > 0 else 0
             }
 
-            db = []
-            if os.path.exists(DB_FILE):
-                try:
-                    with open(DB_FILE, 'r', encoding='utf-8') as f: db = json.load(f)
-                except: pass
+            db = load_data_from_file()
             db = [e for e in db if e.get('tweet_id') != tweet_id]
             db.append(final_result)
             with open(DB_FILE, 'w', encoding='utf-8') as f: json.dump(db, f, ensure_ascii=False, indent=2)
-            print(f"✅ Complete: {tweet_id} | Likes: {metrics['likes']} | Skin: {image_results[0]['skin_ratio']}%")
+            print(f"✅ Complete: {tweet_id} | Likes: {metrics['likes']}")
 
         except Exception as e: print(f"❌ Error: {e}")
         finally: await browser.close()
+
+def load_data_from_file():
+    if os.path.exists(DB_FILE):
+        with open(DB_FILE, 'r', encoding='utf-8') as f:
+            try: return json.load(f)
+            except: return []
+    return []
 
 if __name__ == "__main__":
     if len(sys.argv) > 1: asyncio.run(run_analysis(sys.argv[1]))

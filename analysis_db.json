@@ -4598,5 +4598,3432 @@
     ],
     "engagement_rate": 6.91,
     "save_rate": 9.12
+  },
+  {
+    "tweet_id": "1685279711499567105",
+    "url": "https://x.com/i/status/1685279711499567105",
+    "created_at": "2023-07-29T13:22:48.861000",
+    "timestamp": "2026-02-12T03:35:56.436011",
+    "metrics": {
+      "likes": 603,
+      "reposts": 71,
+      "bookmarks": 23,
+      "views": 27600
+    },
+    "images": [
+      {
+        "path": "static/images/1685279711499567105.jpg",
+        "url": "https://pbs.twimg.com/media/F2NQ9rFaAAAr4N1?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 18.5,
+        "skin_ratio": 18.37
+      }
+    ],
+    "engagement_rate": 2.18,
+    "save_rate": 3.81
+  },
+  {
+    "tweet_id": "1687796472451117056",
+    "url": "https://x.com/i/status/1687796472451117056",
+    "created_at": "2023-08-05T12:03:31.431000",
+    "timestamp": "2026-02-12T03:36:17.792838",
+    "metrics": {
+      "likes": 477,
+      "reposts": 79,
+      "bookmarks": 20,
+      "views": 20400
+    },
+    "images": [
+      {
+        "path": "static/images/1687796472451117056.jpg",
+        "url": "https://pbs.twimg.com/media/F2xB8Z9aoAEqPq_?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.9,
+        "skin_ratio": 2.27
+      }
+    ],
+    "engagement_rate": 2.34,
+    "save_rate": 4.19
+  },
+  {
+    "tweet_id": "1703376567303623046",
+    "url": "https://x.com/i/status/1703376567303623046",
+    "created_at": "2023-09-17T11:53:15.508000",
+    "timestamp": "2026-02-12T03:41:33.739780",
+    "metrics": {
+      "likes": 995,
+      "reposts": 97,
+      "bookmarks": 46,
+      "views": 54400
+    },
+    "images": [
+      {
+        "path": "static/images/1703376567303623046.jpg",
+        "url": "https://pbs.twimg.com/media/F6Ob8xObUAA0oIG?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 25.5,
+        "skin_ratio": 24.99
+      }
+    ],
+    "engagement_rate": 1.83,
+    "save_rate": 4.62
+  },
+  {
+    "tweet_id": "1728393335575044569",
+    "url": "https://x.com/i/status/1728393335575044569",
+    "created_at": "2023-11-25T12:40:57.853000",
+    "timestamp": "2026-02-12T03:41:53.111124",
+    "metrics": {
+      "likes": 244,
+      "reposts": 47,
+      "bookmarks": 15,
+      "views": 10400
+    },
+    "images": [
+      {
+        "path": "static/images/1728393335575044569.jpg",
+        "url": "https://pbs.twimg.com/media/F_x8ksKa0AAul0u?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.5,
+        "skin_ratio": 4.3
+      }
+    ],
+    "engagement_rate": 2.35,
+    "save_rate": 6.15
+  },
+  {
+    "tweet_id": "1775151539382014259",
+    "url": "https://x.com/i/status/1775151539382014259",
+    "created_at": "2024-04-02T13:21:22.366000",
+    "timestamp": "2026-02-12T03:42:09.681778",
+    "metrics": {
+      "likes": 236,
+      "reposts": 32,
+      "bookmarks": 19,
+      "views": 7001
+    },
+    "images": [
+      {
+        "path": "static/images/1775151539382014259.jpg",
+        "url": "https://pbs.twimg.com/media/GKKa6W2acAA5vSi?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.5,
+        "skin_ratio": 1.29
+      }
+    ],
+    "engagement_rate": 3.37,
+    "save_rate": 8.05
+  },
+  {
+    "tweet_id": "1974716281619403227",
+    "url": "https://x.com/i/status/1974716281619403227",
+    "created_at": "2025-10-05T06:00:24.649000",
+    "timestamp": "2026-02-12T03:42:26.019762",
+    "metrics": {
+      "likes": 716,
+      "reposts": 64,
+      "bookmarks": 67,
+      "views": 16900
+    },
+    "images": [
+      {
+        "path": "static/images/1974716281619403227.jpg",
+        "url": "https://pbs.twimg.com/media/G2eZ8K1aAAESjpm?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 11.5,
+        "skin_ratio": 11.86
+      }
+    ],
+    "engagement_rate": 4.24,
+    "save_rate": 9.36
+  },
+  {
+    "tweet_id": "1974755810262872348",
+    "url": "https://x.com/i/status/1974755810262872348",
+    "created_at": "2025-10-05T08:37:29.012000",
+    "timestamp": "2026-02-12T03:42:42.176247",
+    "metrics": {
+      "likes": 445,
+      "reposts": 50,
+      "bookmarks": 29,
+      "views": 9573
+    },
+    "images": [
+      {
+        "path": "static/images/1974755810262872348.jpg",
+        "url": "https://pbs.twimg.com/media/G2e96chbEAA7unD?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 20.1,
+        "skin_ratio": 30.25
+      }
+    ],
+    "engagement_rate": 4.65,
+    "save_rate": 6.52
+  },
+  {
+    "tweet_id": "1976197430329987395",
+    "url": "https://x.com/i/status/1976197430329987395",
+    "created_at": "2025-10-09T08:05:58.020000",
+    "timestamp": "2026-02-12T03:43:00.640312",
+    "metrics": {
+      "likes": 339,
+      "reposts": 35,
+      "bookmarks": 22,
+      "views": 7535
+    },
+    "images": [
+      {
+        "path": "static/images/1976197430329987395.jpg",
+        "url": "https://pbs.twimg.com/media/G2zdFVOaAAMPN-U?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.6,
+        "skin_ratio": 20.96
+      }
+    ],
+    "engagement_rate": 4.5,
+    "save_rate": 6.49
+  },
+  {
+    "tweet_id": "1983799286006718513",
+    "url": "https://x.com/i/status/1983799286006718513",
+    "created_at": "2025-10-30T07:33:01.649000",
+    "timestamp": "2026-02-12T03:43:20.542403",
+    "metrics": {
+      "likes": 263,
+      "reposts": 31,
+      "bookmarks": 39,
+      "views": 18400
+    },
+    "images": [
+      {
+        "path": "static/images/1983799286006718513.jpg",
+        "url": "https://pbs.twimg.com/media/G4fe7b5bAAAeB2P?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.7,
+        "skin_ratio": 11.1
+      }
+    ],
+    "engagement_rate": 1.43,
+    "save_rate": 14.83
+  },
+  {
+    "tweet_id": "1997836798308078041",
+    "url": "https://x.com/i/status/1997836798308078041",
+    "created_at": "2025-12-08T01:13:05.386000",
+    "timestamp": "2026-02-12T03:43:38.090416",
+    "metrics": {
+      "likes": 317,
+      "reposts": 24,
+      "bookmarks": 18,
+      "views": 5069
+    },
+    "images": [
+      {
+        "path": "static/images/1997836798308078041.jpg",
+        "url": "https://pbs.twimg.com/media/G7m9-ZUacAAiHrT?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 19.2,
+        "skin_ratio": 30.51
+      }
+    ],
+    "engagement_rate": 6.25,
+    "save_rate": 5.68
+  },
+  {
+    "tweet_id": "1998540471405261254",
+    "url": "https://x.com/i/status/1998540471405261254",
+    "created_at": "2025-12-09T23:49:14.126000",
+    "timestamp": "2026-02-12T03:43:54.818601",
+    "metrics": {
+      "likes": 341,
+      "reposts": 28,
+      "bookmarks": 24,
+      "views": 5307
+    },
+    "images": [
+      {
+        "path": "static/images/1998540471405261254.jpg",
+        "url": "https://pbs.twimg.com/media/G7w99zVaMAAPlfs?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 14.1,
+        "skin_ratio": 38.35
+      }
+    ],
+    "engagement_rate": 6.43,
+    "save_rate": 7.04
+  },
+  {
+    "tweet_id": "1642826685858070529",
+    "url": "https://x.com/i/status/1642826685858070529",
+    "created_at": "2023-04-03T09:49:38.809000",
+    "timestamp": "2026-02-12T03:44:13.173588",
+    "metrics": {
+      "likes": 30,
+      "reposts": 2,
+      "bookmarks": 1,
+      "views": 905
+    },
+    "images": [
+      {
+        "path": "static/images/1642826685858070529.jpg",
+        "url": "https://pbs.twimg.com/media/Fsx-DSraYAADxCx?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 15.3,
+        "skin_ratio": 10.67
+      }
+    ],
+    "engagement_rate": 3.31,
+    "save_rate": 3.33
+  },
+  {
+    "tweet_id": "1652579135825522689",
+    "url": "https://x.com/i/status/1652579135825522689",
+    "created_at": "2023-04-30T07:42:24.073000",
+    "timestamp": "2026-02-12T03:44:35.505325",
+    "metrics": {
+      "likes": 17,
+      "reposts": 5,
+      "bookmarks": 0,
+      "views": 1312
+    },
+    "images": [
+      {
+        "path": "static/images/1652579135825522689.jpg",
+        "url": "https://pbs.twimg.com/media/Fu8jggxaQAA5j2N?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.6,
+        "skin_ratio": 4.25
+      }
+    ],
+    "engagement_rate": 1.3,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1677275995429298177",
+    "url": "https://x.com/i/status/1677275995429298177",
+    "created_at": "2023-07-07T11:18:54.248000",
+    "timestamp": "2026-02-12T03:44:55.518760",
+    "metrics": {
+      "likes": 28,
+      "reposts": 6,
+      "bookmarks": 0,
+      "views": 1432
+    },
+    "images": [
+      {
+        "path": "static/images/1677275995429298177.jpg",
+        "url": "https://pbs.twimg.com/media/F0bhfCKaAAM6VO6?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 13.6,
+        "skin_ratio": 16.84
+      }
+    ],
+    "engagement_rate": 1.96,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1691812963328397811",
+    "url": "https://x.com/i/status/1691812963328397811",
+    "created_at": "2023-08-16T14:03:37.479000",
+    "timestamp": "2026-02-12T03:45:15.095843",
+    "metrics": {
+      "likes": 23,
+      "reposts": 3,
+      "bookmarks": 0,
+      "views": 606
+    },
+    "images": [
+      {
+        "path": "static/images/1691812963328397811.jpg",
+        "url": "https://pbs.twimg.com/media/F3qG6AlWEAAxZRG?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 17.2,
+        "skin_ratio": 44.26
+      }
+    ],
+    "engagement_rate": 3.8,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1757756171455479893",
+    "url": "https://x.com/i/status/1757756171455479893",
+    "created_at": "2024-02-14T13:18:23.462000",
+    "timestamp": "2026-02-12T03:45:32.240437",
+    "metrics": {
+      "likes": 25,
+      "reposts": 7,
+      "bookmarks": 1,
+      "views": 1259
+    },
+    "images": [
+      {
+        "path": "static/images/1757756171455479893.jpg",
+        "url": "https://pbs.twimg.com/media/GGTN6VkbEAAs7u-?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.6,
+        "skin_ratio": 3.86
+      }
+    ],
+    "engagement_rate": 1.99,
+    "save_rate": 4.0
+  },
+  {
+    "tweet_id": "1774817487282122928",
+    "url": "https://x.com/i/status/1774817487282122928",
+    "created_at": "2024-04-01T15:13:58.139000",
+    "timestamp": "2026-02-12T03:45:50.621403",
+    "metrics": {
+      "likes": 27,
+      "reposts": 1,
+      "bookmarks": 0,
+      "views": 742
+    },
+    "images": [
+      {
+        "path": "static/images/1774817487282122928.jpg",
+        "url": "https://pbs.twimg.com/media/GKFqyDUaMAA3-MN?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 12.8,
+        "skin_ratio": 43.13
+      }
+    ],
+    "engagement_rate": 3.64,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1819705304298520894",
+    "url": "https://x.com/i/status/1819705304298520894",
+    "created_at": "2024-08-03T12:02:07.691000",
+    "timestamp": "2026-02-12T03:46:11.187022",
+    "metrics": {
+      "likes": 309,
+      "reposts": 27,
+      "bookmarks": 39,
+      "views": 12400
+    },
+    "images": [
+      {
+        "path": "static/images/1819705304298520894.jpg",
+        "url": "https://pbs.twimg.com/media/GUDkT4oX0AEy9PX?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.3,
+        "skin_ratio": 16.11
+      }
+    ],
+    "engagement_rate": 2.49,
+    "save_rate": 12.62
+  },
+  {
+    "tweet_id": "1831331790386245891",
+    "url": "https://x.com/i/status/1831331790386245891",
+    "created_at": "2024-09-04T14:01:37.984000",
+    "timestamp": "2026-02-12T03:46:31.476370",
+    "metrics": {
+      "likes": 118,
+      "reposts": 13,
+      "bookmarks": 11,
+      "views": 5152
+    },
+    "images": [
+      {
+        "path": "static/images/1831331790386245891.jpg",
+        "url": "https://pbs.twimg.com/media/GWoya-jWIAAIPY4?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 31.1,
+        "skin_ratio": 1.13
+      }
+    ],
+    "engagement_rate": 2.29,
+    "save_rate": 9.32
+  },
+  {
+    "tweet_id": "1835646112658866665",
+    "url": "https://x.com/i/status/1835646112658866665",
+    "created_at": "2024-09-16T11:45:12.570000",
+    "timestamp": "2026-02-12T03:46:51.281722",
+    "metrics": {
+      "likes": 85,
+      "reposts": 10,
+      "bookmarks": 7,
+      "views": 2684
+    },
+    "images": [
+      {
+        "path": "static/images/1835646112658866665.jpg",
+        "url": "https://pbs.twimg.com/media/GXmGVq4bcAAESjC?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.2,
+        "skin_ratio": 7.86
+      }
+    ],
+    "engagement_rate": 3.17,
+    "save_rate": 8.24
+  },
+  {
+    "tweet_id": "1847958044657025332",
+    "url": "https://x.com/i/status/1847958044657025332",
+    "created_at": "2024-10-20T11:08:25.903000",
+    "timestamp": "2026-02-12T03:47:10.884385",
+    "metrics": {
+      "likes": 75,
+      "reposts": 10,
+      "bookmarks": 9,
+      "views": 11100
+    },
+    "images": [
+      {
+        "path": "static/images/1847958044657025332.jpg",
+        "url": "https://pbs.twimg.com/media/GaVCNj1aAAElvLu?format=jpg&name=orig",
+        "composition": "Object/Scenery",
+        "confidence": 21.8,
+        "skin_ratio": 0.45
+      }
+    ],
+    "engagement_rate": 0.68,
+    "save_rate": 12.0
+  },
+  {
+    "tweet_id": "1907104302528864639",
+    "url": "https://x.com/i/status/1907104302528864639",
+    "created_at": "2025-04-01T16:14:32.664000",
+    "timestamp": "2026-02-12T03:47:27.029139",
+    "metrics": {
+      "likes": 138,
+      "reposts": 17,
+      "bookmarks": 19,
+      "views": 3096
+    },
+    "images": [
+      {
+        "path": "static/images/1907104302528864639.jpg",
+        "url": "https://pbs.twimg.com/media/GndlBOja4AAJPUj?format=jpg&name=orig",
+        "composition": "Object/Scenery",
+        "confidence": 25.3,
+        "skin_ratio": 0.22
+      }
+    ],
+    "engagement_rate": 4.46,
+    "save_rate": 13.77
+  },
+  {
+    "tweet_id": "1980195075369185567",
+    "url": "https://x.com/i/status/1980195075369185567",
+    "created_at": "2025-10-20T08:51:10.870000",
+    "timestamp": "2026-02-12T03:47:46.515056",
+    "metrics": {
+      "likes": 168,
+      "reposts": 12,
+      "bookmarks": 28,
+      "views": 4436
+    },
+    "images": [
+      {
+        "path": "static/images/1980195075369185567.jpg",
+        "url": "https://pbs.twimg.com/media/G3sQtoDXoAA9WL0?format=jpg&name=orig",
+        "composition": "Object/Scenery",
+        "confidence": 15.7,
+        "skin_ratio": 3.84
+      }
+    ],
+    "engagement_rate": 3.79,
+    "save_rate": 16.67
+  },
+  {
+    "tweet_id": "1684491060104531968",
+    "url": "https://x.com/i/status/1684491060104531968",
+    "created_at": "2023-07-27T09:08:59.716000",
+    "timestamp": "2026-02-12T03:48:05.157820",
+    "metrics": {
+      "likes": 1350,
+      "reposts": 165,
+      "bookmarks": 55,
+      "views": 63800
+    },
+    "images": [
+      {
+        "path": "static/images/1684491060104531968.jpg",
+        "url": "https://pbs.twimg.com/media/F2CDpCxaUAQbSQU?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 15.5,
+        "skin_ratio": 4.71
+      }
+    ],
+    "engagement_rate": 2.12,
+    "save_rate": 4.07
+  },
+  {
+    "tweet_id": "1684877572461731840",
+    "url": "https://x.com/i/status/1684877572461731840",
+    "created_at": "2023-07-28T10:44:51.443000",
+    "timestamp": "2026-02-12T03:48:24.218367",
+    "metrics": {
+      "likes": 358,
+      "reposts": 77,
+      "bookmarks": 16,
+      "views": 18100
+    },
+    "images": [
+      {
+        "path": "static/images/1684877572461731840.jpg",
+        "url": "https://pbs.twimg.com/media/F2HjN8vaQAIPH6K?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.6,
+        "skin_ratio": 1.09
+      }
+    ],
+    "engagement_rate": 1.98,
+    "save_rate": 4.47
+  },
+  {
+    "tweet_id": "1700079946667024631",
+    "url": "https://x.com/i/status/1700079946667024631",
+    "created_at": "2023-09-08T09:33:39.900000",
+    "timestamp": "2026-02-12T03:48:46.700251",
+    "metrics": {
+      "likes": 168,
+      "reposts": 55,
+      "bookmarks": 10,
+      "views": 11200
+    },
+    "images": [
+      {
+        "path": "static/images/1700079946667024631.jpg",
+        "url": "https://pbs.twimg.com/media/F5flsfDaIAABpIM?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 25.7,
+        "skin_ratio": 0.54
+      }
+    ],
+    "engagement_rate": 1.5,
+    "save_rate": 5.95
+  },
+  {
+    "tweet_id": "1707989936077774861",
+    "url": "https://x.com/i/status/1707989936077774861",
+    "created_at": "2023-09-30T05:25:08.336000",
+    "timestamp": "2026-02-12T03:49:08.085471",
+    "metrics": {
+      "likes": 2051,
+      "reposts": 176,
+      "bookmarks": 179,
+      "views": 68700
+    },
+    "images": [
+      {
+        "path": "static/images/1707989936077774861.jpg",
+        "url": "https://pbs.twimg.com/media/F7P_xm4bUAEF5v6?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.8,
+        "skin_ratio": 25.48
+      }
+    ],
+    "engagement_rate": 2.99,
+    "save_rate": 8.73
+  },
+  {
+    "tweet_id": "1708031047966097510",
+    "url": "https://x.com/i/status/1708031047966097510",
+    "created_at": "2023-09-30T08:08:30.174000",
+    "timestamp": "2026-02-12T03:49:29.991083",
+    "metrics": {
+      "likes": 1444,
+      "reposts": 189,
+      "bookmarks": 156,
+      "views": 51000
+    },
+    "images": [
+      {
+        "path": "static/images/1708031047966097510.jpg",
+        "url": "https://pbs.twimg.com/media/F7QlK6jaYAAoWN5?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.8,
+        "skin_ratio": 11.84
+      }
+    ],
+    "engagement_rate": 2.83,
+    "save_rate": 10.8
+  },
+  {
+    "tweet_id": "1708390409045778921",
+    "url": "https://x.com/i/status/1708390409045778921",
+    "created_at": "2023-10-01T07:56:28.532000",
+    "timestamp": "2026-02-12T03:49:47.739883",
+    "metrics": {
+      "likes": 1448,
+      "reposts": 175,
+      "bookmarks": 181,
+      "views": 70300
+    },
+    "images": [
+      {
+        "path": "static/images/1708390409045778921.jpg",
+        "url": "https://pbs.twimg.com/media/F7Vr1cFbkAAYAxC?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.9,
+        "skin_ratio": 15.19
+      }
+    ],
+    "engagement_rate": 2.06,
+    "save_rate": 12.5
+  },
+  {
+    "tweet_id": "1709144985571061984",
+    "url": "https://x.com/i/status/1709144985571061984",
+    "created_at": "2023-10-03T09:54:53.595000",
+    "timestamp": "2026-02-12T03:50:06.137289",
+    "metrics": {
+      "likes": 1277,
+      "reposts": 154,
+      "bookmarks": 86,
+      "views": 41300
+    },
+    "images": [
+      {
+        "path": "static/images/1709144985571061984.jpg",
+        "url": "https://pbs.twimg.com/media/F7gaS07bIAAuZLa?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.0,
+        "skin_ratio": 25.9
+      }
+    ],
+    "engagement_rate": 3.09,
+    "save_rate": 6.73
+  },
+  {
+    "tweet_id": "1712441530945012055",
+    "url": "https://x.com/i/status/1712441530945012055",
+    "created_at": "2023-10-12T12:14:11.259000",
+    "timestamp": "2026-02-12T03:50:22.966709",
+    "metrics": {
+      "likes": 1151,
+      "reposts": 138,
+      "bookmarks": 115,
+      "views": 37400
+    },
+    "images": [
+      {
+        "path": "static/images/1712441530945012055.jpg",
+        "url": "https://pbs.twimg.com/media/F8PQfa2aUAA-g63?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.9,
+        "skin_ratio": 15.55
+      }
+    ],
+    "engagement_rate": 3.08,
+    "save_rate": 9.99
+  },
+  {
+    "tweet_id": "1715289627005944014",
+    "url": "https://x.com/i/status/1715289627005944014",
+    "created_at": "2023-10-20T08:51:30.275000",
+    "timestamp": "2026-02-12T03:50:39.157764",
+    "metrics": {
+      "likes": 794,
+      "reposts": 121,
+      "bookmarks": 57,
+      "views": 26800
+    },
+    "images": [
+      {
+        "path": "static/images/1715289627005944014.jpg",
+        "url": "https://pbs.twimg.com/media/F83uvqja0AA772w?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.5,
+        "skin_ratio": 8.91
+      }
+    ],
+    "engagement_rate": 2.96,
+    "save_rate": 7.18
+  },
+  {
+    "tweet_id": "1728754977676656739",
+    "url": "https://x.com/i/status/1728754977676656739",
+    "created_at": "2023-11-26T12:38:00.049000",
+    "timestamp": "2026-02-12T03:50:56.962445",
+    "metrics": {
+      "likes": 619,
+      "reposts": 113,
+      "bookmarks": 32,
+      "views": 24600
+    },
+    "images": [
+      {
+        "path": "static/images/1728754977676656739.jpg",
+        "url": "https://pbs.twimg.com/media/F_3Fe05bYAAHYzp?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 16.0,
+        "skin_ratio": 30.02
+      }
+    ],
+    "engagement_rate": 2.52,
+    "save_rate": 5.17
+  },
+  {
+    "tweet_id": "1730556413137887618",
+    "url": "https://x.com/i/status/1730556413137887618",
+    "created_at": "2023-12-01T11:56:15.732000",
+    "timestamp": "2026-02-12T03:51:18.213433",
+    "metrics": {
+      "likes": 729,
+      "reposts": 112,
+      "bookmarks": 40,
+      "views": 35600
+    },
+    "images": [
+      {
+        "path": "static/images/1730556413137887618.jpg",
+        "url": "https://pbs.twimg.com/media/GAQr4GIbUAAJ07I?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 11.0,
+        "skin_ratio": 48.97
+      }
+    ],
+    "engagement_rate": 2.05,
+    "save_rate": 5.49
+  },
+  {
+    "tweet_id": "1751555063544488318",
+    "url": "https://x.com/i/status/1751555063544488318",
+    "created_at": "2024-01-28T10:37:24.125000",
+    "timestamp": "2026-02-12T03:51:39.459846",
+    "metrics": {
+      "likes": 434,
+      "reposts": 73,
+      "bookmarks": 19,
+      "views": 10200
+    },
+    "images": [
+      {
+        "path": "static/images/1751555063544488318.jpg",
+        "url": "https://pbs.twimg.com/media/GE7F_a4bQAAsUj2?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.8,
+        "skin_ratio": 14.55
+      }
+    ],
+    "engagement_rate": 4.25,
+    "save_rate": 4.38
+  },
+  {
+    "tweet_id": "1794547177681002913",
+    "url": "https://x.com/i/status/1794547177681002913",
+    "created_at": "2024-05-26T01:52:42.890000",
+    "timestamp": "2026-02-12T03:52:00.993654",
+    "metrics": {
+      "likes": 931,
+      "reposts": 119,
+      "bookmarks": 166,
+      "views": 28300
+    },
+    "images": [
+      {
+        "path": "static/images/1794547177681002913.jpg",
+        "url": "https://pbs.twimg.com/media/GOeC-ZGa4AAcKTz?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 16.8,
+        "skin_ratio": 10.86
+      }
+    ],
+    "engagement_rate": 3.29,
+    "save_rate": 17.83
+  },
+  {
+    "tweet_id": "1810264769905209784",
+    "url": "https://x.com/i/status/1810264769905209784",
+    "created_at": "2024-07-08T10:48:48.895000",
+    "timestamp": "2026-02-12T03:52:21.593187",
+    "metrics": {
+      "likes": 3088,
+      "reposts": 239,
+      "bookmarks": 417,
+      "views": 83000
+    },
+    "images": [
+      {
+        "path": "static/images/1810264769905209784.jpg",
+        "url": "https://pbs.twimg.com/media/GR9ZyJfa4AAH5O_?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.8,
+        "skin_ratio": 14.28
+      }
+    ],
+    "engagement_rate": 3.72,
+    "save_rate": 13.5
+  },
+  {
+    "tweet_id": "1811319289930289354",
+    "url": "https://x.com/i/status/1811319289930289354",
+    "created_at": "2024-07-11T08:39:06.061000",
+    "timestamp": "2026-02-12T03:52:39.996367",
+    "metrics": {
+      "likes": 2431,
+      "reposts": 180,
+      "bookmarks": 295,
+      "views": 59200
+    },
+    "images": [
+      {
+        "path": "static/images/1811319289930289354.jpg",
+        "url": "https://pbs.twimg.com/media/GSMZSZnaAAAq5bL?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.7,
+        "skin_ratio": 3.51
+      }
+    ],
+    "engagement_rate": 4.11,
+    "save_rate": 12.13
+  },
+  {
+    "tweet_id": "1812781212479705537",
+    "url": "https://x.com/i/status/1812781212479705537",
+    "created_at": "2024-07-15T09:28:15.558000",
+    "timestamp": "2026-02-12T03:52:56.306735",
+    "metrics": {
+      "likes": 666,
+      "reposts": 87,
+      "bookmarks": 56,
+      "views": 16300
+    },
+    "images": [
+      {
+        "path": "static/images/1812781212479705537.jpg",
+        "url": "https://pbs.twimg.com/media/GShK47iX0AEBSHo?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.9,
+        "skin_ratio": 26.29
+      }
+    ],
+    "engagement_rate": 4.09,
+    "save_rate": 8.41
+  },
+  {
+    "tweet_id": "1827503903514227157",
+    "url": "https://x.com/i/status/1827503903514227157",
+    "created_at": "2024-08-25T00:30:58.635000",
+    "timestamp": "2026-02-12T03:53:14.175059",
+    "metrics": {
+      "likes": 1602,
+      "reposts": 127,
+      "bookmarks": 166,
+      "views": 31600
+    },
+    "images": [
+      {
+        "path": "static/images/1827503903514227157.jpg",
+        "url": "https://pbs.twimg.com/media/GVyZG8gbgAAGRIa?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.2,
+        "skin_ratio": 3.33
+      }
+    ],
+    "engagement_rate": 5.07,
+    "save_rate": 10.36
+  },
+  {
+    "tweet_id": "1838137769925005551",
+    "url": "https://x.com/i/status/1838137769925005551",
+    "created_at": "2024-09-23T08:46:09.955000",
+    "timestamp": "2026-02-12T03:53:31.704295",
+    "metrics": {
+      "likes": 379,
+      "reposts": 57,
+      "bookmarks": 19,
+      "views": 13000
+    },
+    "images": [
+      {
+        "path": "static/images/1838137769925005551.jpg",
+        "url": "https://pbs.twimg.com/media/GYJgBbeaMAADPvJ?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 18.0,
+        "skin_ratio": 23.63
+      }
+    ],
+    "engagement_rate": 2.92,
+    "save_rate": 5.01
+  },
+  {
+    "tweet_id": "1838500229978689574",
+    "url": "https://x.com/i/status/1838500229978689574",
+    "created_at": "2024-09-24T08:46:27.166000",
+    "timestamp": "2026-02-12T03:53:50.284968",
+    "metrics": {
+      "likes": 322,
+      "reposts": 55,
+      "bookmarks": 17,
+      "views": 9428
+    },
+    "images": [
+      {
+        "path": "static/images/1838500229978689574.jpg",
+        "url": "https://pbs.twimg.com/media/GYOpV7jakAACYtY?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.8,
+        "skin_ratio": 52.99
+      }
+    ],
+    "engagement_rate": 3.42,
+    "save_rate": 5.28
+  },
+  {
+    "tweet_id": "1839257924495081830",
+    "url": "https://x.com/i/status/1839257924495081830",
+    "created_at": "2024-09-26T10:57:15.616000",
+    "timestamp": "2026-02-12T03:54:10.915583",
+    "metrics": {
+      "likes": 598,
+      "reposts": 68,
+      "bookmarks": 52,
+      "views": 16900
+    },
+    "images": [
+      {
+        "path": "static/images/1839257924495081830.jpg",
+        "url": "https://pbs.twimg.com/media/GYZbU0GaMAATxvE?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.9,
+        "skin_ratio": 7.11
+      }
+    ],
+    "engagement_rate": 3.54,
+    "save_rate": 8.7
+  },
+  {
+    "tweet_id": "1842848972211359993",
+    "url": "https://x.com/i/status/1842848972211359993",
+    "created_at": "2024-10-06T08:46:48.110000",
+    "timestamp": "2026-02-12T03:54:27.800390",
+    "metrics": {
+      "likes": 278,
+      "reposts": 42,
+      "bookmarks": 15,
+      "views": 8999
+    },
+    "images": [
+      {
+        "path": "static/images/1842848972211359993.jpg",
+        "url": "https://pbs.twimg.com/media/GZMdPMPbcAEBP2f?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 12.0,
+        "skin_ratio": 0.02
+      }
+    ],
+    "engagement_rate": 3.09,
+    "save_rate": 5.4
+  },
+  {
+    "tweet_id": "1907092916583231862",
+    "url": "https://x.com/i/status/1907092916583231862",
+    "created_at": "2025-04-01T15:29:18.043000",
+    "timestamp": "2026-02-12T03:54:48.354391",
+    "metrics": {
+      "likes": 328,
+      "reposts": 35,
+      "bookmarks": 30,
+      "views": 11100
+    },
+    "images": [
+      {
+        "path": "static/images/1907092916583231862.jpg",
+        "url": "https://pbs.twimg.com/media/Gnda5VubQAAlVBu?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.6,
+        "skin_ratio": 0.04
+      }
+    ],
+    "engagement_rate": 2.95,
+    "save_rate": 9.15
+  },
+  {
+    "tweet_id": "1916510329799876737",
+    "url": "https://x.com/i/status/1916510329799876737",
+    "created_at": "2025-04-27T15:10:44.321000",
+    "timestamp": "2026-02-12T03:55:07.781627",
+    "metrics": {
+      "likes": 233,
+      "reposts": 49,
+      "bookmarks": 29,
+      "views": 13200
+    },
+    "images": [
+      {
+        "path": "static/images/1916510329799876737.jpg",
+        "url": "https://pbs.twimg.com/media/GpjP84obgAAqc7h?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.8,
+        "skin_ratio": 3.08
+      }
+    ],
+    "engagement_rate": 1.77,
+    "save_rate": 12.45
+  },
+  {
+    "tweet_id": "1916786468158320967",
+    "url": "https://x.com/i/status/1916786468158320967",
+    "created_at": "2025-04-28T09:28:00.836000",
+    "timestamp": "2026-02-12T03:55:25.458305",
+    "metrics": {
+      "likes": 384,
+      "reposts": 62,
+      "bookmarks": 22,
+      "views": 13800
+    },
+    "images": [
+      {
+        "path": "static/images/1916786468158320967.jpg",
+        "url": "https://pbs.twimg.com/media/GpnKi04boAAUwE_?format=jpg&name=orig",
+        "composition": "Object/Scenery",
+        "confidence": 12.7,
+        "skin_ratio": 0.41
+      }
+    ],
+    "engagement_rate": 2.78,
+    "save_rate": 5.73
+  },
+  {
+    "tweet_id": "1922230141192745146",
+    "url": "https://x.com/i/status/1922230141192745146",
+    "created_at": "2025-05-13T09:59:13.626000",
+    "timestamp": "2026-02-12T03:55:45.976202",
+    "metrics": {
+      "likes": 237,
+      "reposts": 39,
+      "bookmarks": 13,
+      "views": 11000
+    },
+    "images": [
+      {
+        "path": "static/images/1922230141192745146.jpg",
+        "url": "https://pbs.twimg.com/media/Gq0iGbPXgAAyW-N?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.8,
+        "skin_ratio": 2.49
+      }
+    ],
+    "engagement_rate": 2.15,
+    "save_rate": 5.49
+  },
+  {
+    "tweet_id": "1958097632985035083",
+    "url": "https://x.com/i/status/1958097632985035083",
+    "created_at": "2025-08-20T09:23:50.055000",
+    "timestamp": "2026-02-12T03:56:01.860232",
+    "metrics": {
+      "likes": 305,
+      "reposts": 63,
+      "bookmarks": 37,
+      "views": 10800
+    },
+    "images": [
+      {
+        "path": "static/images/1958097632985035083.jpg",
+        "url": "https://pbs.twimg.com/media/GyyPX8zaIAA6yKh?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.3,
+        "skin_ratio": 0.44
+      }
+    ],
+    "engagement_rate": 2.82,
+    "save_rate": 12.13
+  },
+  {
+    "tweet_id": "1958502941796835369",
+    "url": "https://x.com/i/status/1958502941796835369",
+    "created_at": "2025-08-21T12:14:23.206000",
+    "timestamp": "2026-02-12T03:56:22.696332",
+    "metrics": {
+      "likes": 362,
+      "reposts": 46,
+      "bookmarks": 35,
+      "views": 11200
+    },
+    "images": [
+      {
+        "path": "static/images/1958502941796835369.jpg",
+        "url": "https://pbs.twimg.com/media/Gy4ACYjbMAAMbQ9?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.9,
+        "skin_ratio": 0.31
+      }
+    ],
+    "engagement_rate": 3.23,
+    "save_rate": 9.67
+  },
+  {
+    "tweet_id": "1960664151640170897",
+    "url": "https://x.com/i/status/1960664151640170897",
+    "created_at": "2025-08-27T11:22:15.786000",
+    "timestamp": "2026-02-12T03:56:41.271739",
+    "metrics": {
+      "likes": 279,
+      "reposts": 52,
+      "bookmarks": 25,
+      "views": 9948
+    },
+    "images": [
+      {
+        "path": "static/images/1960664151640170897.jpg",
+        "url": "https://pbs.twimg.com/media/GzWtlDia4AQ74L7?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.7,
+        "skin_ratio": 0.1
+      }
+    ],
+    "engagement_rate": 2.8,
+    "save_rate": 8.96
+  },
+  {
+    "tweet_id": "1962331710726774923",
+    "url": "https://x.com/i/status/1962331710726774923",
+    "created_at": "2025-09-01T01:48:32.854000",
+    "timestamp": "2026-02-12T03:57:00.606206",
+    "metrics": {
+      "likes": 636,
+      "reposts": 50,
+      "bookmarks": 65,
+      "views": 12400
+    },
+    "images": [
+      {
+        "path": "static/images/1962331710726774923.jpg",
+        "url": "https://pbs.twimg.com/media/GzuaRy6bwAAaAfp?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 16.9,
+        "skin_ratio": 12.22
+      }
+    ],
+    "engagement_rate": 5.13,
+    "save_rate": 10.22
+  },
+  {
+    "tweet_id": "1965612622004601213",
+    "url": "https://x.com/i/status/1965612622004601213",
+    "created_at": "2025-09-10T03:05:43.059000",
+    "timestamp": "2026-02-12T04:02:19.044371",
+    "metrics": {
+      "likes": 268,
+      "reposts": 35,
+      "bookmarks": 28,
+      "views": 10000
+    },
+    "images": [
+      {
+        "path": "static/images/1965612622004601213.jpg",
+        "url": "https://pbs.twimg.com/media/G0dCQIvaIAAMP_n?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 11.0,
+        "skin_ratio": 3.18
+      }
+    ],
+    "engagement_rate": 2.68,
+    "save_rate": 10.45
+  },
+  {
+    "tweet_id": "1965789184888856982",
+    "url": "https://x.com/i/status/1965789184888856982",
+    "created_at": "2025-09-10T14:47:18.931000",
+    "timestamp": "2026-02-12T04:02:35.795807",
+    "metrics": {
+      "likes": 339,
+      "reposts": 39,
+      "bookmarks": 32,
+      "views": 9308
+    },
+    "images": [
+      {
+        "path": "static/images/1965789184888856982.jpg",
+        "url": "https://pbs.twimg.com/media/G0fi1odaQAACa4u?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 13.7,
+        "skin_ratio": 5.34
+      }
+    ],
+    "engagement_rate": 3.64,
+    "save_rate": 9.44
+  },
+  {
+    "tweet_id": "1966100709763625236",
+    "url": "https://x.com/i/status/1966100709763625236",
+    "created_at": "2025-09-11T11:25:12.249000",
+    "timestamp": "2026-02-12T04:02:55.839020",
+    "metrics": {
+      "likes": 409,
+      "reposts": 57,
+      "bookmarks": 55,
+      "views": 9720
+    },
+    "images": [
+      {
+        "path": "static/images/1966100709763625236.jpg",
+        "url": "https://pbs.twimg.com/media/G0j-KlrbkAAWV3z?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.9,
+        "skin_ratio": 2.76
+      }
+    ],
+    "engagement_rate": 4.21,
+    "save_rate": 13.45
+  },
+  {
+    "tweet_id": "1967384091055292759",
+    "url": "https://x.com/i/status/1967384091055292759",
+    "created_at": "2025-09-15T00:24:54.193000",
+    "timestamp": "2026-02-12T04:03:12.803721",
+    "metrics": {
+      "likes": 198,
+      "reposts": 24,
+      "bookmarks": 25,
+      "views": 5862
+    },
+    "images": [
+      {
+        "path": "static/images/1967384091055292759.jpg",
+        "url": "https://pbs.twimg.com/media/G02NZXYasAAAw32?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.3,
+        "skin_ratio": 0.1
+      }
+    ],
+    "engagement_rate": 3.38,
+    "save_rate": 12.63
+  },
+  {
+    "tweet_id": "1967794190844326372",
+    "url": "https://x.com/i/status/1967794190844326372",
+    "created_at": "2025-09-16T03:34:29.602000",
+    "timestamp": "2026-02-12T04:03:32.407637",
+    "metrics": {
+      "likes": 365,
+      "reposts": 53,
+      "bookmarks": 35,
+      "views": 10200
+    },
+    "images": [
+      {
+        "path": "static/images/1967794190844326372.jpg",
+        "url": "https://pbs.twimg.com/media/G08CYSpbsAAKdWp?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.9,
+        "skin_ratio": 1.28
+      }
+    ],
+    "engagement_rate": 3.58,
+    "save_rate": 9.59
+  },
+  {
+    "tweet_id": "1967880252627329036",
+    "url": "https://x.com/i/status/1967880252627329036",
+    "created_at": "2025-09-16T09:16:28.330000",
+    "timestamp": "2026-02-12T04:03:52.428613",
+    "metrics": {
+      "likes": 382,
+      "reposts": 45,
+      "bookmarks": 26,
+      "views": 12500
+    },
+    "images": [
+      {
+        "path": "static/images/1967880252627329036.jpg",
+        "url": "https://pbs.twimg.com/media/G09QpyPbcAAgfHa?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 28.8,
+        "skin_ratio": 26.6
+      }
+    ],
+    "engagement_rate": 3.06,
+    "save_rate": 6.81
+  },
+  {
+    "tweet_id": "1851968434629939414",
+    "url": "https://x.com/i/status/1851968434629939414",
+    "created_at": "2024-10-31T12:44:17.382000",
+    "timestamp": "2026-02-12T04:04:08.416890",
+    "metrics": {
+      "likes": 658,
+      "reposts": 41,
+      "bookmarks": 93,
+      "views": 22100
+    },
+    "images": [
+      {
+        "path": "static/images/1851968434629939414.jpg",
+        "url": "https://pbs.twimg.com/media/GbODeJtakAMj8Dl?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.9,
+        "skin_ratio": 76.95
+      }
+    ],
+    "engagement_rate": 2.98,
+    "save_rate": 14.13
+  },
+  {
+    "tweet_id": "1852968192483999762",
+    "url": "https://x.com/i/status/1852968192483999762",
+    "created_at": "2024-11-03T06:56:58.229000",
+    "timestamp": "2026-02-12T04:04:25.587717",
+    "metrics": {
+      "likes": 328,
+      "reposts": 39,
+      "bookmarks": 32,
+      "views": 12500
+    },
+    "images": [
+      {
+        "path": "static/images/1852968192483999762.jpg",
+        "url": "https://pbs.twimg.com/media/GbcQv5raAAAR6xa?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 14.2,
+        "skin_ratio": 2.65
+      }
+    ],
+    "engagement_rate": 2.62,
+    "save_rate": 9.76
+  },
+  {
+    "tweet_id": "1978783749224443949",
+    "url": "https://x.com/i/status/1978783749224443949",
+    "created_at": "2025-10-16T11:23:04.496000",
+    "timestamp": "2026-02-12T04:04:45.468249",
+    "metrics": {
+      "likes": 281,
+      "reposts": 46,
+      "bookmarks": 39,
+      "views": 14900
+    },
+    "images": [
+      {
+        "path": "static/images/1978783749224443949.jpg",
+        "url": "https://pbs.twimg.com/media/G3YNQECbcAAXsIJ?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.6,
+        "skin_ratio": 2.24
+      }
+    ],
+    "engagement_rate": 1.89,
+    "save_rate": 13.88
+  },
+  {
+    "tweet_id": "1853381441142530234",
+    "url": "https://x.com/i/status/1853381441142530234",
+    "created_at": "2024-11-04T10:19:04.387000",
+    "timestamp": "2026-02-12T04:05:02.289259",
+    "metrics": {
+      "likes": 312,
+      "reposts": 75,
+      "bookmarks": 22,
+      "views": 15600
+    },
+    "images": [
+      {
+        "path": "static/images/1853381441142530234.jpg",
+        "url": "https://pbs.twimg.com/media/GbiImJyaMAA4r2y?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 20.0,
+        "skin_ratio": 14.94
+      }
+    ],
+    "engagement_rate": 2.0,
+    "save_rate": 7.05
+  },
+  {
+    "tweet_id": "1980281425699188908",
+    "url": "https://x.com/i/status/1980281425699188908",
+    "created_at": "2025-10-20T14:34:18.393000",
+    "timestamp": "2026-02-12T04:05:20.299923",
+    "metrics": {
+      "likes": 365,
+      "reposts": 30,
+      "bookmarks": 28,
+      "views": 7885
+    },
+    "images": [
+      {
+        "path": "static/images/1980281425699188908.jpg",
+        "url": "https://pbs.twimg.com/media/G3tfVb5X0AAbj2t?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.0,
+        "skin_ratio": 4.26
+      }
+    ],
+    "engagement_rate": 4.63,
+    "save_rate": 7.67
+  },
+  {
+    "tweet_id": "1853749238876057981",
+    "url": "https://x.com/i/status/1853749238876057981",
+    "created_at": "2024-11-05T10:40:34.200000",
+    "timestamp": "2026-02-12T04:05:37.840529",
+    "metrics": {
+      "likes": 515,
+      "reposts": 75,
+      "bookmarks": 60,
+      "views": 33600
+    },
+    "images": [
+      {
+        "path": "static/images/1853749238876057981.jpg",
+        "url": "https://pbs.twimg.com/media/GbnXGxxbMAEZEVu?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.6,
+        "skin_ratio": 16.18
+      }
+    ],
+    "engagement_rate": 1.53,
+    "save_rate": 11.65
+  },
+  {
+    "tweet_id": "1856987688483918102",
+    "url": "https://x.com/i/status/1856987688483918102",
+    "created_at": "2024-11-14T09:09:00.754000",
+    "timestamp": "2026-02-12T04:05:57.534974",
+    "metrics": {
+      "likes": 136,
+      "reposts": 18,
+      "bookmarks": 8,
+      "views": 5902
+    },
+    "images": [
+      {
+        "path": "static/images/1856987688483918102.jpg",
+        "url": "https://pbs.twimg.com/media/GcVYdJ2bkAAqPN-?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.4,
+        "skin_ratio": 18.85
+      }
+    ],
+    "engagement_rate": 2.3,
+    "save_rate": 5.88
+  },
+  {
+    "tweet_id": "1858846366115787192",
+    "url": "https://x.com/i/status/1858846366115787192",
+    "created_at": "2024-11-19T12:14:44.034000",
+    "timestamp": "2026-02-12T04:06:14.586750",
+    "metrics": {
+      "likes": 297,
+      "reposts": 38,
+      "bookmarks": 28,
+      "views": 8943
+    },
+    "images": [
+      {
+        "path": "static/images/1858846366115787192.jpg",
+        "url": "https://pbs.twimg.com/media/Gcvy6nibUAAhIeD?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.0,
+        "skin_ratio": 8.99
+      }
+    ],
+    "engagement_rate": 3.32,
+    "save_rate": 9.43
+  },
+  {
+    "tweet_id": "1869687753379909987",
+    "url": "https://x.com/i/status/1869687753379909987",
+    "created_at": "2024-12-19T10:14:32.181000",
+    "timestamp": "2026-02-12T04:06:34.608896",
+    "metrics": {
+      "likes": 420,
+      "reposts": 64,
+      "bookmarks": 46,
+      "views": 13600
+    },
+    "images": [
+      {
+        "path": "static/images/1869687753379909987.jpg",
+        "url": "https://pbs.twimg.com/media/GfJ3F6EaYAAfulF?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 16.1,
+        "skin_ratio": 6.86
+      }
+    ],
+    "engagement_rate": 3.09,
+    "save_rate": 10.95
+  },
+  {
+    "tweet_id": "1871481804823437516",
+    "url": "https://x.com/i/status/1871481804823437516",
+    "created_at": "2024-12-24T09:03:27.377000",
+    "timestamp": "2026-02-12T04:06:55.450308",
+    "metrics": {
+      "likes": 306,
+      "reposts": 36,
+      "bookmarks": 30,
+      "views": 8982
+    },
+    "images": [
+      {
+        "path": "static/images/1871481804823437516.jpg",
+        "url": "https://pbs.twimg.com/media/GfjWx8KbcAADlS_?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 24.2,
+        "skin_ratio": 64.59
+      }
+    ],
+    "engagement_rate": 3.41,
+    "save_rate": 9.8
+  },
+  {
+    "tweet_id": "1883397024583917647",
+    "url": "https://x.com/i/status/1883397024583917647",
+    "created_at": "2025-01-26T06:10:17.142000",
+    "timestamp": "2026-02-12T04:07:11.776557",
+    "metrics": {
+      "likes": 492,
+      "reposts": 57,
+      "bookmarks": 60,
+      "views": 13300
+    },
+    "images": [
+      {
+        "path": "static/images/1883397024583917647.jpg",
+        "url": "https://pbs.twimg.com/media/GiMrmnWacAAQcuW?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.7,
+        "skin_ratio": 31.9
+      }
+    ],
+    "engagement_rate": 3.7,
+    "save_rate": 12.2
+  },
+  {
+    "tweet_id": "1918606865417867306",
+    "url": "https://x.com/i/status/1918606865417867306",
+    "created_at": "2025-05-03T10:01:37.364000",
+    "timestamp": "2026-02-12T04:07:33.339878",
+    "metrics": {
+      "likes": 557,
+      "reposts": 61,
+      "bookmarks": 52,
+      "views": 15400
+    },
+    "images": [
+      {
+        "path": "static/images/1918606865417867306.jpg",
+        "url": "https://pbs.twimg.com/media/GqBCxbvbEAA8wFM?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.5,
+        "skin_ratio": 0.46
+      }
+    ],
+    "engagement_rate": 3.62,
+    "save_rate": 9.34
+  },
+  {
+    "tweet_id": "1763885102113882227",
+    "url": "https://x.com/i/status/1763885102113882227",
+    "created_at": "2024-03-02T11:12:34.401000",
+    "timestamp": "2026-02-12T04:07:51.728623",
+    "metrics": {
+      "likes": 51,
+      "reposts": 17,
+      "bookmarks": 3,
+      "views": 4592
+    },
+    "images": [
+      {
+        "path": "static/images/1763885102113882227.jpg",
+        "url": "https://pbs.twimg.com/media/GHqUI9ybwAA82J-?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 31.4,
+        "skin_ratio": 2.39
+      }
+    ],
+    "engagement_rate": 1.11,
+    "save_rate": 5.88
+  },
+  {
+    "tweet_id": "1833827994563203508",
+    "url": "https://x.com/i/status/1833827994563203508",
+    "created_at": "2024-09-11T11:20:39.437000",
+    "timestamp": "2026-02-12T04:08:09.229975",
+    "metrics": {
+      "likes": 877,
+      "reposts": 114,
+      "bookmarks": 42,
+      "views": 27400
+    },
+    "images": [
+      {
+        "path": "static/images/1833827994563203508.jpg",
+        "url": "https://pbs.twimg.com/media/GXMQ1hfaQAAGq31?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 14.7,
+        "skin_ratio": 12.55
+      }
+    ],
+    "engagement_rate": 3.2,
+    "save_rate": 4.79
+  },
+  {
+    "tweet_id": "1836725804392149010",
+    "url": "https://x.com/i/status/1836725804392149010",
+    "created_at": "2024-09-19T11:15:31.139000",
+    "timestamp": "2026-02-12T04:08:29.173660",
+    "metrics": {
+      "likes": 1215,
+      "reposts": 101,
+      "bookmarks": 99,
+      "views": 29900
+    },
+    "images": [
+      {
+        "path": "static/images/1836725804392149010.jpg",
+        "url": "https://pbs.twimg.com/media/GX1cYQdawAAfY1-?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 16.4,
+        "skin_ratio": 7.6
+      }
+    ],
+    "engagement_rate": 4.06,
+    "save_rate": 8.15
+  },
+  {
+    "tweet_id": "1862094440762093738",
+    "url": "https://x.com/i/status/1862094440762093738",
+    "created_at": "2024-11-28T11:21:25.376000",
+    "timestamp": "2026-02-12T04:08:45.294137",
+    "metrics": {
+      "likes": 630,
+      "reposts": 79,
+      "bookmarks": 46,
+      "views": 19800
+    },
+    "images": [
+      {
+        "path": "static/images/1862094440762093738.jpg",
+        "url": "https://pbs.twimg.com/media/Gdd9BTSWcAAq9Rc?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 14.7,
+        "skin_ratio": 12.55
+      }
+    ],
+    "engagement_rate": 3.18,
+    "save_rate": 7.3
+  },
+  {
+    "tweet_id": "1809012488962519428",
+    "url": "https://x.com/i/status/1809012488962519428",
+    "created_at": "2024-07-04T23:52:41.852000",
+    "timestamp": "2026-02-12T04:09:07.294340",
+    "metrics": {
+      "likes": 47,
+      "reposts": 11,
+      "bookmarks": 5,
+      "views": 5751
+    },
+    "images": [
+      {
+        "path": "static/images/1809012488962519428.jpg",
+        "url": "https://pbs.twimg.com/media/GRrnREbbMAYhnSH?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.5,
+        "skin_ratio": 1.84
+      }
+    ],
+    "engagement_rate": 0.82,
+    "save_rate": 10.64
+  },
+  {
+    "tweet_id": "1809013913167745179",
+    "url": "https://x.com/i/status/1809013913167745179",
+    "created_at": "2024-07-04T23:58:21.409000",
+    "timestamp": "2026-02-12T04:09:25.199626",
+    "metrics": {
+      "likes": 53,
+      "reposts": 13,
+      "bookmarks": 8,
+      "views": 3303
+    },
+    "images": [
+      {
+        "path": "static/images/1809013913167745179.jpg",
+        "url": "https://pbs.twimg.com/media/GRrokMXbMAEyN16?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.8,
+        "skin_ratio": 1.23
+      }
+    ],
+    "engagement_rate": 1.6,
+    "save_rate": 15.09
+  },
+  {
+    "tweet_id": "1838144982974333182",
+    "url": "https://x.com/i/status/1838144982974333182",
+    "created_at": "2024-09-23T09:14:49.680000",
+    "timestamp": "2026-02-12T04:09:45.033023",
+    "metrics": {
+      "likes": 315,
+      "reposts": 27,
+      "bookmarks": 27,
+      "views": 12400
+    },
+    "images": [
+      {
+        "path": "static/images/1838144982974333182.jpg",
+        "url": "https://pbs.twimg.com/media/GYJnHUTbkAAsn22?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 15.6,
+        "skin_ratio": 52.66
+      }
+    ],
+    "engagement_rate": 2.54,
+    "save_rate": 8.57
+  },
+  {
+    "tweet_id": "1874044758500532416",
+    "url": "https://x.com/i/status/1874044758500532416",
+    "created_at": "2024-12-31T10:47:43.151000",
+    "timestamp": "2026-02-12T04:10:02.517291",
+    "metrics": {
+      "likes": 21,
+      "reposts": 2,
+      "bookmarks": 1,
+      "views": 783
+    },
+    "images": [
+      {
+        "path": "static/images/1874044758500532416.jpg",
+        "url": "https://pbs.twimg.com/media/GgHxxSzbYAAuqmQ?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.0,
+        "skin_ratio": 3.94
+      }
+    ],
+    "engagement_rate": 2.68,
+    "save_rate": 4.76
+  },
+  {
+    "tweet_id": "1874048029403340947",
+    "url": "https://x.com/i/status/1874048029403340947",
+    "created_at": "2024-12-31T11:00:42.995000",
+    "timestamp": "2026-02-12T04:10:19.278526",
+    "metrics": {
+      "likes": 54,
+      "reposts": 9,
+      "bookmarks": 1,
+      "views": 1959
+    },
+    "images": [
+      {
+        "path": "static/images/1874048029403340947.jpg",
+        "url": "https://pbs.twimg.com/media/GgH0vqwbEAAItIc?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 15.9,
+        "skin_ratio": 0.65
+      }
+    ],
+    "engagement_rate": 2.76,
+    "save_rate": 1.85
+  },
+  {
+    "tweet_id": "1907113718640685317",
+    "url": "https://x.com/i/status/1907113718640685317",
+    "created_at": "2025-04-01T16:51:57.640000",
+    "timestamp": "2026-02-12T04:10:34.213303",
+    "metrics": {
+      "likes": 302,
+      "reposts": 35,
+      "bookmarks": 33,
+      "views": 19500
+    },
+    "images": [
+      {
+        "path": "static/images/1907113718640685317.jpg",
+        "url": "https://pbs.twimg.com/media/Gndt0XhaMAE91kz?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.2,
+        "skin_ratio": 1.23
+      }
+    ],
+    "engagement_rate": 1.55,
+    "save_rate": 10.93
+  },
+  {
+    "tweet_id": "1931733949182824718",
+    "url": "https://x.com/i/status/1931733949182824718",
+    "created_at": "2025-06-08T15:23:58.023000",
+    "timestamp": "2026-02-12T04:10:50.894396",
+    "metrics": {
+      "likes": 1046,
+      "reposts": 95,
+      "bookmarks": 160,
+      "views": 40700
+    },
+    "images": [
+      {
+        "path": "static/images/1931733949182824718.jpg",
+        "url": "https://pbs.twimg.com/media/Gs7lx4jbcAA9dZ7?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 14.7,
+        "skin_ratio": 9.95
+      }
+    ],
+    "engagement_rate": 2.57,
+    "save_rate": 15.3
+  },
+  {
+    "tweet_id": "1936421978107482429",
+    "url": "https://x.com/i/status/1936421978107482429",
+    "created_at": "2025-06-21T13:52:31.218000",
+    "timestamp": "2026-02-12T04:11:07.669406",
+    "metrics": {
+      "likes": 398,
+      "reposts": 40,
+      "bookmarks": 61,
+      "views": 10900
+    },
+    "images": [
+      {
+        "path": "static/images/1936421978107482429.jpg",
+        "url": "https://pbs.twimg.com/media/Gt-NhNjXIAAQnHh?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.0,
+        "skin_ratio": 0.36
+      }
+    ],
+    "engagement_rate": 3.65,
+    "save_rate": 15.33
+  },
+  {
+    "tweet_id": "1938044630991614288",
+    "url": "https://x.com/i/status/1938044630991614288",
+    "created_at": "2025-06-26T01:20:21.813000",
+    "timestamp": "2026-02-12T04:11:25.396515",
+    "metrics": {
+      "likes": 638,
+      "reposts": 46,
+      "bookmarks": 93,
+      "views": 15500
+    },
+    "images": [
+      {
+        "path": "static/images/1938044630991614288.jpg",
+        "url": "https://pbs.twimg.com/media/GuVRUCEbEAE2If_?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.5,
+        "skin_ratio": 0.88
+      }
+    ],
+    "engagement_rate": 4.12,
+    "save_rate": 14.58
+  },
+  {
+    "tweet_id": "1941464428828143796",
+    "url": "https://x.com/i/status/1941464428828143796",
+    "created_at": "2025-07-05T11:49:25.154000",
+    "timestamp": "2026-02-12T04:11:41.832361",
+    "metrics": {
+      "likes": 373,
+      "reposts": 35,
+      "bookmarks": 53,
+      "views": 9545
+    },
+    "images": [
+      {
+        "path": "static/images/1941464428828143796.jpg",
+        "url": "https://pbs.twimg.com/media/GvF3lmTaAAIBVz7?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 11.7,
+        "skin_ratio": 7.45
+      }
+    ],
+    "engagement_rate": 3.91,
+    "save_rate": 14.21
+  },
+  {
+    "tweet_id": "1941819805612617866",
+    "url": "https://x.com/i/status/1941819805612617866",
+    "created_at": "2025-07-06T11:21:33.582000",
+    "timestamp": "2026-02-12T04:11:58.679167",
+    "metrics": {
+      "likes": 314,
+      "reposts": 40,
+      "bookmarks": 40,
+      "views": 16000
+    },
+    "images": [
+      {
+        "path": "static/images/1941819805612617866.jpg",
+        "url": "https://pbs.twimg.com/media/GvK6z1fbcAAKdDo?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 20.7,
+        "skin_ratio": 3.19
+      }
+    ],
+    "engagement_rate": 1.96,
+    "save_rate": 12.74
+  },
+  {
+    "tweet_id": "1941886000139231380",
+    "url": "https://x.com/i/status/1941886000139231380",
+    "created_at": "2025-07-06T15:44:35.587000",
+    "timestamp": "2026-02-12T04:12:16.419110",
+    "metrics": {
+      "likes": 395,
+      "reposts": 42,
+      "bookmarks": 87,
+      "views": 9319
+    },
+    "images": [
+      {
+        "path": "static/images/1941886000139231380.jpg",
+        "url": "https://pbs.twimg.com/media/GvL3BAgawAAINlV?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.5,
+        "skin_ratio": 0.66
+      }
+    ],
+    "engagement_rate": 4.24,
+    "save_rate": 22.03
+  },
+  {
+    "tweet_id": "1942147450934038723",
+    "url": "https://x.com/i/status/1942147450934038723",
+    "created_at": "2025-07-07T09:03:30.314000",
+    "timestamp": "2026-02-12T04:12:38.736871",
+    "metrics": {
+      "likes": 307,
+      "reposts": 33,
+      "bookmarks": 51,
+      "views": 7230
+    },
+    "images": [
+      {
+        "path": "static/images/1942147450934038723.jpg",
+        "url": "https://pbs.twimg.com/media/GvPkznPbkAAQvoS?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.3,
+        "skin_ratio": 4.82
+      }
+    ],
+    "engagement_rate": 4.25,
+    "save_rate": 16.61
+  },
+  {
+    "tweet_id": "1942210954672115988",
+    "url": "https://x.com/i/status/1942210954672115988",
+    "created_at": "2025-07-07T13:15:50.785000",
+    "timestamp": "2026-02-12T04:12:55.821389",
+    "metrics": {
+      "likes": 310,
+      "reposts": 40,
+      "bookmarks": 59,
+      "views": 6704
+    },
+    "images": [
+      {
+        "path": "static/images/1942210954672115988.jpg",
+        "url": "https://pbs.twimg.com/media/GvQejcpa8AAGyU5?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.3,
+        "skin_ratio": 3.29
+      }
+    ],
+    "engagement_rate": 4.62,
+    "save_rate": 19.03
+  },
+  {
+    "tweet_id": "1942429260855345279",
+    "url": "https://x.com/i/status/1942429260855345279",
+    "created_at": "2025-07-08T03:43:19.035000",
+    "timestamp": "2026-02-12T04:13:15.994710",
+    "metrics": {
+      "likes": 248,
+      "reposts": 35,
+      "bookmarks": 52,
+      "views": 7056
+    },
+    "images": [
+      {
+        "path": "static/images/1942429260855345279.jpg",
+        "url": "https://pbs.twimg.com/media/GvTlHB7XEAAEl3V?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.8,
+        "skin_ratio": 5.31
+      }
+    ],
+    "engagement_rate": 3.51,
+    "save_rate": 20.97
+  },
+  {
+    "tweet_id": "1942582094850564156",
+    "url": "https://x.com/i/status/1942582094850564156",
+    "created_at": "2025-07-08T13:50:37.499000",
+    "timestamp": "2026-02-12T04:13:31.235582",
+    "metrics": {
+      "likes": 233,
+      "reposts": 31,
+      "bookmarks": 38,
+      "views": 5514
+    },
+    "images": [
+      {
+        "path": "static/images/1942582094850564156.jpg",
+        "url": "https://pbs.twimg.com/media/GvVwHSmXcAAq9-G?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.2,
+        "skin_ratio": 2.61
+      }
+    ],
+    "engagement_rate": 4.23,
+    "save_rate": 16.31
+  },
+  {
+    "tweet_id": "1942596008510382095",
+    "url": "https://x.com/i/status/1942596008510382095",
+    "created_at": "2025-07-08T14:45:54.774000",
+    "timestamp": "2026-02-12T04:13:52.454834",
+    "metrics": {
+      "likes": 170,
+      "reposts": 25,
+      "bookmarks": 28,
+      "views": 5243
+    },
+    "images": [
+      {
+        "path": "static/images/1942596008510382095.jpg",
+        "url": "https://pbs.twimg.com/media/GvV8xIRWcAA-1uC?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.0,
+        "skin_ratio": 2.33
+      }
+    ],
+    "engagement_rate": 3.24,
+    "save_rate": 16.47
+  },
+  {
+    "tweet_id": "1942893867659034857",
+    "url": "https://x.com/i/status/1942893867659034857",
+    "created_at": "2025-07-09T10:29:29.929000",
+    "timestamp": "2026-02-12T04:14:09.330777",
+    "metrics": {
+      "likes": 419,
+      "reposts": 38,
+      "bookmarks": 90,
+      "views": 8781
+    },
+    "images": [
+      {
+        "path": "static/images/1942893867659034857.jpg",
+        "url": "https://pbs.twimg.com/media/GvaLqvrWwAAWMYm?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.1,
+        "skin_ratio": 3.63
+      }
+    ],
+    "engagement_rate": 4.77,
+    "save_rate": 21.48
+  },
+  {
+    "tweet_id": "1943130959504904551",
+    "url": "https://x.com/i/status/1943130959504904551",
+    "created_at": "2025-07-10T02:11:37.030000",
+    "timestamp": "2026-02-12T04:14:27.656229",
+    "metrics": {
+      "likes": 875,
+      "reposts": 70,
+      "bookmarks": 147,
+      "views": 19300
+    },
+    "images": [
+      {
+        "path": "static/images/1943130959504904551.jpg",
+        "url": "https://pbs.twimg.com/media/GvdjTaCWEAAsSuu?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 16.7,
+        "skin_ratio": 4.31
+      }
+    ],
+    "engagement_rate": 4.53,
+    "save_rate": 16.8
+  },
+  {
+    "tweet_id": "1943303017098367300",
+    "url": "https://x.com/i/status/1943303017098367300",
+    "created_at": "2025-07-10T13:35:18.757000",
+    "timestamp": "2026-02-12T04:14:47.791907",
+    "metrics": {
+      "likes": 227,
+      "reposts": 30,
+      "bookmarks": 34,
+      "views": 6896
+    },
+    "images": [
+      {
+        "path": "static/images/1943303017098367300.jpg",
+        "url": "https://pbs.twimg.com/media/Gvf_yR5akAM8AUL?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 22.2,
+        "skin_ratio": 13.05
+      }
+    ],
+    "engagement_rate": 3.29,
+    "save_rate": 14.98
+  },
+  {
+    "tweet_id": "1943562629211132110",
+    "url": "https://x.com/i/status/1943562629211132110",
+    "created_at": "2025-07-11T06:46:55.108000",
+    "timestamp": "2026-02-12T04:15:03.622829",
+    "metrics": {
+      "likes": 316,
+      "reposts": 36,
+      "bookmarks": 55,
+      "views": 6605
+    },
+    "images": [
+      {
+        "path": "static/images/1943562629211132110.jpg",
+        "url": "https://pbs.twimg.com/media/Gvjr5y0akAMRUuy?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.0,
+        "skin_ratio": 0.43
+      }
+    ],
+    "engagement_rate": 4.78,
+    "save_rate": 17.41
+  },
+  {
+    "tweet_id": "1943670582924480738",
+    "url": "https://x.com/i/status/1943670582924480738",
+    "created_at": "2025-07-11T13:55:53.279000",
+    "timestamp": "2026-02-12T04:15:20.767657",
+    "metrics": {
+      "likes": 364,
+      "reposts": 44,
+      "bookmarks": 46,
+      "views": 7739
+    },
+    "images": [
+      {
+        "path": "static/images/1943670582924480738.jpg",
+        "url": "https://pbs.twimg.com/media/GvlOFjBawAA7lU_?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.5,
+        "skin_ratio": 5.07
+      }
+    ],
+    "engagement_rate": 4.7,
+    "save_rate": 12.64
+  },
+  {
+    "tweet_id": "1945326341664203198",
+    "url": "https://x.com/i/status/1945326341664203198",
+    "created_at": "2025-07-16T03:35:16.925000",
+    "timestamp": "2026-02-12T04:15:39.617503",
+    "metrics": {
+      "likes": 686,
+      "reposts": 41,
+      "bookmarks": 140,
+      "views": 14400
+    },
+    "images": [
+      {
+        "path": "static/images/1945326341664203198.jpg",
+        "url": "https://pbs.twimg.com/media/Gv8v-HDWIAAOdDi?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 16.0,
+        "skin_ratio": 13.39
+      }
+    ],
+    "engagement_rate": 4.76,
+    "save_rate": 20.41
+  },
+  {
+    "tweet_id": "1949119474822483988",
+    "url": "https://x.com/i/status/1949119474822483988",
+    "created_at": "2025-07-26T14:47:50.343000",
+    "timestamp": "2026-02-12T04:15:57.171886",
+    "metrics": {
+      "likes": 697,
+      "reposts": 41,
+      "bookmarks": 77,
+      "views": 14200
+    },
+    "images": [
+      {
+        "path": "static/images/1949119474822483988.jpg",
+        "url": "https://pbs.twimg.com/media/Gwypx5YbkAAxm0R?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 13.8,
+        "skin_ratio": 10.01
+      }
+    ],
+    "engagement_rate": 4.91,
+    "save_rate": 11.05
+  },
+  {
+    "tweet_id": "1953437589391684045",
+    "url": "https://x.com/i/status/1953437589391684045",
+    "created_at": "2025-08-07T12:46:29.083000",
+    "timestamp": "2026-02-12T04:16:15.912524",
+    "metrics": {
+      "likes": 327,
+      "reposts": 30,
+      "bookmarks": 47,
+      "views": 6846
+    },
+    "images": [
+      {
+        "path": "static/images/1953437589391684045.jpg",
+        "url": "https://pbs.twimg.com/media/GxwBILcbAAAV9Br?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.8,
+        "skin_ratio": 0.15
+      }
+    ],
+    "engagement_rate": 4.78,
+    "save_rate": 14.37
+  },
+  {
+    "tweet_id": "1838077340838215861",
+    "url": "https://x.com/i/status/1838077340838215861",
+    "created_at": "2024-09-23T04:46:02.538000",
+    "timestamp": "2026-02-12T04:16:33.167720",
+    "metrics": {
+      "likes": 39,
+      "reposts": 10,
+      "bookmarks": 1,
+      "views": 2151
+    },
+    "images": [
+      {
+        "path": "static/images/1838077340838215861.jpg",
+        "url": "https://pbs.twimg.com/media/GYIpmUZa4AAuEbC?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 23.8,
+        "skin_ratio": 10.82
+      }
+    ],
+    "engagement_rate": 1.81,
+    "save_rate": 2.56
+  },
+  {
+    "tweet_id": "1838398706862956867",
+    "url": "https://x.com/i/status/1838398706862956867",
+    "created_at": "2024-09-24T02:03:02.169000",
+    "timestamp": "2026-02-12T04:16:54.629402",
+    "metrics": {
+      "likes": 149,
+      "reposts": 29,
+      "bookmarks": 15,
+      "views": 4959
+    },
+    "images": [
+      {
+        "path": "static/images/1838398706862956867.jpg",
+        "url": "https://pbs.twimg.com/media/GYNN4J0aYAAjVqd?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.8,
+        "skin_ratio": 8.39
+      }
+    ],
+    "engagement_rate": 3.0,
+    "save_rate": 10.07
+  },
+  {
+    "tweet_id": "1838511946489807259",
+    "url": "https://x.com/i/status/1838511946489807259",
+    "created_at": "2024-09-24T09:33:00.600000",
+    "timestamp": "2026-02-12T04:17:10.924532",
+    "metrics": {
+      "likes": 220,
+      "reposts": 31,
+      "bookmarks": 29,
+      "views": 9012
+    },
+    "images": [
+      {
+        "path": "static/images/1838511946489807259.jpg",
+        "url": "https://pbs.twimg.com/media/GYO03ecakAAjAAA?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.3,
+        "skin_ratio": 0.12
+      }
+    ],
+    "engagement_rate": 2.44,
+    "save_rate": 13.18
+  },
+  {
+    "tweet_id": "1838741293889212911",
+    "url": "https://x.com/i/status/1838741293889212911",
+    "created_at": "2024-09-25T00:44:21.281000",
+    "timestamp": "2026-02-12T04:22:28.487093",
+    "metrics": {
+      "likes": 189,
+      "reposts": 22,
+      "bookmarks": 20,
+      "views": 5784
+    },
+    "images": [
+      {
+        "path": "static/images/1838741293889212911.jpg",
+        "url": "https://pbs.twimg.com/media/GYSFdZUakAErk_0?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 29.3,
+        "skin_ratio": 9.2
+      }
+    ],
+    "engagement_rate": 3.27,
+    "save_rate": 10.58
+  },
+  {
+    "tweet_id": "1838774443033923771",
+    "url": "https://x.com/i/status/1838774443033923771",
+    "created_at": "2024-09-25T02:56:04.653000",
+    "timestamp": "2026-02-12T04:22:43.940769",
+    "metrics": {
+      "likes": 228,
+      "reposts": 35,
+      "bookmarks": 18,
+      "views": 11100
+    },
+    "images": [
+      {
+        "path": "static/images/1838774443033923771.jpg",
+        "url": "https://pbs.twimg.com/media/GYSjnAXb0AALGpB?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 29.0,
+        "skin_ratio": 25.66
+      }
+    ],
+    "engagement_rate": 2.05,
+    "save_rate": 7.89
+  },
+  {
+    "tweet_id": "1923926837325070602",
+    "url": "https://x.com/i/status/1923926837325070602",
+    "created_at": "2025-05-18T02:21:17.507000",
+    "timestamp": "2026-02-12T04:23:05.543794",
+    "metrics": {
+      "likes": 174,
+      "reposts": 41,
+      "bookmarks": 19,
+      "views": 8527
+    },
+    "images": [
+      {
+        "path": "static/images/1923926837325070602.jpg",
+        "url": "https://pbs.twimg.com/media/GrMpQQrXMAA1czC?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.3,
+        "skin_ratio": 10.45
+      }
+    ],
+    "engagement_rate": 2.04,
+    "save_rate": 10.92
+  },
+  {
+    "tweet_id": "1925706666856665544",
+    "url": "https://x.com/i/status/1925706666856665544",
+    "created_at": "2025-05-23T00:13:41.935000",
+    "timestamp": "2026-02-12T04:23:21.936115",
+    "metrics": {
+      "likes": 147,
+      "reposts": 32,
+      "bookmarks": 16,
+      "views": 7967
+    },
+    "images": [
+      {
+        "path": "static/images/1925706666856665544.jpg",
+        "url": "https://pbs.twimg.com/media/Grl7_9yXAAAyg7B?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 29.4,
+        "skin_ratio": 5.7
+      }
+    ],
+    "engagement_rate": 1.85,
+    "save_rate": 10.88
+  },
+  {
+    "tweet_id": "1953360225605505353",
+    "url": "https://x.com/i/status/1953360225605505353",
+    "created_at": "2025-08-07T07:39:04.119000",
+    "timestamp": "2026-02-12T04:23:42.217064",
+    "metrics": {
+      "likes": 40,
+      "reposts": 11,
+      "bookmarks": 4,
+      "views": 3097
+    },
+    "images": [
+      {
+        "path": "static/images/1953360225605505353.jpg",
+        "url": "https://pbs.twimg.com/media/Gxu6WgCawAE9OOk?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 11.3,
+        "skin_ratio": 11.12
+      }
+    ],
+    "engagement_rate": 1.29,
+    "save_rate": 10.0
+  },
+  {
+    "tweet_id": "1960291671897485640",
+    "url": "https://x.com/i/status/1960291671897485640",
+    "created_at": "2025-08-26T10:42:09.695000",
+    "timestamp": "2026-02-12T04:24:02.456124",
+    "metrics": {
+      "likes": 36,
+      "reposts": 7,
+      "bookmarks": 2,
+      "views": 2308
+    },
+    "images": [
+      {
+        "path": "static/images/1960291671897485640.jpg",
+        "url": "https://pbs.twimg.com/media/GzRa4RLaIAAt0Gd?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.9,
+        "skin_ratio": 8.74
+      }
+    ],
+    "engagement_rate": 1.56,
+    "save_rate": 5.56
+  },
+  {
+    "tweet_id": "1962307249709490388",
+    "url": "https://x.com/i/status/1962307249709490388",
+    "created_at": "2025-09-01T00:11:20.893000",
+    "timestamp": "2026-02-12T04:24:18.766629",
+    "metrics": {
+      "likes": 76,
+      "reposts": 14,
+      "bookmarks": 6,
+      "views": 2431
+    },
+    "images": [
+      {
+        "path": "static/images/1962307249709490388.jpg",
+        "url": "https://pbs.twimg.com/media/GzuECQBbEAAhIay?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 16.5,
+        "skin_ratio": 14.1
+      }
+    ],
+    "engagement_rate": 3.13,
+    "save_rate": 7.89
+  },
+  {
+    "tweet_id": "1988066670003515636",
+    "url": "https://x.com/i/status/1988066670003515636",
+    "created_at": "2025-11-11T02:10:05.278000",
+    "timestamp": "2026-02-12T04:24:42.279832",
+    "metrics": {
+      "likes": 68,
+      "reposts": 6,
+      "bookmarks": 0,
+      "views": 2011
+    },
+    "images": [
+      {
+        "path": "static/images/1988066670003515636.jpg",
+        "url": "https://pbs.twimg.com/media/G5cIGAuakAAfpJs?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 17.6,
+        "skin_ratio": 21.56
+      }
+    ],
+    "engagement_rate": 3.38,
+    "save_rate": 0.0
+  },
+  {
+    "tweet_id": "1987853864801095782",
+    "url": "https://x.com/i/status/1987853864801095782",
+    "created_at": "2025-11-10T12:04:28.564000",
+    "timestamp": "2026-02-12T04:25:04.920493",
+    "metrics": {
+      "likes": 314,
+      "reposts": 26,
+      "bookmarks": 28,
+      "views": 6873
+    },
+    "images": [
+      {
+        "path": "static/images/1987853864801095782.jpg",
+        "url": "https://pbs.twimg.com/media/G5ZGjV8asAAnG2y?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.8,
+        "skin_ratio": 40.88
+      }
+    ],
+    "engagement_rate": 4.57,
+    "save_rate": 8.92
+  },
+  {
+    "tweet_id": "1983474385135735086",
+    "url": "https://x.com/i/status/1983474385135735086",
+    "created_at": "2025-10-29T10:01:59.245000",
+    "timestamp": "2026-02-12T04:25:25.915943",
+    "metrics": {
+      "likes": 8683,
+      "reposts": 448,
+      "bookmarks": 1291,
+      "views": 160200
+    },
+    "images": [
+      {
+        "path": "static/images/1983474385135735086.jpg",
+        "url": "https://pbs.twimg.com/media/G4a296gaQAAty5v?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.8,
+        "skin_ratio": 7.32
+      }
+    ],
+    "engagement_rate": 5.42,
+    "save_rate": 14.87
+  },
+  {
+    "tweet_id": "1981702933336187022",
+    "url": "https://x.com/i/status/1981702933336187022",
+    "created_at": "2025-10-24T12:42:52.224000",
+    "timestamp": "2026-02-12T04:25:45.076592",
+    "metrics": {
+      "likes": 1012,
+      "reposts": 65,
+      "bookmarks": 117,
+      "views": 22400
+    },
+    "images": [
+      {
+        "path": "static/images/1981702933336187022.jpg",
+        "url": "https://pbs.twimg.com/media/G4BsTzyWcAAvZAU?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.3,
+        "skin_ratio": 11.64
+      }
+    ],
+    "engagement_rate": 4.52,
+    "save_rate": 11.56
+  },
+  {
+    "tweet_id": "1983839039892660562",
+    "url": "https://x.com/i/status/1983839039892660562",
+    "created_at": "2025-10-30T10:10:59.714000",
+    "timestamp": "2026-02-12T04:26:15.435464",
+    "metrics": {
+      "likes": 1200,
+      "reposts": 113,
+      "bookmarks": 134,
+      "views": 27000
+    },
+    "images": [
+      {
+        "path": "static/images/1983839039892660562.jpg",
+        "url": "https://pbs.twimg.com/media/G4gCrWAaoAAv4Wi?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.3,
+        "skin_ratio": 9.99
+      }
+    ],
+    "engagement_rate": 4.44,
+    "save_rate": 11.17
+  },
+  {
+    "tweet_id": "2013977760205619567",
+    "url": "https://x.com/i/status/2013977760205619567",
+    "created_at": "2026-01-21T14:11:30.587000",
+    "timestamp": "2026-02-12T04:26:36.542183",
+    "metrics": {
+      "likes": 152,
+      "reposts": 29,
+      "bookmarks": 11,
+      "views": 2685
+    },
+    "images": [
+      {
+        "path": "static/images/2013977760205619567.jpg",
+        "url": "https://pbs.twimg.com/media/G_MWF5JaoAEesT4?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.7,
+        "skin_ratio": 43.71
+      }
+    ],
+    "engagement_rate": 5.66,
+    "save_rate": 7.24
+  },
+  {
+    "tweet_id": "2010614024749379862",
+    "url": "https://x.com/i/status/2010614024749379862",
+    "created_at": "2026-01-12T07:25:13.559000",
+    "timestamp": "2026-02-12T04:26:55.206445",
+    "metrics": {
+      "likes": 264,
+      "reposts": 21,
+      "bookmarks": 20,
+      "views": 4195
+    },
+    "images": [
+      {
+        "path": "static/images/2010614024749379862.jpg",
+        "url": "https://pbs.twimg.com/media/G-ciyyxbwAAyYuX?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.9,
+        "skin_ratio": 65.01
+      }
+    ],
+    "engagement_rate": 6.29,
+    "save_rate": 7.58
+  },
+  {
+    "tweet_id": "1483063954889150464",
+    "url": "https://x.com/i/status/1483063954889150464",
+    "created_at": "2022-01-17T13:09:35.498000",
+    "timestamp": "2026-02-12T04:27:15.057169",
+    "metrics": {
+      "likes": 280,
+      "reposts": 54,
+      "bookmarks": 29,
+      "views": 0
+    },
+    "images": [
+      {
+        "path": "static/images/1483063954889150464.jpg",
+        "url": "https://pbs.twimg.com/media/FJTmzgqacAYrSv1?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.3,
+        "skin_ratio": 0.02
+      }
+    ],
+    "engagement_rate": 0,
+    "save_rate": 10.36
+  },
+  {
+    "tweet_id": "1768259013823930703",
+    "url": "https://x.com/i/status/1768259013823930703",
+    "created_at": "2024-03-14T12:52:56.216000",
+    "timestamp": "2026-02-12T04:27:34.657305",
+    "metrics": {
+      "likes": 38,
+      "reposts": 6,
+      "bookmarks": 1,
+      "views": 3479
+    },
+    "images": [
+      {
+        "path": "static/images/1768259013823930703.jpg",
+        "url": "https://pbs.twimg.com/media/GIoeMj7bMAARfoh?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 18.6,
+        "skin_ratio": 5.92
+      }
+    ],
+    "engagement_rate": 1.09,
+    "save_rate": 2.63
+  },
+  {
+    "tweet_id": "1950500291343990991",
+    "url": "https://x.com/i/status/1950500291343990991",
+    "created_at": "2025-07-30T10:14:42.656000",
+    "timestamp": "2026-02-12T04:28:14.275010",
+    "metrics": {
+      "likes": 20,
+      "reposts": 5,
+      "bookmarks": 5,
+      "views": 1463
+    },
+    "images": [
+      {
+        "path": "static/images/1950500291343990991.jpg",
+        "url": "https://pbs.twimg.com/media/GxGRrK6bEAARUxE?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 12.6,
+        "skin_ratio": 34.98
+      }
+    ],
+    "engagement_rate": 1.37,
+    "save_rate": 25.0
+  },
+  {
+    "tweet_id": "1819691765768823101",
+    "url": "https://x.com/i/status/1819691765768823101",
+    "created_at": "2024-08-03T11:08:19.854000",
+    "timestamp": "2026-02-12T04:28:31.677505",
+    "metrics": {
+      "likes": 34,
+      "reposts": 10,
+      "bookmarks": 1,
+      "views": 1480
+    },
+    "images": [
+      {
+        "path": "static/images/1819691765768823101.jpg",
+        "url": "https://pbs.twimg.com/media/GUDYAy3bUAESfsn?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 17.3,
+        "skin_ratio": 25.32
+      }
+    ],
+    "engagement_rate": 2.3,
+    "save_rate": 2.94
+  },
+  {
+    "tweet_id": "1996533970163712250",
+    "url": "https://x.com/i/status/1996533970163712250",
+    "created_at": "2025-12-04T10:56:06.951000",
+    "timestamp": "2026-02-12T04:28:53.913595",
+    "metrics": {
+      "likes": 202,
+      "reposts": 14,
+      "bookmarks": 15,
+      "views": 3540
+    },
+    "images": [
+      {
+        "path": "static/images/1996533970163712250.jpg",
+        "url": "https://pbs.twimg.com/media/G7UdCTma8AAqp-A?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.2,
+        "skin_ratio": 10.82
+      }
+    ],
+    "engagement_rate": 5.71,
+    "save_rate": 7.43
+  },
+  {
+    "tweet_id": "1873722864685482316",
+    "url": "https://x.com/i/status/1873722864685482316",
+    "created_at": "2024-12-30T13:28:37.685000",
+    "timestamp": "2026-02-12T04:29:15.729588",
+    "metrics": {
+      "likes": 659,
+      "reposts": 64,
+      "bookmarks": 32,
+      "views": 16500
+    },
+    "images": [
+      {
+        "path": "static/images/1873722864685482316.jpg",
+        "url": "https://pbs.twimg.com/media/GgDNA2abwAAtzXs?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 31.7,
+        "skin_ratio": 0.73
+      }
+    ],
+    "engagement_rate": 3.99,
+    "save_rate": 4.86
+  },
+  {
+    "tweet_id": "1987818212277489863",
+    "url": "https://x.com/i/status/1987818212277489863",
+    "created_at": "2025-11-10T09:42:48.340000",
+    "timestamp": "2026-02-12T04:29:35.624874",
+    "metrics": {
+      "likes": 1076,
+      "reposts": 69,
+      "bookmarks": 123,
+      "views": 15400
+    },
+    "images": [
+      {
+        "path": "static/images/1987818212277489863.jpg",
+        "url": "https://pbs.twimg.com/media/G5YmHqYbUAAeKHt?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.7,
+        "skin_ratio": 10.17
+      }
+    ],
+    "engagement_rate": 6.99,
+    "save_rate": 11.43
+  },
+  {
+    "tweet_id": "1967525399472312604",
+    "url": "https://x.com/i/status/1967525399472312604",
+    "created_at": "2025-09-15T09:46:24.745000",
+    "timestamp": "2026-02-12T04:29:57.971146",
+    "metrics": {
+      "likes": 131,
+      "reposts": 18,
+      "bookmarks": 16,
+      "views": 5880
+    },
+    "images": [
+      {
+        "path": "static/images/1967525399472312604.jpg",
+        "url": "https://pbs.twimg.com/media/G04N6y1a0AASQeE?format=jpg&name=orig",
+        "composition": "Face Close-up",
+        "confidence": 19.9,
+        "skin_ratio": 47.33
+      }
+    ],
+    "engagement_rate": 2.23,
+    "save_rate": 12.21
+  },
+  {
+    "tweet_id": "2000202775112843735",
+    "url": "https://x.com/i/status/2000202775112843735",
+    "created_at": "2025-12-14T13:54:38.214000",
+    "timestamp": "2026-02-12T04:30:35.727327",
+    "metrics": {
+      "likes": 599,
+      "reposts": 31,
+      "bookmarks": 53,
+      "views": 10600
+    },
+    "images": [
+      {
+        "path": "static/images/2000202775112843735.jpg",
+        "url": "https://pbs.twimg.com/media/G8Ilx4hawAAq9YG?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.4,
+        "skin_ratio": 31.46
+      }
+    ],
+    "engagement_rate": 5.65,
+    "save_rate": 8.85
+  },
+  {
+    "tweet_id": "1886017788273455371",
+    "url": "https://x.com/i/status/1886017788273455371",
+    "created_at": "2025-02-02T11:44:15.897000",
+    "timestamp": "2026-02-12T04:30:54.034967",
+    "metrics": {
+      "likes": 579,
+      "reposts": 75,
+      "bookmarks": 48,
+      "views": 21200
+    },
+    "images": [
+      {
+        "path": "static/images/1886017788273455371.jpg",
+        "url": "https://pbs.twimg.com/media/Gix7LThaYAEVFvf?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.3,
+        "skin_ratio": 7.15
+      }
+    ],
+    "engagement_rate": 2.73,
+    "save_rate": 8.29
+  },
+  {
+    "tweet_id": "1931644760458150281",
+    "url": "https://x.com/i/status/1931644760458150281",
+    "created_at": "2025-06-08T09:29:33.774000",
+    "timestamp": "2026-02-12T04:31:10.030592",
+    "metrics": {
+      "likes": 1197,
+      "reposts": 92,
+      "bookmarks": 245,
+      "views": 32600
+    },
+    "images": [
+      {
+        "path": "static/images/1931644760458150281.jpg",
+        "url": "https://pbs.twimg.com/media/Gs6UqUgbcAA7dnQ?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.3,
+        "skin_ratio": 22.92
+      }
+    ],
+    "engagement_rate": 3.67,
+    "save_rate": 20.47
+  },
+  {
+    "tweet_id": "1825506226693697744",
+    "url": "https://x.com/i/status/1825506226693697744",
+    "created_at": "2024-08-19T12:12:55.366000",
+    "timestamp": "2026-02-12T04:31:26.261008",
+    "metrics": {
+      "likes": 446,
+      "reposts": 51,
+      "bookmarks": 31,
+      "views": 13200
+    },
+    "images": [
+      {
+        "path": "static/images/1825506226693697744.jpg",
+        "url": "https://pbs.twimg.com/media/GVWAPE1bsAAcLCQ?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 24.4,
+        "skin_ratio": 2.54
+      }
+    ],
+    "engagement_rate": 3.38,
+    "save_rate": 6.95
+  },
+  {
+    "tweet_id": "1941817867877703916",
+    "url": "https://x.com/i/status/1941817867877703916",
+    "created_at": "2025-07-06T11:13:51.590000",
+    "timestamp": "2026-02-12T04:31:46.461956",
+    "metrics": {
+      "likes": 145,
+      "reposts": 29,
+      "bookmarks": 8,
+      "views": 7262
+    },
+    "images": [
+      {
+        "path": "static/images/1941817867877703916.jpg",
+        "url": "https://pbs.twimg.com/media/GvK5DlpXEAAQekI?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 23.6,
+        "skin_ratio": 3.02
+      }
+    ],
+    "engagement_rate": 2.0,
+    "save_rate": 5.52
+  },
+  {
+    "tweet_id": "1927348194486186095",
+    "url": "https://x.com/i/status/1927348194486186095",
+    "created_at": "2025-05-27T12:56:32.620000",
+    "timestamp": "2026-02-12T04:32:04.145635",
+    "metrics": {
+      "likes": 254,
+      "reposts": 29,
+      "bookmarks": 22,
+      "views": 8671
+    },
+    "images": [
+      {
+        "path": "static/images/1927348194486186095.jpg",
+        "url": "https://pbs.twimg.com/media/Gr9Q9FYWQAAWbJL?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 28.4,
+        "skin_ratio": 11.62
+      }
+    ],
+    "engagement_rate": 2.93,
+    "save_rate": 8.66
+  },
+  {
+    "tweet_id": "1893267107296514220",
+    "url": "https://x.com/i/status/1893267107296514220",
+    "created_at": "2025-02-22T11:50:28.238000",
+    "timestamp": "2026-02-12T04:32:22.303355",
+    "metrics": {
+      "likes": 26,
+      "reposts": 9,
+      "bookmarks": 2,
+      "views": 2277
+    },
+    "images": [
+      {
+        "path": "static/images/1893267107296514220.jpg",
+        "url": "https://pbs.twimg.com/media/GkY8ZaXXcAE-ECx?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 13.8,
+        "skin_ratio": 4.9
+      }
+    ],
+    "engagement_rate": 1.14,
+    "save_rate": 7.69
+  },
+  {
+    "tweet_id": "1913953794616148384",
+    "url": "https://x.com/i/status/1913953794616148384",
+    "created_at": "2025-04-20T13:51:58.835000",
+    "timestamp": "2026-02-12T04:32:43.004192",
+    "metrics": {
+      "likes": 166,
+      "reposts": 22,
+      "bookmarks": 14,
+      "views": 12100
+    },
+    "images": [
+      {
+        "path": "static/images/1913953794616148384.jpg",
+        "url": "https://pbs.twimg.com/media/Go-61EBakAE3zwL?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.0,
+        "skin_ratio": 6.82
+      }
+    ],
+    "engagement_rate": 1.37,
+    "save_rate": 8.43
+  },
+  {
+    "tweet_id": "1894684207169044907",
+    "url": "https://x.com/i/status/1894684207169044907",
+    "created_at": "2025-02-26T09:41:31.176000",
+    "timestamp": "2026-02-12T04:32:58.890520",
+    "metrics": {
+      "likes": 291,
+      "reposts": 36,
+      "bookmarks": 30,
+      "views": 9400
+    },
+    "images": [
+      {
+        "path": "static/images/1894684207169044907.jpg",
+        "url": "https://pbs.twimg.com/media/GktFNVaWAAEbjRd?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 27.4,
+        "skin_ratio": 11.64
+      }
+    ],
+    "engagement_rate": 3.1,
+    "save_rate": 10.31
+  },
+  {
+    "tweet_id": "1989302088027767015",
+    "url": "https://x.com/i/status/1989302088027767015",
+    "created_at": "2025-11-14T11:59:11.888000",
+    "timestamp": "2026-02-12T04:33:17.998337",
+    "metrics": {
+      "likes": 589,
+      "reposts": 44,
+      "bookmarks": 52,
+      "views": 11300
+    },
+    "images": [
+      {
+        "path": "static/images/1989302088027767015.jpg",
+        "url": "https://pbs.twimg.com/media/G5trsLzbMAAbRiq?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.9,
+        "skin_ratio": 12.57
+      }
+    ],
+    "engagement_rate": 5.21,
+    "save_rate": 8.83
+  },
+  {
+    "tweet_id": "1982343088615104756",
+    "url": "https://x.com/i/status/1982343088615104756",
+    "created_at": "2025-10-26T07:06:37.136000",
+    "timestamp": "2026-02-12T04:33:38.796247",
+    "metrics": {
+      "likes": 1546,
+      "reposts": 85,
+      "bookmarks": 111,
+      "views": 23200
+    },
+    "images": [
+      {
+        "path": "static/images/1982343088615104756.jpg",
+        "url": "https://pbs.twimg.com/media/G4KyhtuWUAAhq0e?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 30.8,
+        "skin_ratio": 6.33
+      }
+    ],
+    "engagement_rate": 6.66,
+    "save_rate": 7.18
+  },
+  {
+    "tweet_id": "1982743553274196331",
+    "url": "https://x.com/i/status/1982743553274196331",
+    "created_at": "2025-10-27T09:37:55.351000",
+    "timestamp": "2026-02-12T04:33:55.247572",
+    "metrics": {
+      "likes": 633,
+      "reposts": 51,
+      "bookmarks": 60,
+      "views": 10500
+    },
+    "images": [
+      {
+        "path": "static/images/1982743553274196331.jpg",
+        "url": "https://pbs.twimg.com/media/G4QevyyXsAAY8k6?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 26.6,
+        "skin_ratio": 11.03
+      }
+    ],
+    "engagement_rate": 6.03,
+    "save_rate": 9.48
+  },
+  {
+    "tweet_id": "1993884311863640533",
+    "url": "https://x.com/i/status/1993884311863640533",
+    "created_at": "2025-11-27T03:27:19.184000",
+    "timestamp": "2026-02-12T04:34:11.631093",
+    "metrics": {
+      "likes": 1377,
+      "reposts": 58,
+      "bookmarks": 124,
+      "views": 20100
+    },
+    "images": [
+      {
+        "path": "static/images/1993884311863640533.jpg",
+        "url": "https://pbs.twimg.com/media/G6uzNP3a0AUQAJ6?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 14.8,
+        "skin_ratio": 7.51
+      }
+    ],
+    "engagement_rate": 6.85,
+    "save_rate": 9.01
+  },
+  {
+    "tweet_id": "1943279718381543785",
+    "url": "https://x.com/i/status/1943279718381543785",
+    "created_at": "2025-07-10T12:02:43.910000",
+    "timestamp": "2026-02-12T04:34:29.141982",
+    "metrics": {
+      "likes": 113,
+      "reposts": 20,
+      "bookmarks": 11,
+      "views": 5032
+    },
+    "images": [
+      {
+        "path": "static/images/1943279718381543785.jpg",
+        "url": "https://pbs.twimg.com/media/GvfqmhKakAIdQKS?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.9,
+        "skin_ratio": 5.05
+      }
+    ],
+    "engagement_rate": 2.25,
+    "save_rate": 9.73
+  },
+  {
+    "tweet_id": "1828073359957205478",
+    "url": "https://x.com/i/status/1828073359957205478",
+    "created_at": "2024-08-26T14:13:47.631000",
+    "timestamp": "2026-02-12T04:34:44.715701",
+    "metrics": {
+      "likes": 421,
+      "reposts": 41,
+      "bookmarks": 27,
+      "views": 11900
+    },
+    "images": [
+      {
+        "path": "static/images/1828073359957205478.jpg",
+        "url": "https://pbs.twimg.com/media/GV6eoQga8AA0a_M?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 20.5,
+        "skin_ratio": 1.68
+      }
+    ],
+    "engagement_rate": 3.54,
+    "save_rate": 6.41
+  },
+  {
+    "tweet_id": "1829097002044727386",
+    "url": "https://x.com/i/status/1829097002044727386",
+    "created_at": "2024-08-29T10:01:22.923000",
+    "timestamp": "2026-02-12T04:35:02.577858",
+    "metrics": {
+      "likes": 82,
+      "reposts": 16,
+      "bookmarks": 10,
+      "views": 3199
+    },
+    "images": [
+      {
+        "path": "static/images/1829097002044727386.jpg",
+        "url": "https://pbs.twimg.com/media/GWJA35LbQAAk2wK?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.9,
+        "skin_ratio": 1.15
+      }
+    ],
+    "engagement_rate": 2.56,
+    "save_rate": 12.2
+  },
+  {
+    "tweet_id": "1909324251863384327",
+    "url": "https://x.com/i/status/1909324251863384327",
+    "created_at": "2025-04-07T19:15:49.830000",
+    "timestamp": "2026-02-12T04:35:20.311681",
+    "metrics": {
+      "likes": 160,
+      "reposts": 7,
+      "bookmarks": 19,
+      "views": 7841
+    },
+    "images": [
+      {
+        "path": "static/images/1909324251863384327.jpg",
+        "url": "https://pbs.twimg.com/media/Gn9HiU8bwAAgzvD?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 19.3,
+        "skin_ratio": 44.48
+      }
+    ],
+    "engagement_rate": 2.04,
+    "save_rate": 11.88
+  },
+  {
+    "tweet_id": "1572914573971451906",
+    "url": "https://x.com/i/status/1572914573971451906",
+    "created_at": "2022-09-22T11:43:52.431000",
+    "timestamp": "2026-02-12T04:35:41.490664",
+    "metrics": {
+      "likes": 1594,
+      "reposts": 197,
+      "bookmarks": 46,
+      "views": 0
+    },
+    "images": [
+      {
+        "path": "static/images/1572914573971451906.jpg",
+        "url": "https://pbs.twimg.com/media/FdQddROaUAE--KA?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 22.7,
+        "skin_ratio": 15.62
+      }
+    ],
+    "engagement_rate": 0,
+    "save_rate": 2.89
+  },
+  {
+    "tweet_id": "1586292344441012224",
+    "url": "https://x.com/i/status/1586292344441012224",
+    "created_at": "2022-10-29T09:42:21.458000",
+    "timestamp": "2026-02-12T04:35:58.340507",
+    "metrics": {
+      "likes": 3123,
+      "reposts": 292,
+      "bookmarks": 48,
+      "views": 0
+    },
+    "images": [
+      {
+        "path": "static/images/1586292344441012224.jpg",
+        "url": "https://pbs.twimg.com/media/FgOkeoBUcAAIKm2?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 14.1,
+        "skin_ratio": 66.15
+      }
+    ],
+    "engagement_rate": 0,
+    "save_rate": 1.54
+  },
+  {
+    "tweet_id": "1594659403008835584",
+    "url": "https://x.com/i/status/1594659403008835584",
+    "created_at": "2022-11-21T11:50:03.673000",
+    "timestamp": "2026-02-12T04:36:18.096582",
+    "metrics": {
+      "likes": 4350,
+      "reposts": 506,
+      "bookmarks": 150,
+      "views": 0
+    },
+    "images": [
+      {
+        "path": "static/images/1594659403008835584.jpg",
+        "url": "https://pbs.twimg.com/media/FiFeRVCVIAIY9_O?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 25.4,
+        "skin_ratio": 44.0
+      }
+    ],
+    "engagement_rate": 0,
+    "save_rate": 3.45
+  },
+  {
+    "tweet_id": "1609203742368468994",
+    "url": "https://x.com/i/status/1609203742368468994",
+    "created_at": "2022-12-31T15:04:04.397000",
+    "timestamp": "2026-02-12T04:36:37.294258",
+    "metrics": {
+      "likes": 2481,
+      "reposts": 288,
+      "bookmarks": 93,
+      "views": 110900
+    },
+    "images": [
+      {
+        "path": "static/images/1609203742368468994.jpg",
+        "url": "https://pbs.twimg.com/media/FlUKRKwaMAA_quq?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.2,
+        "skin_ratio": 14.96
+      }
+    ],
+    "engagement_rate": 2.24,
+    "save_rate": 3.75
+  },
+  {
+    "tweet_id": "1639600130008694786",
+    "url": "https://x.com/i/status/1639600130008694786",
+    "created_at": "2023-03-25T12:08:27.948000",
+    "timestamp": "2026-02-12T04:36:59.797408",
+    "metrics": {
+      "likes": 3487,
+      "reposts": 422,
+      "bookmarks": 143,
+      "views": 182400
+    },
+    "images": [
+      {
+        "path": "static/images/1639600130008694786.jpg",
+        "url": "https://pbs.twimg.com/media/FsEHnwyaAAE8MXw?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 12.2,
+        "skin_ratio": 0.8
+      }
+    ],
+    "engagement_rate": 1.91,
+    "save_rate": 4.1
+  },
+  {
+    "tweet_id": "1776211098695246240",
+    "url": "https://x.com/i/status/1776211098695246240",
+    "created_at": "2024-04-05T11:31:40.992000",
+    "timestamp": "2026-02-12T04:37:16.409017",
+    "metrics": {
+      "likes": 3284,
+      "reposts": 367,
+      "bookmarks": 221,
+      "views": 91300
+    },
+    "images": [
+      {
+        "path": "static/images/1776211098695246240.jpg",
+        "url": "https://pbs.twimg.com/media/GKZelBibAAEzZmf?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 15.2,
+        "skin_ratio": 15.89
+      }
+    ],
+    "engagement_rate": 3.6,
+    "save_rate": 6.73
+  },
+  {
+    "tweet_id": "1751182688202162202",
+    "url": "https://x.com/i/status/1751182688202162202",
+    "created_at": "2024-01-27T09:57:42.925000",
+    "timestamp": "2026-02-12T04:37:32.677771",
+    "metrics": {
+      "likes": 571,
+      "reposts": 99,
+      "bookmarks": 31,
+      "views": 39800
+    },
+    "images": [
+      {
+        "path": "static/images/1751182688202162202.jpg",
+        "url": "https://pbs.twimg.com/media/GE1zW2pakAAI2zL?format=jpg&name=orig",
+        "composition": "Bust-up",
+        "confidence": 19.0,
+        "skin_ratio": 30.63
+      }
+    ],
+    "engagement_rate": 1.43,
+    "save_rate": 5.43
+  },
+  {
+    "tweet_id": "1756254698821267842",
+    "url": "https://x.com/i/status/1756254698821267842",
+    "created_at": "2024-02-10T09:52:04.490000",
+    "timestamp": "2026-02-12T04:37:50.273976",
+    "metrics": {
+      "likes": 584,
+      "reposts": 113,
+      "bookmarks": 32,
+      "views": 35200
+    },
+    "images": [
+      {
+        "path": "static/images/1756254698821267842.jpg",
+        "url": "https://pbs.twimg.com/media/GF94VOma8AAYT9x?format=jpg&name=orig",
+        "composition": "Full Body",
+        "confidence": 21.8,
+        "skin_ratio": 42.8
+      }
+    ],
+    "engagement_rate": 1.66,
+    "save_rate": 5.48
   }
 ]
