@@ -34,14 +34,20 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model = CLIPModel.from_pretrained(AI_MODEL_ID).to(device)
 processor = CLIPProcessor.from_pretrained(AI_MODEL_ID)
 
+def extract_tweet_id(url):
+    """ ★最重要修正: URLからID(数字)を確実に抜き出す [cite: 2026-02-12] """
+    # status/ の直後にある10桁以上の数字を抽出。末尾に /photo/1 等があっても無視
+    match = re.search(r'status/(\d+)', url)
+    return match.group(1) if match else None
+
 def extract_number(text):
-    """ ★修正: 1.2K などの単位を正確に変換する [cite: 2026-02-11] """
+    """ 1.2K などの単位を正確に変換する [cite: 2026-02-11] """
     if not text: return 0
     clean = text.replace(',', '').strip()
     upper = clean.upper()
     
     mul = 1
-    # 数字の直後にKがある場合のみ1000倍 (BOOKMARK等の誤爆防止)
+    # 数字の直後にKがある場合のみ1000倍
     if re.search(r'\dK', upper):
         mul = 1000
     elif re.search(r'\dM', upper):
@@ -90,7 +96,12 @@ def predict_composition(pil_img):
     return best, round(avg_scores[best] * 100, 1)
 
 async def run_analysis(raw_url):
-    tweet_id = raw_url.split('/')[-1].split('?')[0]
+    # ★修正：正規表現によるID抽出
+    tweet_id = extract_tweet_id(raw_url)
+    if not tweet_id:
+        print(f"❌ Tweet ID NotFound: {raw_url}")
+        return
+
     tweet_url = f"https://x.com/i/status/{tweet_id}"
     
     # 既存データのチェック (肌色解析済みならスキップ)
@@ -100,7 +111,7 @@ async def run_analysis(raw_url):
                 db = json.load(f)
                 entry = next((e for e in db if e.get('tweet_id') == tweet_id), None)
                 if entry and entry.get('images') and 'skin_ratio' in entry['images'][0]:
-                    print(f"⏩ Skip: {tweet_id}")
+                    print(f"⏩ Skip (Already Done): {tweet_id}")
                     return
         except: pass
 
@@ -114,30 +125,32 @@ async def run_analysis(raw_url):
 
         try:
             print(f"📡 Analyzing: {tweet_url}")
-            await page.goto(tweet_url, wait_until="networkidle", timeout=60000)
-            await asyncio.sleep(5)
+            # ★タイムアウト回避：domcontentloadedで読み込み、数秒待機
+            await page.goto(tweet_url, wait_until="domcontentloaded", timeout=60000)
+            await asyncio.sleep(7)
 
-            # メトリクス取得
+            # メトリクス取得ロジック (aria-labelから数値を抽出)
             metrics = {'likes': 0, 'reposts': 0, 'bookmarks': 0, 'views': 0}
             targets = [('likes', ['like', 'unlike']), ('reposts', ['retweet', 'unretweet']), ('bookmarks', ['bookmark', 'removeBookmark'])]
             for key, ids in targets:
                 for tid in ids:
                     btn = await page.query_selector(f'[data-testid="{tid}"]')
                     if btn:
-                        metrics[key] = extract_number(await btn.get_attribute("aria-label"))
-                        if metrics[key] > 0: break
+                        val = extract_number(await btn.get_attribute("aria-label"))
+                        metrics[key] = val
+                        if val > 0: break
             
             v_link = await page.query_selector('a[href*="/analytics"]')
             if v_link: metrics['views'] = extract_number(await v_link.get_attribute("aria-label") or await v_link.inner_text())
 
-            # 画像 & 肌色分析
+            # 画像 & 肌色分析 (1枚目のみ)
             image_results = []
-            img_elements = await page.query_selector_all('[data-testid="tweetPhoto"] img')
-            for i, img_el in enumerate(img_elements[:1]): # 最初の1枚のみ
+            img_el = await page.query_selector('[data-testid="tweetPhoto"] img')
+            if img_el:
                 src = await img_el.get_attribute('src')
                 if 'media' in src:
                     high_res = src.split('?')[0] + "?format=jpg&name=orig"
-                    img_path = os.path.join(SAVE_DIR, f"{tweet_id}_{i+1}.jpg")
+                    img_path = os.path.join(SAVE_DIR, f"{tweet_id}.jpg")
                     img_page = await context.new_page()
                     try:
                         resp = await img_page.goto(high_res)
@@ -153,7 +166,9 @@ async def run_analysis(raw_url):
                             })
                     finally: await img_page.close()
 
-            if not image_results: return
+            if not image_results:
+                print(f"⚠️ No Image Found: {tweet_id}")
+                return
 
             final_result = {
                 "tweet_id": tweet_id, "url": tweet_url,
